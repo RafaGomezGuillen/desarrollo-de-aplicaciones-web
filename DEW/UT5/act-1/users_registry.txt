@@ -1,0 +1,2 @@
+{"firstName":"Rafael","lastName":"Gomez","email":"rafa@gomez.com","user":"rafa","datebirth":"2024-02-01","phone":"( 22)111222333","psswrd":"K.N_R#ksJ<"}
+{"firstName":"ale","lastName":"guillen","email":"gomez@rafa.com","user":"ale","datebirth":"2024-02-20","phone":"( 22)111222999","psswrd":"\\ZV(-mu_qu"}

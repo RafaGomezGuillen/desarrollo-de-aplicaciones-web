@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:fragment="main-fragment (mainContent)"
+>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" th:href="@{/css/main.css}"/>
+  <title>Inicio</title>
+</head>
+  <body>
+    <header>
+      <div class="logotipo">
+        <img th:src="@{/img/logo.png}" />
+      </div>
+      <div class="titulo">
+        <h2>Examen Chinook Artistas / Albumes</h2>
+      </div>
+    </header>
+
+    <section>
+      <main th:insert="${mainContent} ?: ~{}">
+        <!-- Esta es la sección que se rellenará con el contenido específico de cada página -->
+      </main>
+      <nav>
+        <h2><a th:href="@{/}">Inicio</a></h2>
+        <h2><a th:href="@{/album}">Lista de albumes</a></h2>
+        <h2><a th:href="@{/artist}">Lista de artistas</a></h2>
+      </nav>
+    </section>
+
+    <footer>
+      <h2>Java Spring Examen - CIFP César Manrique - Rafael Gómez Guillén - Curso (2023 / 24)</h2>
+    </footer>
+  </body>
+</html>

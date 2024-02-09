@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+
+<div id="main-content">
+    <h1>Lista de artistas</h1>
+    <h2><a th:href="@{/artist/create}">Crear un artista</a></h2>
+
+    <form th:action="@{/artist/getArtistAlbums}" method="get">
+        <!-- Seleccionar artistas -->
+        <select name="artist" onchange="this.form.submit()" th:if="${artistListTotal}">
+            <option th:text="${message}"></option>
+            <option th:each="artista : ${artistListTotal}"
+                    th:value="${artista.id}"
+                    th:text="${artista.name}">
+            </option>
+        </select>
+    </form>
+
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Nombre</td>
+            <td>Operaciones</td>
+        </tr>
+        <tr th:each="artist : ${artistList}">
+            <td th:text="${artist.id}"></td>
+            <td th:text="${artist.name}"></td>
+            <td>
+                <a th:href="@{'/artist/' + ${artist.id}}">Detalles</a> |
+                <a th:href="@{'/artist/update/' + ${artist.id}}">Editar</a> |
+                <a th:href="@{'/artist/delete/' + ${artist.id}}">Eliminar</a>
+            </td>
+        </tr>
+    </table>
+</div>

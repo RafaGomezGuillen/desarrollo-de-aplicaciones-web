@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:fragment="main-fragment (mainContent)"
+>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" th:href="@{/css/main.css}"/>
+  <title>Inicio</title>
+</head>
+  <body>
+    <header>
+      <div class="logotipo">
+        <img th:src="@{/img/mesa_grande.jpg}" />
+      </div>
+      <div class="titulo">
+        <h2>Versión barata de Ali Express</h2>
+      </div>
+    </header>
+
+    <section>
+      <main th:insert="${mainContent} ?: ~{}">
+        <!-- Esta es la sección que se rellenará con el contenido específico de cada página -->
+      </main>
+      <nav>
+        <h2><a th:href="@{/}">Inicio</a></h2>
+
+        <hr />
+
+        <h2>Todos</h2>
+        <h2><a th:href="@{/usuario/create}">Registro</a></h2>
+        <h2><a th:href="@{/login}">Identificarse</a></h2>
+        <h2><a th:href="@{/logout}">Logout</a></h2>
+
+        <hr />
+
+        <h2>Clientes y administradores</h2>
+        <h2><a th:href="@{/producto}">Productos</a></h2>
+        <h2><a th:href="@{/producto/total}">Productos sin filtro</a></h2>
+        <h2><a th:href="@{/producto/carrito}">Carrito</a></h2>
+
+        <hr />
+
+        <h2>Administradores</h2>
+        <h2><a th:href="@{/pedido}">Total lista de pedidos</a></h2>
+        <h2><a th:href="@{/usuario}">Lista de usuarios</a></h2>
+      </nav>
+    </section>
+
+    <footer>
+      <h2>Java Spring MiAli Spring con autentificación y autorización - CIFP César Manrique - Rafael Gómez Guillén - Curso (2023 / 24)</h2>
+    </footer>
+  </body>
+</html>

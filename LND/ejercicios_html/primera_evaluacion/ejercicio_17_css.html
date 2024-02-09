@@ -1,0 +1,215 @@
+<html>
+
+<head>
+  <title> Formulario </title>
+  <link rel="stylesheet" href="../../ejercicios_css/primera_evaluacion/ejercicio_17_css.css" />
+</head>
+
+<body>
+  <h1 class="titulo">
+    Hoja de inscripción </br> en los ciclos formativos de grado superior
+  </h1>
+  <form method="post" >
+    <fieldset class="datos">
+      <legend>Datos personales</legend>
+      <table class="tabla-1">
+        <tr>
+          <td> Apellidos: </td>
+          <td> Nombre: </td>
+          <td> DNI: </td>
+        </tr>
+        <tr>
+          <td class="apellido"> <input type="text" name="apellidos" value="" /> </td>
+          <td> <input type="text" name="nombre" value="" /> </td>
+          <td class="fecha"> <input type="text" name="dni" value="" /> </td>
+        </tr>
+        <tr>
+          <td> Nacido/a en: </td>
+          <td> Provincia: </td>
+          <td> Fecha nacimiento (dd/mm/aaaa): </td>
+        </tr>
+        <tr>
+          <td class="nacido"> <input type="text" name="nacido" value="" /> </td>
+          <td>
+            <select id="provincia" name="provincia">
+              <optgroup>
+                <option value="tenerife" selected="selected">S/C de Tenerife</option>
+                <option value="grancanaria">Gran Canaria</option>
+                <option value="gomera">La Gomera</option>
+                <option value="hierro">El Hierro</option>
+                <option value="palma">La Palma</option>
+                <option value="lanzarote">Lanzarote</option>
+                <option value="fuerteventura">Fuerteventura</option>
+              </optgroup>
+            </select>
+          </td>
+          <td class="fecha"> <input type="text" name="fecha" value="" /> </td>
+        </tr>
+        <table>
+          <tr>
+            <td> Domicilio (Calle, plaza y número): </td>
+            <td class="postal"> Código postal: </td>
+          </tr>
+          <tr>
+            <td> <input type="text" name="domicilio" value="" class="domicilio" /> </td>
+            <td class="postal"> <input type="text" name="codigo-postal" value="" /> </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td> Localidad: </td>
+            <td class="provincia"> Provincia: </td>
+            <td class="telefono"> Teléfono: </td>
+          </tr>
+          <tr>
+            <td class="localidad"> <input type="text" name="lacido" value="" /> </td>
+            <td class="provincia">
+              <select id="provincia" name="provincia">
+                <optgroup>
+                  <option value="tenerife" selected="selected">S/C de Tenerife</option>
+                  <option value="grancanaria">Gran Canaria</option>
+                  <option value="gomera">La Gomera</option>
+                  <option value="hierro">El Hierro</option>
+                  <option value="palma">La Palma</option>
+                  <option value="lanzarote">Lanzarote</option>
+                  <option value="fuerteventura">Fuerteventura</option>
+                </optgroup>
+              </select>
+            </td>
+            <td class="telefono"> <input type="text" name="telefono" value="" /> </td>
+          </tr>
+        </table>
+      </table>
+    </fieldset>
+  </form>
+  <form method="post" >
+    <fieldset class="requisito">
+      <legend>Requisito de acceso</legend>
+      <input type="radio" name="directo" value="directo" /> Directo
+      <div class="tabulado">
+        <input type="radio" name="div" value="bach" /> Bachillerato LOGSE. Modalidad:
+        <input type="text" name="div" value="" /> <br>
+        <input type="radio" name="div" value="" /> Bachillerato experimental <br>
+        <input type="radio" name="div" value="cou" /> COU. Opción
+        <input type="text" name="div" value="" /> <br>
+        <input type="radio" name="div" value="" /> FP2 <br>
+        <input type="radio" name="div" value="otros" /> Otros (especifique):
+        <input type="text" name="div" value="" /> <br>
+      </div>
+      <input type="radio" name="prueba" value="prueba" /> Mediante prueba
+    </fieldset>
+  </form>
+  <form method="post">
+    <fieldset class="solicitud">
+      <legend>Solicitud</legend>
+      <p>
+        El/la que suscribe desea ser adimitido en este centro para cursar el ciclo formativo de grado superior.
+      </p>
+      Ciclo formativo:
+      <select id="provincia" name="provincia">
+        <optgroup>
+          <option value="2013" selected="selected">Informática</option>
+          <option value="2012">Electrónica</option>
+          <option value="2011">Comercio</option>
+          <option value="2010">Peluqueria</option>ñ
+          <option value="2009">Laboratorio</option>
+          <option value="2008">Derechos humanos</option>
+          <option value="2007">Otros</option>
+        </optgroup>
+      </select>
+      <table>
+        <tr class="left">
+          <td> Ciclos formativos </td>
+          <td> Centros </td>
+          <td> Localidad </td>
+        </tr>
+        <tr>
+          <td> <input type="text" name="apellidos" value="" /> </td>
+          <td> <input type="text" name="nombre" value="" /> </td>
+          <td> <input type="text" name="nombre" value="" /> </td>
+        </tr>
+        <tr>
+          <td> <input type="text" name="apellidos" value="" /> </td>
+          <td> <input type="text" name="nombre" value="" /> </td>
+          <td> <input type="text" name="nombre" value="" /> </td>
+        </tr>
+      </table>
+      Modalidad de horario especial (marque):
+      <input name="otros" type="checkbox" value="otros" />
+    </fieldset>
+  </form>
+
+  <form method="post" >
+    <fieldset class="documentacion">
+      <legend>Documentación presentada</legend>
+      <input class="Fotocopia" name="Fotocopia" type="checkbox" value="Fotocopia" /> Fotocopia DNI &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <input name="Certificado" type="checkbox" value="Certificado" /> Certificado académico <br>
+      <input name="otros" type="checkbox" value="otros" /> Otros documentos (especifique):
+      <input type="text" name="otros" value="" />
+    </fieldset>
+  </form>
+
+  <form method="post">
+    <fieldset class="comunicacion">
+      <legend>Comunicación</legend>
+      <p>
+        De acuerdo con el artículo 42.2 de la Ley 30/1992, de 26 de noviembre,
+        de Régimen Jurídico de las Administraciones Públicas y del Procedimiento
+        Administrativo Común, según la nueva redacción de la Ley 4/1999, de 13 de
+        enero, se informa que:
+      </p>
+      <ul>
+        <li>
+          El plazo máximo para resolver la presente solicitud es de 3 meses
+          desde la fecha en que haya tenido entrada en el registro del órgano
+          competente para la tramitación, sin perjuicio de lo previsto en el
+          artículo 42.5 de la misma ley.
+        </li>
+        <li>
+          El efecto que producirá el silecio administrativo si transcurre el plazo
+          sin que se haya dictado y notificado la resolución corresponidtente, es
+          desestimatorio de la solicitud.
+        </li>
+      </ul>
+      <input type="text" name="fecha" value="" />, &nbsp;
+      <input class="dos" type="text" name="fecha" value="" /> &nbsp; de &nbsp;
+      <input type="text" name="fecha" value="" /> &nbsp; de &nbsp;
+      <select id="provincia" name="provincia">
+        <optgroup>
+          <option value="2013" selected="selected">2013</option>
+          <option value="2012">2012</option>
+          <option value="2011">2011</option>
+          <option value="2010">2010</option>
+          <option value="2009">2009</option>
+          <option value="2008">2008</option>
+          <option value="2007">2007</option>
+        </optgroup>
+      </select>
+      <br>
+      <p>
+        La persona solicitante,
+      </p>
+      <div class="registro">
+        <p> Registro de entrada </p>
+      </div>
+      <p class="firma"> Firma </p>
+    </fieldset>
+  </form>
+  <p class="casi-final">
+    Los datos personales contenidos en este impreso
+    podrán ser incluidos en un fichero para su tratamiento por la Consejeria de
+    Educación, en el uso de las funciones propias que tiene atribuidas
+    en el ámbito de sus competencias, pudiendo dirigirse a cualquier órgano de la
+    misma para ejercitarlos derechos de acceso, rectificación, cancelación y
+    oposición, según lo dispuesto en la Ley Orgánica 15/1999, de 13 de diciembre,
+    de Protección de Datos de Carácter Personal (BOE núm 298, de 14 de diciembre
+    de 1999).
+  </p>
+  <p class="final">
+    director/a o titular del centro
+  </p>
+
+</body>
+
+</html>

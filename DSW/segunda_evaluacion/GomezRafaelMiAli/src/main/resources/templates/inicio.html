@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+
+<div id="main-content">
+    <h1>Página principal</h1>
+    <p>Las imágenes se suben en /target/classes/static/img</p>
+    <p>Archivo sql para generar la tabla pedidos en /resources/static/sql/pedidos.sql</p>
+</div>

@@ -1,0 +1,60 @@
+﻿@page
+@model Ejercicios.Pages.Ejercicio01Model
+@{
+    ViewData["Title"] = "Ejercicio 01";
+}
+<h2>Operaciones con números</h2>
+<form method="post">
+    @if (Request.Method == "POST")
+    {
+        <p>
+            <label for="numero1">Primer número: </label>
+            <input type="number" name="numero1" value="@Request.Form["numero1"]" />
+            <br />
+            <br />
+            <label for="numero2">Segundo número: </label>
+            <input type="number" name="numero2" value="@Request.Form["numero2"]" />
+        </p>
+    }
+    else
+    {
+        <p>
+            <label for="numero1">Primer número: </label>
+            <input type="number" name="numero1" value="" />
+            <br />
+            <br />
+            <label for="numero2">Segundo número: </label>
+            <input type="number" name="numero2" value="" />
+        </p>
+    }
+    <p>
+        <input type="submit" value="Operar" />
+    </p>
+</form>
+<div>
+    @{
+        if (Request.Method == "POST")
+        {
+            decimal numero1 = Convert.ToDecimal(Request.Form["numero1"]);
+            decimal numero2 = Convert.ToDecimal(Request.Form["numero2"]);
+
+            decimal suma = numero1 + numero2;
+            decimal resta = numero1 - numero2;
+            decimal mult = numero1 * numero2;
+            decimal div = numero1 / numero2;
+
+            <p>Suma: @($"{numero1} + {numero2} = {suma}")</p>
+            <p>Resta: @($"{numero1} - {numero2} = {resta}")</p>
+            <p>Multiplicación: @($"{numero1} * {numero2} = {mult}")</p>
+
+            if (numero2 == 0)
+            {
+                <p>División: No es posible dividir por cero</p>
+            }
+            else
+            {
+                <p>División: @($"{numero1} / {numero2} = {Math.Round(div, 2)}")</p>
+            }
+        }
+    }
+</div>

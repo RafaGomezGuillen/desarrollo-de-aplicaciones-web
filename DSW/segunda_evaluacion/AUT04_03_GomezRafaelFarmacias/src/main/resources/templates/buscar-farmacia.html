@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+<div id="main-content">
+    <h1>Buscar Farmacia por Nombre</h1>
+
+    <form action="/gomez_farm/farmacias/listado" method="post">
+        <label for="nombreFarmacia">Nombre de la Farmacia:</label>
+        <input type="text" id="nombreFarmacia" name="nombreFarmacia" required>
+        <button type="submit">Buscar farmacias cercanas</button>
+    </form>
+
+    <!-- Verifica si hay un mensaje de error y, si es así, muéstralo -->
+    <p th:if="${mensaje != null}" th:text="${mensaje}" style="color: red;"></p>
+
+    <!-- Si hay farmacias, muestra la tabla -->
+    <div th:if="${farmacias != null and not #lists.isEmpty(farmacias)}">
+        <h2 th:text="${nombreFarmacia}"></h2>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Web</th>
+                <th>Horario</th>
+                <th>Teléfono</th>
+                <th>UTM_X</th>
+                <th>UTM_Y</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="farmacia : ${farmacias}">
+                <td th:text="${farmacia.nombre}"></td>
+                <td th:text="${farmacia.web}"></td>
+                <td th:text="${farmacia.horario}"></td>
+                <td th:text="${farmacia.telefono}"></td>
+                <td th:text="${farmacia.UTM_X}"></td>
+                <td th:text="${farmacia.UTM_Y}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+
+<div id="main-content">
+    <h1>Lista de albumes</h1>
+    <h2><a th:href="@{/album/create}">Crear un album</a></h2>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Titulo</td>
+            <td>Artista</td>
+            <td>Operaciones</td>
+        </tr>
+        <tr th:each="album : ${albumList}">
+            <td th:text="${album.id}"></td>
+            <td th:text="${album.title}"></td>
+            <td th:text="${album.artist.name}"></td>
+            <td>
+                <a th:href="@{'/album/' + ${album.id}}">Detalles</a> |
+                <a th:href="@{'/album/update/' + ${album.id}}">Editar</a> |
+                <a th:href="@{'/album/delete/' + ${album.id}}">Eliminar</a>
+            </td>
+        </tr>
+    </table>
+</div>

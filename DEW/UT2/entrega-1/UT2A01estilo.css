@@ -1,0 +1,33 @@
+
+table {
+    border: 1px solid #000;
+ }
+ th, td {
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 0.3em;
+    caption-side: bottom;
+ }
+ caption {
+    padding: 0.3em;
+    color: #fff;
+     background: #000;
+ }
+ th {
+    background: #d2d2d2;
+ }
+
+table tbody tr:nth-child(even) {
+	background: #e6c3e4;
+}
+
+div:not(:first-child) {
+        background: linear-gradient(to bottom, #1f84ef, #08478a); 
+        color:white;
+        padding: 20px;
+        border-radius: 15px; 
+        margin-top: 15px; 
+        box-shadow: 20px 15px 15px rgb(63, 63, 63); /* Sombra */
+    }

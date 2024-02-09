@@ -1,0 +1,79 @@
+﻿@page
+@model Ejercicios.Pages.Ejercicio05Model
+@{
+    ViewData["Title"] = "Ejercicio 05";
+}
+<h2>Generar tabla</h2>
+<form method="post" id="form-1">
+    @if (Request.Method == "POST")
+    {
+        <div>
+            <label for="filas">Filas: </label>
+            <select name="filas" style="width: 200px;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="columnas">Columnas: </label><br>
+            <select name="columnas" size="3" style="width: 100px;">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+    }
+    else
+    {
+        <div>
+            <label for="filas">Filas: </label>
+            <select name="filas" style="width: 200px;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="columnas">Columnas: </label><br>
+            <select name="columnas" size="3" style="width: 100px;">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+    }
+    <p>
+        <input type="submit" value="Rellenar" />
+    </p>
+</form>
+<div>
+    @if (Request.Method == "POST")
+    {
+        <h2>Resultado</h2>
+        int filas = Convert.ToInt32(Request.Form["filas"]);
+        int columnas = Convert.ToInt32(Request.Form["columnas"]);
+        int celdas = 1;
+        
+        <table>
+            @for (int i = 0; i < filas; i++)
+            {
+                <tr>
+                    @for(int j = 0; j < columnas; j++)
+                    {
+                        <td style="width: 50px;">@(celdas++)</td>
+                    }
+                </tr>
+            }
+        </table>
+
+        if(columnas == 0)
+        {
+            <p>No seleccionaste ninguna columna.</p>
+        }
+    }
+</div>

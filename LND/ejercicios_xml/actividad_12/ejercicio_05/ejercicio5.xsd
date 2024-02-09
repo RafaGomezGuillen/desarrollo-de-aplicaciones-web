@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="discos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="grupo" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="tipoTexto" />
+              <xs:element name="miembro" type="tipoTexto" maxOccurs="unbounded" />
+              <xs:element name="nacionalidad" type="tipoTexto" minOccurs="0" />
+              <xs:choice minOccurs="0">
+                <xs:sequence>
+                  <xs:element name="calle" type="tipoTexto" />
+                  <xs:element name="localidad" type="tipoTexto" />
+                </xs:sequence>
+                <xs:sequence>
+                  <xs:element name="web" type="tipoTexto" />
+                  <xs:element name="email" type="tipoTexto" />
+                </xs:sequence>
+              </xs:choice>
+            </xs:sequence>
+            <xs:attribute name="nom" type="tipoTexto" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="disco" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="interprete" nillable="true">
+                <xs:complexType>
+                  <xs:attribute name="nom" type="tipoTexto" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="titulo" type="tipoTexto" />
+              <xs:element name="discografica" default="CBS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="tipoTexto">
+                    <xs:enumeration value="Sony" />
+                    <xs:enumeration value="CBS" />
+                    <xs:enumeration value="SIRE" />
+                    <xs:enumeration value="OTRAS" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="anio">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="tipoAnio">
+                      <xs:attribute name="mes" type="tipoMes" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="stock">
+                <xs:simpleType>
+                  <xs:restriction base="xs:positiveInteger">
+                    <xs:maxInclusive value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="precio" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:decimal">
+                  <xs:fractionDigits value="2" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="tipoAnio">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:pattern value="\d{4}"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoMes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="enero" />
+      <xs:enumeration value="febrero" />
+      <xs:enumeration value="marzo" />
+      <xs:enumeration value="abril" />
+      <xs:enumeration value="mayo" />
+      <xs:enumeration value="junio" />
+      <xs:enumeration value="julio" />
+      <xs:enumeration value="agosto" />
+      <xs:enumeration value="septiembre" />
+      <xs:enumeration value="octubre" />
+      <xs:enumeration value="noviembre" />
+      <xs:enumeration value="diciembre" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoTexto">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoDominio">
+    <xs:restriction base="xs:string">
+      <xs:pattern value=".+ponprecioamimusica.org.*" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

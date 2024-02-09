@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>POUT2 PRINCIPAL</title>
+  <link rel="stylesheet" href="./UT2A01Principal.css">
+</head>
+
+<body>
+  <noscript>
+    <h1>
+      Para que funcione correctamente esta página requiere
+      tener habilitado JavaScript
+    </h1>
+  </noscript>
+  <div id="info">
+    <h1>Enlaces</h1>
+    <h2>URLs absolutas</h2>
+    <ul>
+      <li><a href="https://cifpcesarmanrique.es/">CIFP César Manrique</a></li>
+      <li><a href="https://es.wikipedia.org/wiki/Singleton">Wikipedia Singleton</a></li>
+      <li><a href="https://boredpanda.es/">Bored Panda</a></li>
+    </ul>
+    <h2>URLs relativas</h2>
+    <ul>
+      <li><a href="./UT2A01Otra.html">Página secundaria</a></li>
+    </ul>
+
+    <button type="button" id="abrir-ventanas" onclick="abrirVentanas()">Abrir ventanas</button>
+    <button type="button" id="cerrar-ventanas" onclick="cerrarVentanas()">Cerrar ventanas</button>
+  </div>
+  <div>
+    <form>
+      <label for="numOper">Número de Operadores:</label>
+      <input type="text" id="numOper" name="numOper" placeholder="Indique el número de operadores">
+    </form>
+    <button type="button" onclick="calculaMedida()">Calcular Media</button>
+  </div>
+  <div>
+  </div>
+  <script type="text/javascript" src="./UT2A01Principal.js"></script>
+</body>
+
+</html>

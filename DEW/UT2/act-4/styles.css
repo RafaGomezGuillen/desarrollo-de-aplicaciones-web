@@ -1,0 +1,51 @@
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+p,
+h1 {
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+}
+
+.div-1 {
+  background-color: green;
+}
+
+.div-2 {
+  background-color: orange;
+}
+
+.div-3 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: purple;
+  color: #fff;
+}
+
+.ventana-principal,
+.carrito-de-compra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: cadetblue;
+}
+
+.ventana-principal div,
+.carrito-de-compra div {
+  gap: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.carrito-de-compra {
+  background-color: peru;
+  margin-bottom: 50px;
+}

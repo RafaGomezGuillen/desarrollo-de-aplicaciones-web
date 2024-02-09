@@ -1,0 +1,99 @@
+﻿@page
+@model EjerciciosEF.Pages.Ejercicio06Model
+@{
+    ViewData["Title"] = "Ejercicio 6";
+    List<string> clientes = clientes = (from cliente in Model.Datos.Cliente
+                                        select $"{cliente.Id};{cliente.Nombre};{(int)(DateTime.Now.Subtract(cliente.FechaRegistro).TotalDays / 365.25)}").ToList(); ;
+}
+<h2>Fecha de antiguedad de los clientes</h2>
+<form method="post">
+    @if (Request.Method == "POST")
+    {
+        <div>
+            <div>
+                <label for="eleccion">Más de 15 años: </label>
+                <input type="radio" name="eleccion" value="si-quincena" @(Request.Form["eleccion"] == "si-quincena" ? "checked" : "") />
+            </div>
+            <br />
+            <div>
+                <labe for="eleccion">Menos de 15 años: </labe>
+                <input type="radio" name="eleccion" value="no-quincena" @(Request.Form["eleccion"] == "no-quincena" ? "checked" : "") />
+            </div>
+            <br />
+            <div>
+                <input type="submit" name="action" value="Mostrar" />
+            </div>
+        </div>
+        <div>
+            @if (Request.Form["action"] == "Mostrar")
+            {
+                bool esQuincena = Request.Form["eleccion"] == "si-quincena";
+                bool noQuincena = Request.Form["eleccion"] == "no-quincena";
+
+                <table>
+                    <tr>
+                        <td>Id</td>
+                        <td>Nombre</td>
+                        <td>Antiguedad (años)</td>
+                    </tr>
+                    @foreach (string cliente in clientes)
+                    {
+                        <tr>
+                            @{
+                                string[] separarCampos = cliente.Split(';');
+                                for (int i = 0; i < separarCampos.Length; i++)
+                                {
+                                    if (esQuincena && Convert.ToInt32(separarCampos[2]) >= 15)
+                                    {
+                                        <td>@separarCampos[i]</td>
+                                    }
+                                    if (noQuincena && Convert.ToInt32(separarCampos[2]) < 15)
+                                    {
+                                        <td>@separarCampos[i]</td>
+                                    }
+                                }
+                            }
+                        </tr>
+                    }
+                </table>
+            }
+        </div>
+    }
+    else
+    {
+        <div>
+            <div>
+                <label for="eleccion">Más de 15 años: </label>
+                <input type="radio" name="eleccion" value="si-quincena" checked />
+            </div>
+            <br />
+            <div>
+                <labe for="eleccion">Menos de 15 años: </labe>
+                <input type="radio" name="eleccion" value="no-quincena" />
+            </div>
+            <br />
+            <div>
+                <input type="submit" name="action" value="Mostrar" />
+            </div>
+        </div>
+        <table>
+            <tr>
+                <td>Id</td>
+                <td>Nombre</td>
+                <td>Antiguedad (años)</td>
+            </tr>
+            @foreach (string cliente in clientes)
+            {
+                <tr>
+                    @{
+                        string[] separarCampos = cliente.Split(';');
+                        for (int i = 0; i < separarCampos.Length; i++)
+                        {
+                             <td>@separarCampos[i]</td>
+                        }
+                    }
+                </tr>
+            }
+        </table>
+    }
+</form>

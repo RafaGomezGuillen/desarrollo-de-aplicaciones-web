@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- shared -->
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+
+    <!-- sections -->
+    <link rel="stylesheet" href="../styles/card-container.css" />
+
+    <!-- style page -->
+    <link rel="stylesheet" href="details.css" />
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>F1 Store</title>
+  </head>
+
+  <body>
+    <nav id="myTopnav">
+      <a href="../index.html">Home</a>
+      <a href="../catalog/catalog.html">Catalog</a>
+      <a href="../profile/profile.html">Profile</a>
+      <a href="../about-us/about-us.html">About us</a>
+      <label for="selTheme">Select color pallete</label>
+      <select id="selTheme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+      <a href="#" class="log">Log in</a>
+      <a href="#" class="log">Log out</a>
+      <a
+        href="javascript:void(0);"
+        class="icon"
+        onclick="navbar()"
+        aria-label="Navbar icon for mobile screens"
+      >
+        <em class="fa fa-bars"></em>
+      </a>
+    </nav>
+
+    <section class="gallery">
+      <div class="gallery-img-container">
+        <article>
+          <div>1 / 3</div>
+          <img src="../assets/img/aston-martin.jpg" alt="aston martin f1 car" />
+        </article>
+
+        <article>
+          <div>2 / 3</div>
+          <img src="../assets/img/aston-martin.jpg" alt="aston martin f1 car" />
+        </article>
+
+        <article>
+          <div>3 / 3</div>
+          <img src="../assets/img/aston-martin.jpg" alt="aston martin f1 car" />
+        </article>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <div class="gallery-img-container-row">
+          <div>
+            <img
+              class="demo cursor"
+              src="../assets/img/aston-martin.jpg"
+              onclick="currentSlide(1)"
+              alt="Check the car number 1"
+            />
+          </div>
+          <div>
+            <img
+              class="demo cursor"
+              src="../assets/img/aston-martin.jpg"
+              onclick="currentSlide(2)"
+              alt="Check the car number 2"
+            />
+          </div>
+          <div>
+            <img
+              class="demo cursor"
+              src="../assets/img/aston-martin.jpg"
+              onclick="currentSlide(3)"
+              alt="Check the car number 3"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-presentation-container">
+        <h1>Aston Martin F1 Car / Season 2021</h1>
+        <p>$1000</p>
+        <p>
+          Rating:
+          <em class="fa fa-star"></em>
+          <em class="fa fa-star"></em>
+
+          <br />
+          <br />
+
+          Some text about the product. Super slim and comfy lorem ipsum lorem
+          jeansum. Lorem jeamsun denim lorem jeansum.
+
+          <br />
+          <br />
+
+          Immediate Shipping.
+
+          <br />
+          <br />
+
+          Delivery for €5.99 between 22 - 30 November Fastest delivery on
+          Thursday, November 23. Order in 22 hours 48 mins
+        </p>
+
+        <div class="gallery-presentation-container-buttons">
+          <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+
+          <a href="../checkout/cart.html">
+            Add to Cart <em class="fa fa-shopping-cart"></em>
+          </a>
+
+          <a href="../checkout/cart.html">
+            Buy now <em class="fa fa-money"></em>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="information">
+      <div class="information-buttons">
+        <button onclick="openArticle('Description')" id="defaultOpen">
+          Description
+        </button>
+        <button onclick="openArticle('Information')">
+          Aditional information and doubts
+        </button>
+        <button onclick="openArticle('Reviews')">Reviews</button>
+      </div>
+
+      <article id="Description">
+        <h2>Description</h2>
+        <p>Description of the car.</p>
+      </article>
+
+      <article id="Information">
+        <h2>Aditional information and doubts</h2>
+        <p>Condiciones de venta (gastos de envío y similares).</p>
+
+        <section class="information-form">
+          <label>Doubt section</label>
+          <input type="text" placeholder="Write a doubt..." />
+
+          <label>Subject</label>
+          <textarea
+            placeholder="Write something.."
+            style="height: 100px"
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </section>
+      </article>
+
+      <article id="Reviews">
+        <h2>Reviews</h2>
+        <div>
+          <p>Review <em class="fa fa-star"></em><em class="fa fa-star"></em></p>
+          <p>
+            Qui nisi minim dolore proident anim aliquip adipisicing in enim.
+          </p>
+        </div>
+        <div>
+          <p>Review <em class="fa fa-star"></em><em class="fa fa-star"></em></p>
+          <p>
+            Pariatur nisi tempor exercitation laborum nulla ad deserunt deserunt
+            sit ea tempor fugiat occaecat.
+          </p>
+        </div>
+        <div>
+          <p>Review <em class="fa fa-star"></em><em class="fa fa-star"></em></p>
+          <p>Aliquip ut nulla ea enim id aliquip in cupidatat.</p>
+        </div>
+
+        <section
+          class="information-form"
+          style="margin-top: 25px; border-right: none; border-radius: 0px"
+        >
+          <label>Review section</label>
+          <input type="text" placeholder="Write a review..." />
+
+          <label>Subject</label>
+          <textarea
+            placeholder="Write something.."
+            style="height: 100px"
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </section>
+      </article>
+    </section>
+
+    <h2 style="text-align: center; color: var(--color-font)">
+      Related products
+    </h2>
+
+    <section class="card-container" style="margin-top: 0px">
+      <div class="card-section" style="border: none">
+        <article>
+          <a href="">
+            <img
+              src="../assets/img/aston-martin.jpg"
+              alt="aston martin f1 car"
+            />
+            <h3>Car One · 1000$</h3>
+            <p>
+              Anim ad aliquip consequat est sit laboris nisi adipisicing
+              consectetur est non consequat velit.
+            </p>
+            <div class="reputacion">
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+            </div>
+          </a>
+        </article>
+        <article>
+          <a href="">
+            <img
+              src="../assets/img/aston-martin.jpg"
+              alt="aston martin f1 car"
+            />
+            <h3>Car Two · 1000$</h3>
+            <p>
+              Anim ad aliquip consequat est sit laboris nisi adipisicing
+              consectetur est non consequat velit.
+            </p>
+            <div class="reputacion">
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+            </div>
+          </a>
+        </article>
+        <article>
+          <a href="">
+            <img
+              src="../assets/img/aston-martin.jpg"
+              alt="aston martin f1 car"
+            />
+            <h3>Car Three · 1000$</h3>
+            <p>
+              Anim ad aliquip consequat est sit laboris nisi adipisicing
+              consectetur est non consequat velit.
+            </p>
+            <div class="reputacion">
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <section class="footer-row">
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="" aria-label="Find us on GitHub">
+                <em class="fa fa-github"></em>
+              </a>
+              <a href="" aria-label="Find us on X">
+                <em class="fa fa-twitter"></em>
+                </a>
+              <a href="" aria-label="Find us on Instagram">
+                <em class="fa fa-instagram"></em>
+              </a>
+              <a href="" aria-label="Find us on LinkedIn">
+                <em class="fa fa-linkedin"></em>
+              </a>
+            </div>
+          </article>
+        </section>
+        <section class="footer-row">
+          <article class="footer-col" style="margin-top: 20px">
+            <a href="/">
+              <img
+                src="../assets/img/logos/f1.png"
+                style="width: 110px; margin-right: 10px; margin-bottom: 10px"
+                alt="f1 logo"
+              />
+            </a>
+          </article>
+          <article class="footer-col-bottom">
+            <p>
+              © 2023 Formula One World Championship Limited. Rafael Gómez
+              Guillén.
+            </p>
+          </article>
+        </section>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/darkMode.js"></script>
+    <script src="../js/gallery.js"></script>
+    <script src="../js/tabs.js"></script>
+  </body>
+</html>

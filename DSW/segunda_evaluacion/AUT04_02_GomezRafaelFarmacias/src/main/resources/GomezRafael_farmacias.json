@@ -1,0 +1,26 @@
+[
+  {
+    "web": "www.farmaciaazul.com",
+    "horario": "Lunes a Viernes de 9:00 a 20:00, Sábados de 10:00 a 14:00",
+    "telefono": "+34 928 123 456",
+    "nombre": "Farmacia Azul",
+    "UTM_X": 28.2916,
+    "UTM_Y": -16.6291
+  },
+  {
+    "web": "www.farmaciaverde.es",
+    "horario": "Lunes a Sábado de 8:00 a 22:00",
+    "telefono": "+34 928 654 321",
+    "nombre": "Farmacia Verde",
+    "UTM_X": 28.4698,
+    "UTM_Y": -16.2549
+  },
+  {
+    "web": "www.farmaciaroja.net",
+    "horario": "Abierto 24 horas",
+    "telefono": "+34 928 789 012",
+    "nombre": "Farmacia Roja",
+    "UTM_X": 28.2937,
+    "UTM_Y": -16.6206
+  }
+]

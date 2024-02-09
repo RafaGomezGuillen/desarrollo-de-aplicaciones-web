@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:fragment="main-fragment (mainContent)"
+>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" th:href="@{/css/main.css}"/>
+  <title>Inicio</title>
+</head>
+  <body>
+    <header>
+      <div class="logotipo">
+        <img th:src="@{/img/mesa_grande.jpg}" />
+      </div>
+      <div class="titulo">
+        <h2>Versión barata de Ali Express</h2>
+      </div>
+    </header>
+
+    <section>
+      <main th:insert="${mainContent} ?: ~{}">
+        <!-- Esta es la sección que se rellenará con el contenido específico de cada página -->
+      </main>
+      <nav>
+        <h2><a th:href="@{/}">Inicio</a></h2>
+        <h2><a th:href="@{/login}">Login</a></h2>
+        <h2><a th:href="@{/usuario/create}">Crear usuario</a></h2>
+        <h2><a th:href="@{/producto}">Productos</a></h2>
+        <h2><a th:href="@{/producto/total}">Productos sin filtro</a></h2>
+        <hr />
+        <h2><a th:href="@{/pedido}">Lista de pedidos</a></h2>
+        <h2><a th:href="@{/pedido/carrito}">Carrito</a></h2>
+      </nav>
+    </section>
+
+    <footer>
+      <h2>Java Spring MiAli Spring - CIFP César Manrique - Rafael Gómez Guillén - Curso (2023 / 24)</h2>
+    </footer>
+  </body>
+</html>

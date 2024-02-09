@@ -1,0 +1,131 @@
+﻿@page
+@model EjerciciosEF.Pages.Ejercicio03Model
+@{
+    ViewData["Title"] = "Ejercicio 3";
+    List<string> datos = (from interprete in Model.Datos.Interprete
+                          join disco in Model.Datos.Disco
+                          on interprete.IdInterprete equals disco.IdInterprete
+                          join puntuacion in Model.Datos.Puntuacion
+                          on disco.IdDisco equals puntuacion.Iddisco
+                          group new { interprete, disco, puntuacion } by new { interprete.Interprete1, disco.Titulo } into grupo
+                          select $"{grupo.Key.Interprete1}?{grupo.Key.Titulo}?{grupo.Select(g => g.puntuacion.Puntuacion1).Average().ToString().Substring(0, 1)}").ToList();
+}
+<h2>Página de filtrado</h2>
+<p>
+    Querido usuario, tienes una lista de intérpretes, una vez seleccioanado ese intérprete se muestran sus títulos,
+    del título seleccionado se muestran el promedio de puntuación.
+</p>
+<form method="post">
+    @if (Request.Method == "POST")
+    {
+        if (Request.Form["action"] == "Elegir")
+        {
+            string interpreteSeleccionado = Request.Form["Interpretes"];
+            List<string> titulos = (from disco in Model.Datos.Disco
+                                   join interprete in Model.Datos.Interprete
+                                   on disco.IdInterprete equals interprete.IdInterprete
+                                   where interprete.Interprete1 == interpreteSeleccionado
+                                   select disco.Titulo).ToList();
+            <div>
+                <label for="Titulos">Titulos de @interpreteSeleccionado: </label>
+                <select name="Titulos" style="width: 200px;">
+                    @foreach (string titulo in titulos)
+                    {
+                        <option value=@titulo>@titulo</option>
+                    }
+                </select>
+                <input type="submit" name="action" value="Mostrar" />
+            </div>
+            
+            datos = (from interprete in Model.Datos.Interprete
+                     join disco in Model.Datos.Disco
+                     on interprete.IdInterprete equals disco.IdInterprete
+                     join puntuacion in Model.Datos.Puntuacion
+                     on disco.IdDisco equals puntuacion.Iddisco
+                     where interprete.Interprete1 == interpreteSeleccionado
+                     group new { interprete, disco, puntuacion } by new { interprete.Interprete1, disco.Titulo } into grupo
+                     select $"{grupo.Key.Interprete1}?{grupo.Key.Titulo}?{grupo.Select(g => g.puntuacion.Puntuacion1).Average().ToString().Substring(0, 1)}").ToList();
+            
+            <table>
+                <tr>
+                    <td>Intérpretes</td>
+                    <td>Títulos</td>
+                    <td>Puntuación</td>
+                </tr>
+                @foreach (string dato in datos)
+                {
+                    <tr>
+                        @{
+                            string[] separarCampos = dato.Split('?');
+                            for (int i = 0; i < separarCampos.Length; i++)
+                            {
+                                <td>@separarCampos[i]</td>
+                            }
+                        }
+                    </tr>
+                }
+            </table>
+        }
+        if (Request.Form["action"] == "Mostrar")
+        {
+
+            List<string> interpretes = (from interprete in Model.Datos.Interprete select interprete.Interprete1).ToList();
+            <div>
+                <label for="Interpretes">Interpretes: </label>
+                <select name="Interpretes" style="width: 200px;">
+                    @foreach (string interprete in interpretes)
+                    {
+                        <option value=@interprete>@interprete</option>
+                    }
+                </select>
+                <input type="submit" name="action" value="Elegir" />
+            </div>
+            
+            string tituloSeleccionado = Request.Form["Titulos"];
+            List<string> titulos = (from disco in Model.Datos.Disco
+                                    join puntuacion in Model.Datos.Puntuacion on disco.IdDisco equals puntuacion.Iddisco
+                                    where disco.Titulo == tituloSeleccionado
+                                    group new { disco, puntuacion } by new { disco.Titulo } into grupo
+                                    select $"Título: {grupo.Key.Titulo}, puntuación: {grupo.Select(g => g.puntuacion.Puntuacion1).Average().ToString().Substring(0, 1)}").ToList();
+
+            foreach(string titulo in titulos)
+            {
+                <h3>@titulo</h3>
+            }
+        }
+    }
+    else
+    {
+        List<string> interpretes = (from interprete in Model.Datos.Interprete select interprete.Interprete1).ToList();
+        <div>
+            <label for="Interpretes">Interpretes: </label>
+            <select name="Interpretes" style="width: 200px;">
+                @foreach (string interprete in interpretes)
+                {
+                    <option value=@interprete>@interprete</option>
+                }
+            </select>
+            <input type="submit" name="action" value="Elegir" />
+        </div>
+
+        <table>
+            <tr>
+                <td>Intérpretes</td>
+                <td>Títulos</td>
+                <td>Puntuación</td>
+            </tr>
+            @foreach(string dato in datos)
+            {
+                <tr>
+                    @{
+                        string[] separarCampos = dato.Split('?');
+                        for (int i = 0; i < separarCampos.Length; i++)
+                        {
+                            <td>@separarCampos[i]</td>
+                        }
+                    }
+                </tr>
+            }
+        </table>
+    }
+</form>

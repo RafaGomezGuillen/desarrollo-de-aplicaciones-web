@@ -1,0 +1,56 @@
+﻿@page
+@model Ejercicios.Pages.Ejercicio02Model
+@{
+    ViewData["Title"] = "Ejercicio 02";
+}
+<h2>Cuantas palabras</h2>
+<form method="post">
+    @if (Request.Method == "POST")
+    {
+        <p>
+            <label>Frase: </label>
+            <input type="text" name="frase" value="@Request.Form["frase"]" />
+            <br />
+            <br />
+            <label>Palabra: </label>
+            <input type="text" name="palabra" value="@Request.Form["palabra"]" />
+        </p>
+    }
+    else
+    {
+        <p>
+            <label>Frase: </label>
+            <input type="text" name="frase" value="" placeholder="Frase" />
+            <br />
+            <br />
+            <label>Palabra: </label>
+            <input type="text" name="palabra" value="" />
+        </p>
+    }
+    <p>
+        <input type="submit" value="Cuenta" />
+    </p>
+</form>
+<div>
+    @{
+        if (Request.Method == "POST")
+        {
+            <h2>Palabras contadas</h2>
+            string frase = Request.Form["frase"];
+            string palabra = Request.Form["palabra"];
+
+            int contador = 0;
+
+            string[] palabras = frase.Split(' ');
+
+            foreach (string str in palabras)
+            {
+                if (str.Equals(palabra, StringComparison.OrdinalIgnoreCase)) contador++;
+            }
+
+            <p>Frase: @frase</p>
+            <p>Palabra: @palabra</p>
+            <p>@($"La palabra \"{palabra}\" aparece {contador} veces.")</p>
+        }
+    }
+</div>

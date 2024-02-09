@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="/medusa/eforma/campus/ruxitagentjs_ICA2NVfqru_10279231130031246.js"
+      data-dtconfig="rid=RID_1236601617|rpid=1151264793|domain=gobiernodecanarias.org|reportUrl=/medusa/eforma/campus/rb_bf29001mpg|app=6f32243ee21d715c|cuc=o9ygw9x5|mel=100000|featureHash=ICA2NVfqru|dpvc=1|ssv=4|lastModification=1704989648487|vcv=2|tp=500,50,0,1|rdnt=1|uxrgce=1|bp=3|agentUri=/medusa/eforma/campus/ruxitagentjs_ICA2NVfqru_10279231130031246.js"
+    ></script>
+    <link rel="stylesheet" href="new_user_dialog.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cauce_cookie.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-base.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-eforma.js"
+    ></script>
+  </head>
+
+  <style type="text/css"></style>
+
+  <body>
+    <div class="dialog">
+      <span>Your message her</span>
+      <ul>
+        <li><input type="checkbox" onclick="input_checked()" /></li>
+        <li>Send me an e-mail with my Gifts list Id</li>
+      </ul>
+      <button onclick="close_me(event)">X</button
+      ><button onclick="close_me(event)">OK</button>
+    </div>
+
+    <div id="new_user">
+      <button onclick="close_me(event)">X</button>
+      <ul>
+        <li><span>(*) Mandatory field:</span><br /></li>
+        <li>
+          <span id="name">First name*</span><br /><input
+            type="text"
+            onchange="onchange_input_alt(event)"
+          />
+        </li>
+        <li>
+          <span id="surname">Last name*</span><br /><input
+            type="text"
+            onchange="onchange_input_alt(event)"
+          />
+        </li>
+        <li>
+          <span id="e_mail">e-mail address*</span><br /><input
+            type="text"
+            onchange="onchange_input_alt(event)"
+          />
+        </li>
+        <li>
+          <span id="e_mail_conf">Repeat your e-email*</span><br /><input
+            type="text"
+            onchange="onchange_input_alt(event)"
+          />
+        </li>
+        <li>
+          <span id="user_name">User* (3 characters at least)</span><br /><input
+            type="text"
+            onchange="onchange_input_alt(event)"
+          />
+        </li>
+        <li>
+          <span id="birth_date">Birth date* (dd/mm/yy)</span><br /><input
+            type="text"
+            onchange="onchange_input_alt(event)"
+          />
+        </li>
+        <li>
+          <span id="tfn_number">Telephone number* (+prefix)xxxxxxxxx</span
+          ><br /><input type="text" onchange="onchange_input_alt(event)" />
+        </li>
+        <li><br /><span id="e_mail_sending_info">Enviando e-mail...</span></li>
+      </ul>
+      <button id="send_new_user">Send</button>
+    </div>
+
+    <form method="post" action="">
+      <button
+        id="form_submit"
+        type="submit"
+        name=""
+        value=""
+        style="display: none"
+      ></button>
+    </form>
+
+    <script>
+      function close_me(e) {
+        e.target.parentNode.style.display = "none";
+      }
+
+      function onchange_input_alt(e) {
+        if (
+          e.target.parentNode.getElementsByTagName("span")[0].innerHTML ==
+          "First name*"
+        ) {
+          validate_first_name(e.target.value);
+        }
+
+        if (
+          e.target.parentNode.getElementsByTagName("span")[0].innerHTML ==
+          "Last name*"
+        ) {
+          validate_last_name(e.target.value);
+        }
+
+        if (
+          e.target.parentNode.getElementsByTagName("span")[0].innerHTML ==
+          "e-mail address*"
+        ) {
+          validate_email(e.target.value);
+        }
+
+        if (
+          e.target.parentNode.getElementsByTagName("span")[0].innerHTML ==
+          "Repeat your e-email*"
+        ) {
+          validate_repeat_email(e.target.value);
+        }
+
+        if (
+          e.target.parentNode.getElementsByTagName("span")[0].innerHTML ==
+          "User* (3 characters at least)"
+        ) {
+          validate_user(e.target.value);
+        }
+
+        if (
+          e.target.parentNode.getElementsByTagName("span")[0].innerHTML ==
+          "Birth date* (dd/mm/yy)"
+        ) {
+          validate_birth_date(e.target.value);
+        }
+
+        if (
+          e.target.parentNode.getElementsByTagName("span")[0].innerHTML ==
+          "Telephone number* (+prefix)xxxxxxxxx"
+        ) {
+          validate_tfn_number(e.target.value);
+        }
+      }
+    </script>
+  </body>
+
+  <script src="scripts.js"></script>
+</html>

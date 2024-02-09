@@ -1,0 +1,76 @@
+#mundo {
+  width: 800px;
+  height: 590px;
+  background-color: grey;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#coche {
+  position: relative;
+  top: 145px;
+  left: 100px;
+  width: 350px;
+  height: 150px;
+}
+
+.rueda {
+  border-radius: 100%;
+  width: 65px;
+  height: 65px;
+  animation-name: rueda-animation;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  position: relative;
+  animation-timing-function: linear;
+}
+
+@keyframes rueda-animation {
+  from {
+    transform: rotate(180deg);
+  }
+
+  to {
+    transform: rotate(-180deg);
+  }
+}
+
+#rueda1 {
+  top: 145px;
+  right: 21px;
+}
+
+#rueda2 {
+  top: 145px;
+  right: 270px;
+}
+
+#suelo {
+  position: absolute;
+  bottom: 15.5%;
+  width: 800px;
+  height: 150px;
+  background-color: rgb(177, 28, 28);
+}
+
+#arbol {
+  height: 300px;
+  width: 200px;
+  position: relative;
+  top: 25%;
+  left: -80%;
+  animation-name: arbol-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes arbol-animation {
+  from {
+    left: -80%;
+  }
+
+  to {
+    left: 100%;
+  }
+}

@@ -1,0 +1,251 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery img {
+  vertical-align: middle;
+}
+
+.gallery-img-container {
+  width: 100%;
+  position: relative;
+}
+
+/* Number text (1/3 etc) */
+.gallery-img-container article div {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* images */
+.gallery-img-container article img {
+  width: 100%;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 5px;
+  margin-top: -50px;
+  color: var(--color-font);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  background-color: var(--color-secondary);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  color: var(--color-font-hover);
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #15151e;
+  padding: 2px 16px;
+  color: #fff;
+}
+
+.gallery-img-container-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Three columns side by side */
+.gallery-img-container-row div {
+  float: left;
+  width: 33.33%;
+}
+
+.gallery-img-container-row div img {
+  width: 100%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* Product presentation */
+.gallery-presentation-container {
+  padding: 25px;
+  color: var(--color-font);
+}
+
+.gallery-presentation-container h1 {
+  font-size: 40px;
+}
+
+/* price product */
+.gallery-presentation-container p:nth-child(2) {
+  color: var(--color-secondary);
+  font-size: 30px;
+}
+
+.gallery-presentation-container-buttons {
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+}
+
+/* add cart buy now buttons */
+.gallery-presentation-container-buttons a {
+  border: solid var(--color-secondary);
+  border-radius: 8px;
+  padding: 5px;
+  color: #fff;
+  background-color: var(--color-secondary);
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  display: block;
+}
+
+.gallery-presentation-container-buttons select {
+  border: solid var(--color-secondary); 
+  border-radius: 8px;
+  padding: 5px;
+  color: #fff;
+  background-color: var(--color-secondary);
+  cursor: pointer;
+  font-size: 18px;
+  display: block;
+  width: 45px;
+}
+
+.gallery-presentation-container-buttons a:hover,
+.information-form input[type="submit"]:hover {
+  background-color: var(--color-success);
+  color: var(--color-font-hover);
+}
+
+/* information section */
+.information {
+  margin: 25px 0px;
+}
+
+/* Style the tab article */
+.information article {
+  color: var(--color-font);
+  display: none;
+  padding: 15px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.information-buttons {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* Description, additional info and review button */
+.information-buttons button {
+  background-color: var(--color-secondary);
+  color: #fff;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  flex-grow: 1;
+  border: 1px solid var(--color-primary);
+}
+
+#Reviews div {
+  border-bottom: solid var(--color-secondary);
+  text-align: left;
+}
+
+/* form  */
+.information-form {
+  padding: 20px;
+  color: var(--color-font);
+  text-align: left;
+  border-bottom: solid var(--color-secondary);
+  border-right: solid var(--color-secondary);
+  border-bottom-right-radius: 8px;
+}
+
+.information-form input[type="text"],
+.information-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+.information-form input[type="submit"] {
+  background-color: var(--color-secondary);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: solid var(--color-secondary);
+  cursor: pointer;
+}
+
+/* tablets */
+@media (min-width: 767px) {
+  .gallery-presentation-container-buttons select {
+    width: 100px;
+  }
+
+  .prev,
+  .next {
+    padding: 16px;
+  }
+
+  #Reviews div,
+  .information-form {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+/* pc */
+@media (min-width: 1170px) {
+  .gallery {
+    flex-direction: row;
+  }
+
+  .gallery-img-container {
+    width: 50%;
+  }
+
+  .gallery-presentation-container {
+    width: 50%;
+    padding: 35px;
+  }
+
+  #Reviews div,
+  .information-form {
+    width: 60%;
+  }
+}

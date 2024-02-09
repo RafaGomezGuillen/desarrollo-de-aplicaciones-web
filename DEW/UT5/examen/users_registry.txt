@@ -1,0 +1,4 @@
+{"user":"manuel","psswrd":"123bA6#8"}
+{"user":"gustavo","psswrd":"123bA6#7"}
+{"user":"alejandro","psswrd":"123bA6#6"}
+{"user":"miguel","psswrd":"123bA6#5"}

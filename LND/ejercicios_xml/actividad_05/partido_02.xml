@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- un DTD en la que los goles sean atributos -->
+<!DOCTYPE partidos [
+  <!ELEMENT partidos (partido)*>
+  <!ELEMENT partido (equipo-local, equipo-visitante)+>
+  <!ELEMENT equipo-local (#PCDATA)>
+  <!ELEMENT equipo-visitante (#PCDATA)>
+  <!ATTLIST equipo-local goles NMTOKEN #REQUIRED>
+  <!ATTLIST equipo-visitante goles NMTOKEN #REQUIRED>
+]>
+
+<partidos>
+  <partido>
+    <equipo-local goles="0">Nottingham Presa</equipo-local>
+    <equipo-visitante goles="1">Inter de Mitente</equipo-visitante>
+  </partido>
+  <partido>
+    <equipo-local goles="3">Vodka Juniors</equipo-local>
+    <equipo-visitante goles="3">Sparta da Risa</equipo-visitante>
+  </partido>
+  <partido>
+    <equipo-local goles="4">Water de Munich</equipo-local>
+    <equipo-visitante goles="2">Esteaua es del grifo</equipo-visitante>
+  </partido>
+</partidos>

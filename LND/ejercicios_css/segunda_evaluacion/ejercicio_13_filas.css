@@ -1,0 +1,17 @@
+table {
+  border-collapse: collapse;
+}
+
+h2::after {
+  content: "Filas";
+}
+
+td {
+  width: 60px;
+  height: 60px;
+  border: solid black 2px;
+}
+
+tr:nth-child(2n +2) {
+  background-color: black;
+}

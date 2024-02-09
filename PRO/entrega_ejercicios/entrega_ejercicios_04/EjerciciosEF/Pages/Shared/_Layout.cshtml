@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <link href="/css/site.css" rel="stylesheet" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="logotipo">
+            <img src="img/logotipo.jpg" />
+        </div>
+        <h1>Rafael Gómez Guillén - 1 DAW "A"</h1>
+    </header>
+
+    <div class="container">
+        <main class="content">
+            @RenderBody()
+        </main>
+        <div class="sidebar">
+            <h2><a href="/">Principal</a></h2>
+            <h2><a href="/Ejercicio01">Ejercicio 1</a></h2>
+            <h2><a href="/Ejercicio02">Ejercicio 2</a></h2>
+            <h2><a href="/Ejercicio02-1">Ejercicio 2.1</a></h2>
+            <h2><a href="/Ejercicio03">Ejercicio 3</a></h2>
+            <h2><a href="/Ejercicio04">Ejercicio 4</a></h2>
+            <h2><a href="/Ejercicio05">Ejercicio 5</a></h2>
+            <h2><a href="/Ejercicio06">Ejercicio 6</a></h2>
+        </div>
+    </div>
+
+    <footer>
+        <h2>23/05/2023 - CIFP César Manrique - Rafael Gómez Guillén - Curso (2022 / 23)</h2>
+    </footer>
+</body>
+</html>

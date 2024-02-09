@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Farmacias</title>
+    <style>
+        .boton {
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #007BFF;
+            color: #ffffff;
+            border-radius: 5px;
+        }
+        section {
+            margin-left: 25px;
+        }
+    </style>
+</head>
+<body>
+<img th:src="@{/images/imagenFarmaciaGod.jpg}" alt="Farmacia" width="300" height="200">
+<h2>Listado de Farmacias: </h2>
+<form th:action="@{/farmacias/listarFarmaciasCercanas}" method="post">
+    <label for="nombreFarmacia">Nombre de la Farmacia:</label>
+    <input type="text" id="nombreFarmacia" name="nombreFarmacia" required>
+    <button type="submit">Buscar</button>
+</form>
+<a th:href="@{/farmacias/form}">Añadir una nueva farmacia</a>
+<br>
+<p>Farmacias totales: <span th:text="${farmaciasTotal}"></span></p>
+<!-- Verifica si hay un mensaje de error y, si es así, muéstralo -->
+<p th:if="${mensaje != null}" th:text="${mensaje}" style="color: red;"></p>
+<div th:if="${farmacias != null and not #lists.isEmpty(farmacias)}">
+    <div th:each="farmacia : ${farmacias}">
+        <br>
+        <ul>
+            <li>ID: <span th:text="${farmacia.id}"></span></li>
+            <li>NOMBRE: <span th:text="${farmacia.nombre}"></span></li>
+            <li>WEB: <span th:text="${farmacia.web}"></span></li>
+            <li>DIRECCION: <span th:text="${farmacia.direccion}"></span></li>
+            <li>TELEFONO: <span th:text="${farmacia.telefono}"></span></li>
+            <li>LUNES: <span th:text="${farmacia.lunes}"></span></li>
+            <li>X: <span th:text="${farmacia.x}"></span></li>
+            <li>Y: <span th:text="${farmacia.y}"></span></li>
+        </ul>
+        <section>
+            <p>     <a th:href="@{/farmacias/eliminar/{nombre}(nombre=${farmacia.nombre})}">Eliminar</a></p>
+        </section>
+    </div>
+</div>
+
+<a th:href="@{/}" class="boton">Volver</a> <a th:href="@{/farmacias/listar}" class="boton"> Ver lista</a>
+</body>
+</html>

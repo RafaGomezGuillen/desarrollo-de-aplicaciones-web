@@ -1,0 +1,72 @@
+﻿@page
+@model Ejercicios.Pages.Ejercicio07Model
+@{
+    ViewData["Title"] = "Ejercicio 07";
+    int contadorNumerosIntroducidos = TempData["contador"] != null ? (int)TempData["contador"] : 1;
+    string numeros = TempData["numeros"] != null ? (string)TempData["numeros"] : "";
+}
+
+<h2>Ejercicio 7</h2>
+<form method="post">
+    @if (Request.Method == "POST")
+    {
+        <p>
+            <label for="numeros-originales">Introduce el número siguiente:</label>
+            <input type="number" min="0" name="numeros-originales" required />
+        </p>
+
+        if (Request.Form["numeros-originales"] != "0")
+        {
+            numeros += (Request.Form["numeros-originales"]) + ",";
+            TempData["numeros"] = numeros;
+
+            <p>Se han introducido: @(contadorNumerosIntroducidos++) números</p>
+            TempData["contador"] = contadorNumerosIntroducidos;
+
+            <p>
+                <input type="submit" name="action" value="Introducir" />
+            </p>
+        }
+        else
+        {
+            <p>Se han introducido: @(contadorNumerosIntroducidos - 1) números</p>
+        }
+        <p>Introduzca el cero para finalizar.</p>
+
+        string[] vectorNumeros = numeros.Split(',');
+        List<string> mensajes = new List<string>();
+
+        for (int i = 0; i < vectorNumeros.Length; i++)
+        {
+            int contador = 0;
+            for (int j = 0; j < vectorNumeros.Length; j++)
+            {
+                if (vectorNumeros[i] == vectorNumeros[j])
+                {
+                    contador++;
+                }
+            }
+            mensajes.Add($"{vectorNumeros[i]}\t{contador}");
+        }
+
+        foreach(string str in mensajes.Distinct())
+        {
+            if(str != "\t1")
+            {
+                <p>@str</p>
+            }
+        }
+    }
+    else
+    {
+        <p>
+            <label for="numero">Introduce el número siguiente: </label>
+            <input type="number" min="0" name="numeros-originales" value="" />
+        </p>
+        <p>Se han introducido: 0 números</p>
+        <p>
+            <input type="submit" name="action" value="Introducir" />
+        </p>
+        <p>Introduzca el cero para finalizar.</p>
+    }
+</form>

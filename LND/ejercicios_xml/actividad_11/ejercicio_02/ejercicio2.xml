@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="ejercicio2.xsd">
+  <alumno dni="99887766X">
+    <nombre>Dario</nombre>
+    <apellidos>Fernandez Alvarez</apellidos>
+    <nota>3.50</nota>
+    <edad>45</edad>
+    <comentario>Necesita mejorar</comentario>
+  </alumno>
+  <alumno dni="11223344A">
+    <nombre>Luis</nombre>
+    <apellidos>Alvarez Garcia</apellidos>
+    <nota>6.75</nota>
+    <edad>80</edad>
+    <comentario>Copio de Dario, Alfredo y Pilar</comentario>
+  </alumno>
+  <alumno dni="556677Z">
+    <nombre>Pilar</nombre>
+    <apellidos>Rodriguez Menendez</apellidos>
+    <nota>8.25</nota>
+    <comentario>Copio de todos</comentario>
+  </alumno>
+  <alumno dni="66554433T">
+    <nombre>Alfredo</nombre>
+    <apellidos>Martinez Gonzalez</apellidos>
+    <nota>No presentado</nota>
+    <comentario>Estudio Universidad de Oviedo</comentario>
+  </alumno>
+</alumnos>

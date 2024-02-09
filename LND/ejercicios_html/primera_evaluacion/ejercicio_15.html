@@ -1,0 +1,62 @@
+<html>
+
+<head>
+  <title> Rellena tu CV </title>
+</head>
+
+<body>
+  <h1> Rellena tu CV </h1>
+  <form action="insertar_producto.php" method="post">
+    <fieldset>
+      <legend> Datos personales</legend>
+      <label for="provincia"> Provincia </label> <br />
+      <select id="provincia" name="provincia">
+        <option value="" selected="selected"> - selecciona - </option>
+        <option value="tenerife"> Tenerife </option>
+        <option value="grancanarias"> Gran Canarias </option>
+        <option value="lagomera"> La Gomera </option>
+        <option value="lanzarote"> Lanzarote </option>
+        <option value="elhierro"> El Hierro </option>
+        <option value="lapalma"> La Palma </option>
+      </select>
+      <br /> <br />
+      Fecha de nacimiento
+      <table>
+        <tr>
+          <td> <input type="text" name="dia" value="" /> </td>
+          <td> de </td>
+          <td>
+            <label for="mes"> </label>
+            <select id="mes" name="mes">
+              <option value="enero"> Enero </option>
+              <option value="febrero"> Febrero </option>
+              <option value="marzo"> Marzo </option>
+              <option value="abril"> Abril </option>
+              <option value="mayo"> Mayo </option>
+              <option value="junio"> Junio </option>
+              <option value="julio"> Julio </option>
+              <option value="agosto"> Agosto </option>
+              <option value="septiembre"> Septiembre </option>
+              <option value="octubre"> Octubre </option>
+              <option value="noviembre"> Noviembre </option>
+              <option value="diciembre"> Diciembre </option>
+            </select>
+          </td>
+          <td> de </td>
+          <td> <input type="text" name="year" value="" /> </td>
+        </tr>
+      </table>
+      <br />
+      <label for="tema"> Tema de interés </label> <br />
+      <select id="tema" name="tema" multiple="multiple">
+        <option value="administracion"> Administración de bases de datos </option>
+        <option value="analisis"> Análisis y programación </option>
+        <option value="arquitectura"> Arquitectura </option>
+        <option value="calidad"> Calidad </option>
+        <option value="business"> ERP, CRM, Business Intelligence </option>
+      </select>
+    </fieldset>
+  </form>
+</body>
+
+</html>

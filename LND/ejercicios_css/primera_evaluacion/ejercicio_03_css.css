@@ -1,0 +1,38 @@
+body {
+  background-color: yellow;
+  background-image: url("../../imagenes/notepad.jpg");
+  background-repeat: repeat-y;
+  padding-left: 128px;
+}
+
+h1 {
+  width: 90%;
+  border-style: solid;
+  border-color: white;
+  background-color: blue;
+}
+
+h2 {
+  width: 95%;
+  background-color: red;
+}
+
+li {
+  margin: 5px;
+  padding: 15px;
+  background-color: white;
+  border-color: blue;
+  border-style: dashed;
+}
+
+ul {
+  margin-right: 5%;
+  padding-right: 35px;
+  padding-left: 30px;
+  background-color: aquamarine;
+}
+
+p {
+  margin-left: 5%;
+  margin-right: 5%;
+}

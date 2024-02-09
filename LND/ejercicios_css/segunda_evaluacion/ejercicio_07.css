@@ -1,0 +1,12 @@
+body {
+  background-image: url(../../imagenes/ejercicio_07_imagen2.png), url(../../imagenes/ejercicio_07_imagen1.png), url(../../imagenes/ejercicio_07_fondo.jpg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 20%, 5%, cover;
+  background-position: 95% 95%, 25% 25%;
+}
+
+p {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}

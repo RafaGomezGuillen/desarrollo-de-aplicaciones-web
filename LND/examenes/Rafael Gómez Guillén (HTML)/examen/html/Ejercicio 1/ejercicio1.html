@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>ejercicio1</title>
+</head>
+
+<body>
+  <p>Antes de programar</p>
+  <table>
+    <tr>
+      <td>
+        <ol>
+          <li>Instalar JDK</li>
+          <ol>
+            <li>Ir a oracle.com</li>
+            <li>Buscar JDK</li>
+            <li>Aceptar licencia</li>
+            <li>Descargar</li>
+            <li>Ejecutar setup.exe</li>
+            <ol>
+              <li>Ejecutar como admin</li>
+              <li>Comprobar</li>
+            </ol>
+          </ol>
+          <li>Modificar variables de entorno</li>
+          <li>Asignar mas memoria</li>
+          <li>Reiniciar</li>
+        </ol>
+      </td>
+      <td>
+        Prerrequisitos
+        <ul>
+          <li>Comprobar RAM</li>
+          <li>Comprobar disco</li>
+          <li>Comprobar arranque</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <td>
+        <fieldset>
+          <legend>Datos personales</legend>
+          Nombre
+          <input type="text" name="nombre" value="" /><br>
+          Apellidos
+          <input type="text" name="nombre" value="" size="30" /><br>
+          <label for="Sueldo">Sueldo</label>
+          <select id="Sueldo" name="Sueldo" size="1">
+            <option value="mas">Mas de 400 euros</option>
+            <option value="menos">Menos de 400 euros</option>
+            <option value="Variable">Variable</option>
+          </select><br>
+          <input name="enfermedad" type="checkbox" value="enfermedad" /> Con enfermedad profesional <br>
+          <input name="padres" type="checkbox" value="padres" /> Con padres a cargo <br>
+          <input name="hijos" type="checkbox" value="hijos" /> Con hijos a cargo <br>
+          <label for="Conocimientos">Conocimientos sobre</label><br>
+          <select id="Conocimientos" name="Conocimientos" size="4" multiple="multiple">
+            <option value="Informatica">Informatica</option>
+            <option value="Conduccion">Conduccion</option>
+            <option value="Finanzas">Finanzas</option>
+            <option value="Leyes">Leyes</option>
+          </select><br>
+        </fieldset>
+      </td>
+      <td>
+        <fieldset>
+          <legend>Datos fiscales</legend>
+          <input name="paro" type="checkbox" value="paro" /> En paro <br>
+          <input name="Autonomo" type="checkbox" value="Autonomo" /> Autonomo <br>
+          <input name="ajena" type="checkbox" value="ajena" /> Po c.ajena <br>
+          ¿Alguna vez en el extranjero?<br>
+          <input name="si" type="checkbox" value="si" /> si
+          <select id="extranjero" name="extranjero" size="1">
+            <option value="UE">Dentro de la UE</option>
+            <option value="Asia">En Asia</option>
+            <option value="Hispanoamerica">En Hispanoamerica</option>
+            <option value="EE.UU">En EE.UU</option>
+            <option value="otro">En otro</option>
+          </select><br>
+          <input name="no" type="checkbox" value="no" /> No <br>
+          Observaciones <br>
+          <textarea id="Observaciones" name="Observaciones" cols="40" rows="4"></textarea>
+        </fieldset>
+      </td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

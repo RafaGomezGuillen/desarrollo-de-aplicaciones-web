@@ -1,0 +1,55 @@
+﻿@model IEnumerable<PO01_GomezRafael_v1.Models.GamaProducto>
+
+@{
+    ViewData["Title"] = "Gama de productos";
+}
+
+<h1>Gama de productos</h1>
+
+<p>
+    <a asp-action="Create">Nueva gama</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DescripcionTexto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescripcionHtml)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imagen)
+            </th>
+            <th>
+                Ver productos
+            </th>
+            <th>
+                Operaciones
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionTexto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionHtml)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Imagen)
+            </td>
+            <td>
+                    <a asp-controller="Productoes" asp-action="ProductosPorGama" asp-route-id="@item.Gama">Productos</a>
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Gama">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Gama">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.Gama">Borrar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

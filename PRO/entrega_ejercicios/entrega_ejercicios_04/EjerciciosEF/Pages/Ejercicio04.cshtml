@@ -1,0 +1,85 @@
+﻿@page
+@model EjerciciosEF.Pages.Ejercicio04Model
+@{
+    ViewData["Title"] = "Ejercicio 4";
+    List<string> tipoPuntuacion = (from tipo in Model.Datos.Tipo
+                                   join discotipo in Model.Datos.DiscoTipo
+                                   on tipo.IdTipo equals discotipo.IdTipo
+                                   join puntuacion1 in Model.Datos.Puntuacion
+                                   on discotipo.IdDisco equals puntuacion1.Iddisco
+                                   group new { tipo, puntuacion1 } by new { tipo.Tipo1 } into grupo
+                                   select $"{grupo.Key.Tipo1};{grupo.Select(g => g.puntuacion1.Puntuacion1).Average()}").ToList();
+}
+<h2>Mostrar tipos de música por puntuación</h2>
+<p>
+    Hay un input de tipo int que representa la puntuación del 1 al 10. Se muestran los tipos de música iguales a
+    la seleccionada.
+</p>
+<form method="post">
+    @if (Request.Method == "POST")
+    {
+        <div>
+            <label for="puntuacion">Puntuación: </label>
+            <input type="number" required min="1" max="10" name="puntuacion" value="@Request.Form["puntuacion"]" />
+            <input type="submit" name="action" value="Mostrar"/>
+        </div>
+        <div>
+            @if (Request.Form["action"] == "Mostrar")
+            {
+                int puntuacion = Convert.ToInt32(Request.Form["puntuacion"]);
+                tipoPuntuacion = (from tipo in Model.Datos.Tipo
+                                               join discotipo in Model.Datos.DiscoTipo
+                                               on tipo.IdTipo equals discotipo.IdTipo
+                                               join puntuacion1 in Model.Datos.Puntuacion
+                                               on discotipo.IdDisco equals puntuacion1.Iddisco
+                                               where puntuacion1.Puntuacion1 == puntuacion
+                                               group new { tipo, puntuacion1 } by new { tipo.Tipo1 } into grupo
+                                               select $"{grupo.Key.Tipo1};{grupo.Select(g => g.puntuacion1.Puntuacion1).Average()}").ToList();
+
+                <table>
+                    <tr>
+                        <td>Tipo de música</td>
+                        <td>Puntuación</td>
+                    </tr>
+                    @foreach (string str in tipoPuntuacion)
+                    {
+                        <tr>
+                            @{
+                                string[] separarCampos = str.Split(';');
+                                for (int i = 0; i < separarCampos.Length; i++)
+                                {
+                                    <td>@separarCampos[i]</td>
+                                }
+                            }
+                        </tr>
+                    }
+                </table>
+            }
+        </div>
+    }
+    else
+    {
+        <div>
+            <label for="puntuacion">Puntuación: </label>
+            <input type="number" required min="1" max="10" name="puntuacion" />
+            <input type="submit" name="action" value="Mostrar" />
+        </div>
+
+        <table>
+            <tr>
+                <td>Tipo de música</td>
+                <td>Puntuación</td>
+            </tr>
+            @foreach (string str in tipoPuntuacion)
+            {
+                <tr>
+                    @{
+                        string[] separarCampos = str.Split(';');
+                        <td>@separarCampos[0]</td>
+                        <td>@(separarCampos[1].Substring(0, 1))</td>
+                    }
+                </tr>
+            }
+        </table>
+    }
+</form>

@@ -1,0 +1,302 @@
+@font-face {
+  font-family: "peignot";
+  src: url("Peignot.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#new_user {
+  position: absolute;
+  left: 50%;
+  top: 15vw;
+  width: 90%;
+  transform: translate(-50%, 0);
+  background-color: white;
+  color: #808080;
+  border-radius: 2vw;
+  font-size: 5vw;
+  font-family: "peignot";
+  z-index: 2;
+  height: 100vw;
+}
+
+#new_user > button:first-child {
+  color: black;
+  background-color: white;
+  font-size: 3.5vh;
+  position: absolute;
+  left: 100%;
+  top: 0%;
+  transform: translate(-100%, 0);
+  border: none;
+  border-radius: inherit;
+  outline: none;
+}
+
+#new_user > ul {
+  list-style-type: none;
+  background-color: inherit;
+  position: absolute;
+  width: 100%;
+  top: 5%;
+  left: 0%;
+  transform: translate(0, 0);
+}
+
+#new_user > ul > li {
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#new_user > ul > li:after {
+  content: "\00a0";
+}
+
+#new_user > ul > li:nth-child(8):after {
+  content: "";
+}
+
+#new_user > ul > li input {
+  color: black;
+  font-family: "verdana";
+  outline: none;
+  width: 100%;
+  height: auto;
+  border-radius: 2vw;
+  border-style: inset;
+  border-color: #909090;
+  padding: 0vw 0vw 0vw 1vw;
+}
+
+#new_user > ul > li input:focus {
+  background-color: #eeeeee;
+}
+
+#new_user > button:nth-child(3) {
+  position: relative;
+  top: 125%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: black;
+  color: white;
+  border-radius: 2vw;
+  border: none;
+  padding: 2vw 2vw 2vw 2vw;
+  outline: none;
+  font-family: "peignot";
+  font-size: 6vw;
+}
+
+#new_user > button:nth-child(3):active {
+  background-color: rgba(150, 150, 150, 1);
+  color: black;
+}
+
+/*#new_user>ul>li:nth-child(9) {display:none;color:#808080;animation: weee 0.8s infinite;}*/
+
+@media only screen and (min-device-aspect-ratio: 1/1) {
+  #new_user {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    width: 25vw;
+    height: 30vw;
+    transform: translate(-50%, -50%);
+    box-shadow: 0.5vw 0.1vw 0.5vw #909090;
+    border-radius: 1vw;
+    font-size: 0.9vw;
+    background-color: #ffffff;
+    z-index: 2;
+    opacity: 1;
+  }
+
+  #new_user > ul > li:after {
+    content: "\00a0";
+  }
+
+  #new_user > button:first-child {
+    position: absolute;
+    top: 0vh;
+    left: 100%;
+    transform: translate(-100%, 0);
+    border: none;
+    color: black;
+    font-size: 1.6vw;
+    font-family: "peignot";
+    border-radius: inherit;
+    background-color: white;
+  }
+
+  #new_user > button:nth-child(3) {
+    position: absolute;
+    outline: none;
+    transform: translate(-50%, -150%);
+    padding: 0.5vw;
+    font-size: 0.9vw;
+    border-radius: 1vw;
+    top: 100%;
+    left: 50%;
+  }
+
+  #new_user > button:nth-child(3):active {
+    background-color: rgba(150, 150, 150, 1);
+    color: black;
+    outline: none;
+    transform: translateX(-50%) translateY(-150%);
+  }
+
+  #new_user > ul {
+    list-style-type: none;
+    color: #909090;
+    font-size: 0.8vw;
+    position: absolute;
+    width: calc(0.8 * 25vw);
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    font-family: "peignot";
+  }
+
+  #new_user > ul > li > input {
+    width: 100%;
+    padding-left: 0.5vw;
+    height: 1.2vw;
+  }
+
+  #new_user > ul > li:nth-child(9) {
+    display: none;
+    color: #808080;
+    animation: weee 0.8s infinite;
+  }
+}
+
+.dialog {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 50vh;
+  height: 30vh;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 1vw;
+  max-width: 80vw;
+  z-index: 4;
+  display: none;
+  box-shadow: 1vh 1vh rgba(0, 0, 0, 1);
+  font-family: "verdana";
+}
+
+.dialog > span {
+  position: absolute;
+  padding: 0vw 2vw 0vw 2vw;
+  width: calc(100% - 4vw);
+  top: 50%;
+  left: 0%;
+  transform: translate(0, -50%);
+  color: black;
+  text-align: justify;
+  background-color: white;
+}
+
+.dialog button {
+  outline: none;
+  padding: 0.5vw 1vw 0.5vw 1vw;
+  border: none;
+  position: absolute;
+  border-radius: inherit;
+  font-family: "peignot";
+}
+
+.dialog button:active {
+  background-color: rgba(150, 150, 150, 1);
+  color: black;
+}
+
+.dialog > button:nth-child(3):active {
+  background-color: rgba(150, 150, 150, 1);
+  color: black;
+}
+
+.dialog > button:nth-child(3) {
+  left: 100%;
+  top: 0%;
+  transform: translate(-100%, 0);
+  background-color: white;
+  color: black;
+  font-size: 3.5vh;
+}
+
+.dialog > button:last-child {
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -150%);
+  background-color: black;
+  color: white;
+  font-size: 3vh;
+}
+
+.dialog > ul {
+  list-style-type: none;
+  text-align: right;
+  width: calc(100% - 4vw);
+  padding: 0vw 2vw 0vw 2vw;
+  position: absolute;
+  top: 70%;
+  display: none;
+}
+
+.dialog > ul > li {
+  display: inline-block;
+}
+
+.dialog > ul > li:first-child {
+  padding: 0vw 2vw 0vw 0vw;
+}
+
+.dialog > ul > li > input:checked {
+  color: green;
+}
+
+.dialog button:last-child:active {
+  background-color: rgba(150, 150, 150, 1);
+  color: black;
+}
+
+@media only screen and (min-device-aspect-ratio: 1/1) {
+  .dialog > span {
+    font-size: 1vw;
+  }
+  .dialog > button:nth-child(3) {
+    top: 0vh;
+    left: 100%;
+    font-size: 1.6vw;
+    transform: translate(-102%, 0);
+    padding: 0vw 0vw 0vw 0vw;
+  }
+  .dialog > button:last-child {
+    font-size: 1vw;
+  }
+}

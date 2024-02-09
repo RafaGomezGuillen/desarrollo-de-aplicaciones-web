@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+
+<div id="main-content">
+    <h1>Detalles del artista</h1>
+    <h2><a th:href="@{/artist}">Lista de artistas</a></h2>
+    <div class="form-container">
+        <form th:object="${artist}">
+            <label>Id</label>
+            <input type="text" th:field="*{id}" readonly />
+
+            <label>Nombre</label>
+            <input type="text" th:field="*{name}" readonly />
+
+            <th:block th:if="${#lists.size(artist.albums) > 0}">
+                <label>Albumes</label>
+                <table>
+                    <tr>
+                        <td>Titulo</td>
+                    </tr>
+                    <tr th:each="album : ${artist.albums}">
+                        <td th:text="${album.title}"></td>
+                    </tr>
+                </table>
+            </th:block>
+
+            <th:block th:if="${#lists.size(artist.albums) <= 0}">
+                <label>Este artista no tiene albumes</label>
+            </th:block>
+        </form>
+    </div>
+</div>

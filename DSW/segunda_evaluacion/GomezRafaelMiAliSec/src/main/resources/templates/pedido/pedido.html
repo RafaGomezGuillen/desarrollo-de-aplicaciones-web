@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+
+<div id="main-content">
+    <h1>Historial de pedidos</h1>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Usuario</td>
+            <td>Precio total</td>
+            <td>Fecha</td>
+            <td>Productos</td>
+        </tr>
+        <tr th:each="pedido : ${listPedidos}">
+            <td th:text="${pedido.id}"></td>
+            <td th:text="${pedido.usuario}"></td>
+            <td th:text="${pedido.precioTotal}"></td>
+            <td th:text="${pedido.fecha}"></td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>Precio</td>
+                        <td>Imagen</td>
+                        <td>Municipio</td>
+                        <td>Stock</td>
+                    </tr>
+                    <tr th:each="product : ${pedido.productos}">
+                        <td th:text="${product.productName}"></td>
+                        <td th:text="${product.productPrice}"></td>
+                        <td>
+                            <img th:src="@{'/img/'+${product.productPicture}}" width="100px" height="100px" />
+                        </td>
+                        <td th:text="${product.municipio.nombre}"></td>
+                        <td th:text="${product.productStock}"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>

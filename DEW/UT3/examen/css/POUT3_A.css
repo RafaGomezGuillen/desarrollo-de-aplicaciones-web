@@ -1,0 +1,39 @@
+table,
+table th,
+table td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
+.cabecera {
+  background: rgb(133, 221, 55);
+  color: #0d0d0d;
+  font: bold "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+.columnaPar {
+  background: #b0bad0;
+  color: rgb(46, 40, 40);
+}
+
+.columnaImpar {
+  background: #d2ae6a;
+  color: black;
+}
+
+.primeraColumna {
+  background: black;
+  color: white;
+}
+
+.pie {
+  background: #f5a9e1;
+  text-align: right;
+  font-size: 150%;
+}
+
+.borde_rojo {
+  border: 3px red solid;
+}

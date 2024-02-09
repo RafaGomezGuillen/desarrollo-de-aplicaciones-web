@@ -1,0 +1,12 @@
+1. Nombre de los módulos que se imparten en el Instituto:
+/cifp/modulos/modulo/nombre
+2. Nombre de los módulos del ciclo ASIR:
+/cifp/modulos/modulo[ciclo="ASIR"]/nombre
+3. Nombre de los módulos que se imparten en el primer curso de cualquier ciclo:
+/cifp/modulos/modulo[curso="1"]/nombre
+4. Nombre de los módulos de menos de 5 horas semanales:
+/cifp/modulos/modulo[horasSemanales<5]/nombre
+5. Nombre de los módulos que se imparten en el primer curso de ASIR:
+/cifp/modulos/modulo[curso=1][ciclo="ASIR"]/nombre
+6. Horas semanales de los módulos de más de 4 horas semanales (5, 5, 6,6).
+/cifp/modulos/modulo[horasSemanales>4]/horasSemanales

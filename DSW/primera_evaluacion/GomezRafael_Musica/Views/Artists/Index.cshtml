@@ -1,0 +1,56 @@
+﻿@model IEnumerable<GomezRafael_Musica.Models.Artist>
+
+@{
+    ViewData["Title"] = "Artistas";
+}
+
+<h1>Lista de artistas</h1>
+
+<p>
+    <a asp-action="Create">Crear un nuevo artista</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ArtistId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                Crear álbum
+            </th>
+            <th>
+                Operaciones
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @*Manera descendente según el nombre del artista. Take solo muestra 15 items*@
+
+        @foreach (var item in Model.OrderByDescending(item => item.Name).Take(15))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArtistId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <a asp-controller="Albums" asp-action="CreateAlbumByArtist" asp-route-id="@item.ArtistId" asp-route-name="@item.Name">Crear ábum</a>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ArtistId">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.ArtistId">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ArtistId">Borrar</a> |
+                    <a asp-controller="Albums" asp-action="AlbumsByArtist" asp-route-artistId="@item.ArtistId">
+                        Discos del artista
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-primary">Casa</a>

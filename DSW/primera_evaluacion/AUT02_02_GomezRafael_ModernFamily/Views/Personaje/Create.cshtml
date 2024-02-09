@@ -1,0 +1,42 @@
+﻿@using AUT02_02_GomezRafael_ModernFamily.Models
+@model Personaje
+
+@{
+    ViewData["Title"] = "Crear personaje";
+}
+
+<h1>Crear personaje</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Introduce tu nombre: </label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Family" class="control-label">Introduce el nombre de la familia: </label>
+                <input asp-for="Family" class="form-control" />
+                <span asp-validation-for="Family" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NChildren" class="control-label">Introduce el número de hijos: </label>
+                <input asp-for="NChildren" class="form-control" />
+                <span asp-validation-for="NChildren" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin: 25px 0px">
+                <input type="submit" value="Crear personaje" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a la lista de personajes</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

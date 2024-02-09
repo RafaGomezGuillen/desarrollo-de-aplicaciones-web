@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- shared -->
+    <link rel="stylesheet" href="../../styles/styles.css" />
+    <link rel="stylesheet" href="../../styles/nav.css" />
+    <link rel="stylesheet" href="../../styles/footer.css" />
+
+    <!-- style page -->
+    <link rel="stylesheet" href="shipping.css" />
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>F1 Store</title>
+  </head>
+
+  <body>
+    <nav id="myTopnav">
+      <a href="../../index.html">Home</a>
+      <a href="../../catalog/catalog.html">Catalog</a>
+      <a href="../../profile/profile.html">Profile</a>
+      <a href="../../about-us/about-us.html" class="active">About us</a>
+      <label for="selTheme">Select color pallete</label>
+      <select id="selTheme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+      <a href="#" class="log">Log in</a>
+      <a href="#" class="log">Log out</a>
+      <a
+        href="javascript:void(0);"
+        class="icon"
+        onclick="navbar()"
+        aria-label="Navbar icon for mobile screens"
+      >
+        <em class="fa fa-bars"></em>
+      </a>
+    </nav>
+
+    <p class="col-25" style="color: var(--color-font)">
+      Purchasing >> <a href="../cart.html">cart</a> / checkout
+    </p>
+
+    <section class="row-shipping">
+      <div class="col-75">
+        <div class="shipping-container">
+          <div class="row-shipping">
+            <div class="col-50">
+              <h3>Billing Address</h3>
+
+              <label><em class="fa fa-user"></em> Full Name</label>
+              <input type="text" placeholder="Rafa G. Guillen" />
+
+              <label><em class="fa fa-envelope"></em> Email</label>
+              <input type="text" placeholder="rafa@example.com" />
+
+              <label><em class="fa fa-address-card-o"></em> Address</label>
+              <input type="text" placeholder="Calle Castillo" />
+
+              <label><em class="fa fa-institution"></em> City</label>
+              <input type="text" placeholder="Santa Cruz de Tenerife" />
+
+              <div class="row-shipping">
+                <div class="col-50">
+                  <label>State</label>
+                  <input type="text" placeholder="SC" />
+                </div>
+                <div class="col-50">
+                  <label>Zip</label>
+                  <input type="text" placeholder="38010" />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-50">
+              <h3>Payment</h3>
+
+              <label>Accepted Cards</label>
+              <div class="icon-container">
+                <em class="fa fa-cc-visa" style="color: navy"></em>
+                <em class="fa fa-cc-amex" style="color: blue"></em>
+                <em class="fa fa-cc-mastercard" style="color: red"></em>
+                <em class="fa fa-cc-discover" style="color: orange"></em>
+                <em class="fa fa-paypal"></em>
+              </div>
+
+              <label>Name on Card</label>
+              <input type="text" placeholder="Rafael Gomez Guillen" />
+
+              <label>Credit card number</label>
+              <input type="text" placeholder="1111-2222-3333-4444" />
+
+              <label>Exp Month</label>
+              <input type="text" placeholder="September" />
+
+              <div class="row-shipping">
+                <div class="col-50">
+                  <label>Exp Year</label>
+                  <input type="text" placeholder="2023" />
+                </div>
+                <div class="col-50">
+                  <label>CVV</label>
+                  <input type="text" placeholder="010" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            onclick="document.getElementById('id01').style.display='block'"
+          >
+            Display modal (Confirm Purchase)
+          </button>
+        </div>
+      </div>
+      <div class="col-25">
+        <div
+          class="shipping-container"
+          style="border: solid var(--color-secondary) 2px; border-radius: 8px"
+        >
+          <h3>Cart</h3>
+          <p>Car 1 <span class="price">1000$</span></p>
+          <p>Car 2 <span class="price">1000$</span></p>
+          <p>Car 3 <span class="price">1000$</span></p>
+          <hr />
+          <p>
+            Total <span class="price" style="color: black"><b>3000$</b></span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="id01" class="modal">
+      <article class="modal-content animate">
+        <div class="modal-img">
+          <span
+            onclick="document.getElementById('id01').style.display='none'"
+            class="close"
+            >&times;</span
+          >
+          <img src="../../assets/img/logos/f1.png" alt="f1 logo" />
+        </div>
+
+        <div class="modal-content-text">
+          <h2>Congratulations</h2>
+          <p>Purchase confirmed</p>
+          <p>
+            Occaecat nulla aliquip officia laborum elit. Excepteur dolor nisi
+            ipsum officia voluptate. Dolore irure veniam nisi veniam nostrud
+            fugiat voluptate cupidatat ullamco elit deserunt ipsum ipsum.
+            Laboris quis anim tempor eiusmod eu exercitation consectetur. Do
+            incididunt ut sint ut adipisicing proident ipsum. Magna esse irure
+            sit officia fugiat. Pariatur anim proident consequat officia sit
+            veniam ea est voluptate velit nulla enim.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <section class="footer-row">
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="" aria-label="Find us on GitHub">
+                <em class="fa fa-github"></em>
+              </a>
+              <a href="" aria-label="Find us on X">
+                <em class="fa fa-twitter"></em>
+                </a>
+              <a href="" aria-label="Find us on Instagram">
+                <em class="fa fa-instagram"></em>
+              </a>
+              <a href="" aria-label="Find us on LinkedIn">
+                <em class="fa fa-linkedin"></em>
+              </a>
+            </div>
+          </article>
+        </section>
+        <section class="footer-row">
+          <article class="footer-col" style="margin-top: 20px">
+            <a href="/">
+              <img
+                src="../../assets/img/logos/f1.png"
+                style="width: 110px; margin-right: 10px; margin-bottom: 10px"
+                alt="f1 logo"
+              />
+            </a>
+          </article>
+          <article class="footer-col-bottom">
+            <p>
+              © 2023 Formula One World Championship Limited. Rafael Gómez
+              Guillén.
+            </p>
+          </article>
+        </section>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="../../js/navbar.js"></script>
+    <script src="../../js/darkMode.js"></script>
+
+    <script>
+      const modal = document.getElementById("id01");
+
+      window.onclick = function (event) {
+        if (event.target == modal) modal.style.display = "none";
+      };
+    </script>
+  </body>
+</html>

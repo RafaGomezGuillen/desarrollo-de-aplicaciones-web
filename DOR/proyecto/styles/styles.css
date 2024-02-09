@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: F1regular;
+  src: url("../assets/fonts/Formula1-Regular.otf");
+}
+
+@font-face {
+  font-family: F1Bold;
+  src: url("../assets/fonts/Formula1-Bold.otf");
+}
+
+@font-face {
+  font-family: F1Wide;
+  src: url("../assets/fonts/Formula1-Wide.otf");
+}
+
+/* Dark mode variables */
+:root {
+  --dark-color-primary: #15151e;
+  --dark-color-secondary: #cc0000;
+  --dark-color-success: #fff;
+  --dark-color-font: #fff;
+  --dark-color-font-hover: #000;
+}
+
+/* Set dark mode variables */
+body.theme-dark {
+  --color-primary: var(--dark-color-primary);
+  --color-secondary: var(--dark-color-secondary);
+  --color-success: var(--dark-color-success);
+  --color-font: var(--dark-color-font);
+  --color-font-hover: var(--dark-color-font-hover);
+}
+
+/* Light mode variables*/
+body {
+  --color-primary: #fff;
+  --color-secondary: #cc0000;
+  --color-success: #030304;
+  --color-font: #000;
+  --color-font-hover: #fff;
+
+  background-color: var(--color-primary);
+  font-family: F1regular, Arial, Helvetica, sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: F1Bold;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-font);
+}
+
+a:hover {
+  color: var(--color-font-hover);
+}
+
+.fa-star {
+  color: gold;
+  font-size: 25px !important;
+}

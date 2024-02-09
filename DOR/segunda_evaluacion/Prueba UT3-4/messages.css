@@ -1,0 +1,14 @@
+.ok {
+  color: green; /* verde para indicar que todo está bien */
+  background-color: #d4edda; /* Fondo verde más oscuro */
+}
+
+.alert {
+  color: orange; /* naranja para advertencias o estados de atención */
+  background-color: #fff3cd; /* Fondo amarillo más oscuro */
+}
+
+.error {
+  color: red; /* rojo para errores o problemas */
+  background-color: #f8d7da; /* Fondo rojo más oscuro */
+}

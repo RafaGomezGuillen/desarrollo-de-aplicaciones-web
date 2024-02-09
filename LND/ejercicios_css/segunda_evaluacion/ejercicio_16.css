@@ -1,0 +1,37 @@
+.bocadillo {
+  border: solid red;
+  margin: 0 auto;
+  border-width: 10px;
+  width: 600px;
+  height: 100px;
+  border-top-left-radius: 10em 50px;
+  border-bottom-left-radius: 10em 50px;
+  border-top-right-radius: 10em 50px;
+  border-bottom-right-radius: 10em 50px;
+}
+
+.bocadillo::after {
+  content: "";
+  display: block;
+  height: 50px;
+  width: 50px;
+  border: solid red;
+  border-width: 10px;
+  border-radius: 100%;
+  position: relative;
+  left: 420px;
+  top: 30px;
+}
+
+.bocadillo::before {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+  border: solid red;
+  border-width: 10px;
+  border-radius: 100%;
+  position: relative;
+  left: 490px;
+  top: 130px;
+}

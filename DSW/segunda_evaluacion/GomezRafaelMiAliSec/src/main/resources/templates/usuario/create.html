@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+
+<div id="main-content">
+    <h1>Crear producto</h1>
+    <div class="form-container">
+        <form th:action="@{/usuario/saveUser}" th:object="${user}" method="post">
+            <label>Nombre de usuario</label>
+            <input type="text" required th:field="*{userName}">
+            <label th:text="${errorMessage}" class="error"></label>
+
+            <label>Contraseña</label>
+            <input type="password" required th:field="*{password}">
+
+            <button>Registrarse</button>
+        </form>
+    </div>
+</div>

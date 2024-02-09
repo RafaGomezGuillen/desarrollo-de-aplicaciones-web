@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+
+<div id="main-content">
+    <h1>Carrito</h1>
+    <h2><a th:href="@{/producto}">Volver a la lista de productos</a></h2>
+    <!-- Verifica si el tamaño de listProducts es mayor que 0 -->
+    <th:block th:if="${#lists.size(listProducts) > 0}">
+        <table>
+            <tr>
+                <td>Nombre</td>
+                <td>Precio</td>
+                <td>Imagen</td>
+                <td>Municipio</td>
+                <td>Stock</td>
+            </tr>
+            <tr th:each="product, index : ${listProducts}">
+                <td th:text="${product.productName}"></td>
+                <td th:text="${product.productPrice}"></td>
+                <td>
+                    <img th:src="@{'/img/'+${product.productPicture}}" width="100px" height="100px" />
+                </td>
+                <td th:text="${product.municipio.nombre}"></td>
+                <td th:text="${product.productStock}"></td>
+            </tr>
+        </table>
+
+        <h3>Subir carrito a la lista de pedidos</h3>
+
+        <div class="form-container">
+            <form th:action="@{/pedido/savePedido}" th:object="${pedido}" method="post">
+                <label>Precio total de compra</label>
+                <input type="number" th:value="${precioTotal}" readonly>
+
+                <button>Comprar</button>
+            </form>
+        </div>
+    </th:block>
+    <th:block th:if="${#lists.size(listProducts) <= 0}">
+        <p>No hay productos en el carrito.</p>
+    </th:block>
+</div>

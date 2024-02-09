@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <title> Formulario </title>
+</head>
+
+<body>
+  <form action="http://www.apuntes.es/maneja_formulario.php" method="post">
+    Nombre: <input type="text" name="nombre" value="" /> <br /> <br />
+    Apellidos: <input type="text" name="apellidos" value="" size="30" /> <br /> <br />
+    Correo electrónico: <input type="text" name="correo_electronico" value="" size="45" /> <br /> <br />
+    Población: <input type="text" name="provincia" value="" /> <br /> <br />
+    Provincia: <input type="text" name="provincia" value="" /> <br /> <br />
+    <table style="width: 50%;">
+      <tr>
+        <td> Edad: </td>
+        <td> ¿Cómo nos conociste? </td>
+      </tr>
+      <tr>
+        <td> <input type="radio" name="edad" value="0-20" /> 0-20 </td>
+        <td> <input name="amigo" type="checkbox" value="amigo" /> A través de un amigo.</td>
+      </tr>
+      <tr>
+        <td> <input type="radio" name="edad" value="20-40" checked="checked" /> 20-40 </td>
+        <td> <input name="buscador" type="checkbox" value="buscador" /> A través de un buscador.</td>
+      </tr>
+      <tr>
+        <td> <input type="radio" name="edad" value="40-60" /> 40-60 </td>
+        <td> <input name="red" type="checkbox" value="red" /> Navegando por la red.</td>
+      </tr>
+      <tr>
+        <td> <input type="radio" name="edad" value="60-100" /> 60-100 </td>
+        <td> <input name="otros" type="checkbox" value="otros" /> Otros. </td>
+      </tr>
+      <tr>
+        <td> <input type="submit" name="Enviar" value="Enviar formulario" /> </td>
+        <td> <input type="reset" name="limpiar" value="Borrar formulario" /> </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+
+<div id="main-content">
+    <h1>Lista de usuarios</h1>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Usuario</td>
+            <td>Roles</td>
+            <td>Operaciones</td>
+        </tr>
+        <tr th:each="user : ${userList}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.userName}"></td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Id</td>
+                        <td>Rol</td>
+                        <td>Descripcion</td>
+                    </tr>
+                    <tr th:each="group : ${user.groups}">
+                        <td th:text="${group.id}"></td>
+                        <td th:text="${group.groupName}"></td>
+                        <td th:text="${group.description}"></td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <a th:href="@{'/producto/pedido/' + ${user.userName}}">Detalles</a> |
+                <a th:href="@{'/usuario/update/' + ${user.id}}">Editar</a> |
+                <a th:href="@{'/usuario/delete/' + ${user.id}}">Eliminar</a>
+            </td>
+        </tr>
+    </table>
+</div>

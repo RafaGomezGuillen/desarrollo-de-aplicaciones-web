@@ -1,0 +1,143 @@
+﻿@page
+@model EjerciciosEF.Pages.Ejercicio01Model
+@{
+    ViewData["Title"] = "Ejercicio 1";
+}
+<style>
+    .container-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto; 
+        grid-gap: 10px; 
+    }
+
+    .item {
+        grid-column: span 1; 
+        grid-row: span 1; 
+    }
+</style>
+<h2>Página de selección</h2>
+<p>
+    Querido usuario, tienes tres campos (id, nombre, Email); tu puedes mostrar los que tu quieras. Eso si, tienes que elegir entre adultos @("año nacimiento < 1980") o jóvenes.
+</p>
+<form method="post">
+    @if (Request.Method == "POST")
+    {
+        <div class="container-form">
+            <div class="item">
+                <label for="campo1-box">Elegir id: </label>
+                <input type="checkbox" name="campo1-box" @(Request.Form["campo1-box"] == "on" ? "checked" : "") />
+            </div>
+            <div class="item">
+                <label for="eleccion">Adultos: </label>
+                <input type="radio" name="eleccion" value="adultos" @(Request.Form["eleccion"] == "adultos" ? "checked" : "") />
+            </div>
+            <div class="item">
+                <label for="campo3-box">Elegir email: </label>
+                <input type="checkbox" name="campo3-box" @(Request.Form["campo3-box"] == "on" ? "checked" : "") />
+            </div>
+            <div class="item">
+                <labe for="eleccion">Jóvenes: </labe>
+                <input type="radio" name="eleccion" value="jovenes" @(Request.Form["eleccion"] == "jovenes" ? "checked" : "") />
+            </div>
+            <div class="item">
+                <label for="campo2-box">Elegir nombre: </label>
+                <input type="checkbox" name="campo2-box" @(Request.Form["campo2-box"] == "on" ? "checked" : "") />
+            </div>
+            <div class="item">
+                <input type="submit" name="action" value="Mostrar" />
+            </div>
+        </div>
+        <div>
+            @if (Request.Form["action"] == "Mostrar")
+            {
+                bool checkCampo1 = Request.Form["campo1-box"] == "on";
+                bool checkCampo2 = Request.Form["campo2-box"] == "on";
+                bool checkCampo3 = Request.Form["campo3-box"] == "on";
+                bool esAnciano = Request.Form["eleccion"] == "adultos";
+                DateTime fechaLimite = DateTime.Parse("01/01/1980");
+
+                List<string> clientes = (from cliente in Model.Datos.Cliente
+                                         where DateTime.Compare(cliente.FechaNacimiento, fechaLimite) > 0
+                                         select $"{cliente.Id};{cliente.Nombre};{cliente.Email}").ToList();
+
+                if (esAnciano)
+                {
+                    clientes = (from cliente in Model.Datos.Cliente
+                                where DateTime.Compare(cliente.FechaNacimiento, fechaLimite) < 0
+                                select $"{cliente.Id};{cliente.Nombre};{cliente.Email}").ToList();
+                }
+                <table>
+                    <tr>
+                        @{
+                            if (checkCampo1)
+                            {
+                                <td>Id</td>
+                            }
+
+                            if (checkCampo2)
+                            {
+                                <td>Nombre</td>
+                            }
+
+                            if (checkCampo3)
+                            {
+                                <td>Email</td>
+                            }
+                        }
+                    </tr>
+                    @foreach(string cliente in clientes)
+                    {
+                        <tr>
+                            @{
+                                string[] separarCampos = cliente.Split(';');
+                                if(checkCampo1)
+                                {
+                                    <td>@separarCampos[0]</td>
+                                }
+
+                                if(checkCampo2)
+                                {
+                                    <td>@separarCampos[1]</td>
+                                }
+
+                                if (checkCampo3)
+                                {
+                                    <td>@separarCampos[2]</td>
+                                }
+                            }
+                        </tr>
+                    }
+                </table>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="container-form">
+            <div class="item">
+                <label for="campo1-box">Elegir id: </label>
+                <input type="checkbox" name="campo1-box" />
+            </div>
+            <div class="item">
+                <label for="eleccion">Adultos: </label>
+                <input type="radio" name="eleccion" value="adultos" checked />
+            </div>
+            <div class="item">
+                <label for="campo3-box">Elegir email: </label>
+                <input type="checkbox" name="campo3-box" />
+            </div>
+            <div class="item">
+                <labe for="eleccion">Jóvenes: </labe>
+                <input type="radio" name="eleccion" value="jovenes" />
+            </div>
+            <div class="item">
+                <label for="campo2-box">Elegir nombre: </label>
+                <input type="checkbox" name="campo2-box" />
+            </div>
+            <div class="item">
+                <input type="submit" name="action" value="Mostrar" />
+            </div>
+        </div>
+    }
+</form>

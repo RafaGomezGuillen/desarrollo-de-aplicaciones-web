@@ -1,0 +1,44 @@
+.about-us {
+  margin: auto;
+  width: 95%;
+  color: var(--color-font);
+}
+
+.about-us h2 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 50px;
+  margin: 33px 0px;
+}
+
+.about-us p {
+  line-height: 24px;
+  margin: 16px 0px 24px;
+}
+
+.about-us div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-us img {
+  width: 300px;
+  height: auto;
+}
+
+/* tablets */
+@media (min-width: 767px) {
+  .about-us {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+/* pc */
+@media (min-width: 1170px) {
+  .about-us {
+    margin: auto;
+    width: 60%;
+  }
+}

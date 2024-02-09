@@ -1,0 +1,40 @@
+body {
+  margin-bottom: 50px;
+}
+
+section {
+  margin: auto;
+  width: 50%;
+}
+
+.calculadora table {
+  border: 1px solid black;
+  margin: auto;
+}
+
+.calculadora button {
+  width: 100%;
+  padding: 20px 40px;
+  background-color: green;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+.calculadora #display {
+  padding: 20px 30px;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid black;
+  text-align: right;
+}
+
+@media only screen and (max-width: 900px) {
+  section {
+    width: 100%;
+  }
+}

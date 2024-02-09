@@ -1,0 +1,59 @@
+h3 {
+  font-size: 40px;
+}
+
+div {
+  width: 400px;
+  height: 400px;
+}
+
+ul {
+  width: 300px;
+  height: 300px;
+}
+
+li {
+  width: 200px;
+  height: 25px;
+  border: black solid;
+  background-color: orange;
+  text-align: center;
+  list-style: none;
+  padding: 10px;
+  border-collapse: collapse;
+}
+
+li:hover {
+  background-color: black;
+}
+
+li:hover a {
+  color: white;
+}
+
+li ul {
+  visibility: hidden;
+}
+
+li:hover ul {
+  visibility: visible;
+  position: relative;
+  left: 170px;
+  bottom: 36px;
+}
+
+li:hover li {
+  background-color: yellow;
+}
+
+li:hover ul a {
+  color: blue;
+}
+
+a {
+  color: blue;
+  width: 120px;
+  height: 40px;
+  text-decoration: none;
+  font-size: 20px;
+}

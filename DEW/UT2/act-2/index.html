@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="sctipt.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Actividad 3 -->
+  <section>
+    <h1>Multiplicación</h1>
+    <form>
+      <!-- num1 -->
+      <input type="text">
+      *
+      <!-- num2 -->
+      <input type="text" name="num">
+      <button onclick="multiplicar()">=</button>
+    </form>
+    <p id="producto"></p>
+  </section>
+
+  <hr />
+
+  <!-- Actividad 4 -->
+  <section>
+    <h1>Notas de clase</h1>
+    <form>
+      Indique su nota:
+      <input type="text" id="nota">
+      <button onclick="Corresponde()">Corresponde</button>
+    </form>
+    <div id="Suspenso" style="display: none;"></div>
+    <div id="Aprobado" style="display: none;"></div>
+    <div id="Notable" style="display: none;"></div>
+    <div id="Sobresaliente" style="display: none;"></div>
+    <div id="ERROR" style="display: none;"></div>
+  </section>
+
+  <hr />
+
+  <!-- Actividad 5 -->
+  <section>
+    <h1>Estacion del mes correspondiente</h1>
+    <form>
+      Mes del año:
+      <select id="mes" onchange="Meses()">
+        <option value="Enero">Enero</option>
+        <option value="Febrero">Febrero</option>
+        <option value="Marzo">Marzo</option>
+        <option value="Abril">Abril</option>
+        <option value="Mayo">Mayo</option>
+        <option value="Junio">Junio</option>
+        <option value="Julio">Julio</option>
+        <option value="Agosto">Agosto</option>
+        <option value="Septiembre">Septiembre</option>
+        <option value="Octubre">Octubre</option>
+        <option value="Noviembre">Noviembre</option>
+        <option value="Diciembre">Diciembre</option>
+      </select>
+    </form>
+    <p id="estacion"></p>
+  </section>
+
+  <hr />
+
+  <!-- Actividad 6-->
+  <section>
+    <h1>Cuenta vocales "a" y "o"</h1>
+    <form>
+      <input type="text" id="input-texto">
+      <button onclick="contar()">Contar</button>
+    </form>
+  </section>
+
+</body>
+
+</html>

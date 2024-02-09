@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="es"
+            xmlns:th="http://www.thymeleaf.org"
+            th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+
+<div id="main-content">
+    <h1>Listado de Farmacias</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Web</th>
+                <th>Horario</th>
+                <th>Teléfono</th>
+                <th>UTM_X</th>
+                <th>UTM_Y</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="farmacia : ${farmacias}">
+                <td th:text="${farmacia.nombre}"></td>
+                <td th:text="${farmacia.web}"></td>
+                <td th:text="${farmacia.horario}"></td>
+                <td th:text="${farmacia.telefono}"></td>
+                <td th:text="${farmacia.UTM_X}"></td>
+                <td th:text="${farmacia.UTM_Y}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

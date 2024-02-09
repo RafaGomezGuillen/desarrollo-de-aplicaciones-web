@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+
+<div id="main-content">
+    <h1>Editar artista</h1>
+    <h2><a th:href="@{/artist}">Lista de artistas</a></h2>
+    <div class="form-container">
+        <form th:action="@{/artist/updateArtist}" method="post" th:object="${artist}">
+            <label for="id">Id</label>
+            <input type="text" id="id" name="id" th:field="*{id}" readonly>
+
+            <!-- Campo para el nombre -->
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" th:field="*{name}" required>
+            <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="error"></span>
+
+            <!-- Botón de envío -->
+            <button type="submit">Editar artista</button>
+        </form>
+    </div>
+</div>

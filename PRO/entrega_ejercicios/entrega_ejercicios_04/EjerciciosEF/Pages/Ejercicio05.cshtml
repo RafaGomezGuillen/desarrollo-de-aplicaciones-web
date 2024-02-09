@@ -1,0 +1,104 @@
+﻿@page
+@model EjerciciosEF.Pages.Ejercicio05Model
+@{
+    ViewData["Title"] = "Ejercicio 05";
+    string contraseñaStr = "";
+}
+<h2>Generador de contraseñas de los clientes</h2>
+<form method="post">
+    @if (Request.Method == "POST")
+    {
+        <div>
+            <label for="contenido">Contenido: </label>
+            <select name="contenido" style="width: 200px;">
+                <option value="letras">Letras</option>
+                <option value="letras-numeros">Letras y números</option>
+                <option value="letras-numeros-simbolos">Letras, números y símbolos</option>
+            </select>
+        </div>
+        <br />
+        <div>
+            <label for="tamaño">Tamaño: </label>
+            <input type="number" min="8" max="20" required name="tamaño" value="@Request.Form["tamaño"]" style="width: 207px;" />
+        </div>
+        <br />
+        <div>
+            <input type="submit" name="action" value="Generar" />
+        </div>
+        <div>
+            @if (Request.Form["action"] == "Generar")
+            {
+                string opcion = Request.Form["contenido"];
+                int tamaño = Convert.ToInt32(Request.Form["tamaño"]);
+                string caracteresPermitidos = "";
+
+                char[] contraseña = new char[tamaño];
+                Random random = new Random();
+
+                List<string> clientes = (from cliente in Model.Datos.Cliente
+                                         select $"{cliente.Id};{cliente.Nombre};{cliente.Email}").ToList();
+                
+                if (opcion == "letras")
+                    caracteresPermitidos = "abcdefghijklmnopqrstuvwxyz";
+
+                if (opcion == "letras-numeros")
+                    caracteresPermitidos = "abcdefghijklmnopqrstuvwxyz0123456789";
+
+                if (opcion == "letras-numeros-simbolos")
+                    caracteresPermitidos = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=";
+                
+                <table>
+                    <tr>
+                        <td>Id</td>
+                        <td>Nombre</td>
+                        <td>Email</td>
+                        <td>Contraseña</td>
+                    </tr>
+                    @foreach (string cliente in clientes)
+                    {
+                        <tr>
+                            @{
+                                for (int i = 0; i < tamaño; i++)
+                                {
+                                    int randomNumber = random.Next(0, caracteresPermitidos.Length);
+                                    contraseña[i] = caracteresPermitidos[randomNumber];
+                                    contraseñaStr += contraseña[i];
+                                }
+                                string[] separarCampos = cliente.Split(';');
+                                for (int i = 0; i < separarCampos.Length; i++)
+                                {
+                                    <td>@separarCampos[i]</td>
+                                    if (i == separarCampos.Length - 1)
+                                    {
+                                        <td>@contraseñaStr</td>
+                                    }
+                                }
+                                contraseñaStr = "";
+                            }
+                        </tr>
+                    }
+                </table>
+            }
+        </div>
+    }
+    else
+    {
+        <div>
+            <label for="contenido">Contenido: </label>
+            <select name="contenido" style="width: 200px;">
+                <option value="letras">Letras</option>
+                <option value="letras-numeros">Letras y números</option>
+                <option value="letras-numeros-simbolos">Letras, números y símbolos</option>
+            </select>
+        </div>
+        <br />
+        <div>
+            <label for="tamaño">Tamaño: </label>
+            <input type="number" min="8" max="20" required name="tamaño" value="" style="width: 207px;" />
+        </div>
+        <br />    
+        <div>
+            <input type="submit" name="action" value="Generar" />
+        </div>
+    }
+</form>

@@ -1,0 +1,180 @@
+.row-shipping {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-25 {
+  flex: 25%;
+}
+
+.col-50 {
+  flex: 50%;
+}
+
+.col-75 {
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.col-25 a:hover {
+  color: var(--color-font);
+  text-decoration: underline;
+}
+
+.row-shipping h3 {
+  position: relative;
+}
+
+.row-shipping h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: var(--color-secondary);
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.shipping-container {
+  background-color: #fff;
+  padding: 5px 20px 15px 20px;
+  border-radius: 3px;
+}
+
+.row-shipping input[type="text"] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.row-shipping label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.row-shipping button {
+  padding: 12px;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 17px;
+  border: solid var(--color-secondary);
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: var(--color-secondary);
+}
+
+.row-shipping button:hover {
+  background-color: var(--color-success);
+  color: var(--color-font-hover);
+}
+
+.row-shipping hr {
+  border: 1px solid var(--color-secondary);
+}
+
+.price {
+  float: right;
+  color: grey;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.modal-img {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.modal-img img {
+  width: 200px;
+  height: 100px;
+}
+
+.modal-content-text {
+  padding: 16px;
+  text-align: justify;
+}
+
+.modal-content-text h2 {
+  text-align: center;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .row-shipping {
+    flex-direction: column-reverse;
+  }
+}
+
+/* tablets */
+@media (min-width: 767px) {
+  .modal-img img {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+/* Add Zoom Animation */
+.animate {
+  animation: animatezoom 0.6s;
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

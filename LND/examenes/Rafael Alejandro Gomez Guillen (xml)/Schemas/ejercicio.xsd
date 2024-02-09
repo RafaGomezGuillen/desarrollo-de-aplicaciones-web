@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="catalogo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="producto" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="especificaciones" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="peso" type="xs:positiveInteger" use="optional"></xs:attribute>
+                      <xs:attribute name="potencia" use="required">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:positiveInteger">
+                            <xs:maxInclusive value="1000" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:attribute>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="opciones" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="comenzarMayus">
+                      <xs:attribute name="adaptador" use="optional" default="incluido">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:enumeration value="incluido" />
+                            <xs:enumeration value="opcional" />
+                            <xs:enumeration value="noincluido" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:attribute>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="fabrica" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Valladolid" />
+                    <xs:enumeration value="Palencia" />
+                    <xs:enumeration value="León" />
+                    <xs:enumeration value="Madrid" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="precios" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="unDecimal">
+                      <xs:attribute name="moneda" use="optional">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:enumeration value="euros" />
+                            <xs:enumeration value="libra" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:attribute>
+                      <xs:attribute name="gastodeenvio" use="optional"></xs:attribute>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="notas" maxOccurs="unbounded" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="stock" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:length value="0" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="nombre" type="xs:string" use="optional" />
+            <xs:attribute name="categoria" default="herramienta">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="herramienta" />
+                  <xs:enumeration value="mesa" />
+                  <xs:enumeration value="tienda-profesional" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="inventario">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="enstock" />
+                  <xs:enumeration value="bajoorden" />
+                  <xs:enumeration value="nodisponible" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="comenzarMayus">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z].+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="unDecimal">
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

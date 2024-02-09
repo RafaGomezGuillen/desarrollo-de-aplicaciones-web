@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="heladeria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="helado" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:choice>
+                <xs:element name="chocolate" type="tipoGramos"/>
+                <xs:element name="fresa" type="tipoGramos"/>
+              </xs:choice>
+              <xs:choice>
+                <xs:element name="vainilla" type="tipoGramos" />
+                <xs:element name="turron" type="tipoGramos" />
+                <xs:element name="nata" type="tipoGramos" />
+              </xs:choice>
+            </xs:sequence>
+            <xs:attribute name="fabricación" type="xs:date"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="tipoGramos">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="1000" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

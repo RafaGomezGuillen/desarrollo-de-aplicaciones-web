@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CVs [
+  <!ELEMENT CVs (CV)*>
+  <!ELEMENT CV (DatosPersonales, Idiomas)>
+  <!ATTLIST CV dni CDATA #REQUIRED
+              fechacv CDATA #REQUIRED>
+  <!ELEMENT DatosPersonales (nombre, apellido1, apellido2, fechanac, direccion?, direccion?)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT apellido1 (#PCDATA)>
+  <!ELEMENT apellido2 (#PCDATA)>
+  <!ELEMENT fechanac (#PCDATA)>
+  <!ELEMENT direccion (calle, localidad, codigopostal, pais)>
+  <!ATTLIST direccion tipoDireccion (t | p) #REQUIRED>
+  <!ELEMENT calle (#PCDATA)>
+  <!ELEMENT localidad (#PCDATA)>
+  <!ELEMENT codigopostal (#PCDATA)>
+  <!ELEMENT pais (#PCDATA)>
+  <!ELEMENT Idiomas (idioma*)>
+  <!ELEMENT idioma (nombreidioma)>
+  <!ELEMENT nombreidioma (#PCDATA)>
+  <!ATTLIST idioma nivel (alto | medio | bajo) #REQUIRED
+                   tipoIdioma (m | e) #REQUIRED>
+]>
+
+<CVs>
+  <CV dni="12345678N" fechacv="10/04/2023">
+    <DatosPersonales>
+      <nombre>Rafa</nombre>
+      <apellido1>Gomez</apellido1>
+      <apellido2>Guillen</apellido2>
+      <fechanac>10/04/2003</fechanac>
+      <direccion tipoDireccion="t">
+        <calle>Pepe</calle>
+        <localidad>Ofra</localidad>
+        <codigopostal>38010</codigopostal>
+        <pais>España</pais>
+      </direccion>
+      <direccion tipoDireccion="p">
+        <calle>Tony</calle>
+        <localidad>Frankfurt</localidad>
+        <codigopostal>20310</codigopostal>
+        <pais>Alemania</pais>
+      </direccion>
+    </DatosPersonales>
+    <Idiomas>
+      <idioma nivel="alto" tipoIdioma="m">
+        <nombreidioma>Español</nombreidioma>
+      </idioma>
+      <idioma nivel="medio" tipoIdioma="e">
+        <nombreidioma>Ingles</nombreidioma>
+      </idioma>
+    </Idiomas>
+  </CV>
+</CVs>

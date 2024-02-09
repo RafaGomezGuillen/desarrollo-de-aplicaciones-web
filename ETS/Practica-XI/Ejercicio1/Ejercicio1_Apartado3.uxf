@@ -1,0 +1,71 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>36</x><y>216</y><w>234</w><h>198</h></coordinates><panel_attributes>CuerpoSolido
+--
+- Imagen: String
+- Direccion: Int
+- Posicion: Coordenadas
+- Velocidad: Int
+--
++ GetImagen(): String
++ SetImagen(imagen: string): Void
++ GetDireccion(): Int
++ SetDireccion(direccion: Int): Void
++ GetPosicion(): Coordenadas
++ SetPosicion(posicion: Coordenadas): Void
++ GetVelocidad(): Int
++ SetVelocidad(velocidad: Int): Void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>459</x><y>216</y><w>189</w><h>90</h></coordinates><panel_attributes>Satelite
+--
++ AumentarVelocidad(): Void
++ DisminuirVelocidad(): Void
++ GirarIzquierda(): Void
++ GirarDerecha(): Void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>36</x><y>9</y><w>234</w><h>117</h></coordinates><panel_attributes>Coordenadas
+--
+-X: Int
+-Y: Int
+--
++ GetX(): Int
++ SetX(x: Int): Void
++ GetY(): Int
++ SetY(y: Int): Void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>855</x><y>504</y><w>378</w><h>72</h></coordinates><panel_attributes>Instrumento
+--
++ ActivarInstrumento(): Void
++ DesactivarInstrumento(): Void
++ VisualizarInstrumento(): Void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>684</x><y>693</y><w>234</w><h>45</h></coordinates><panel_attributes>Brujula
+--
++ TratarInformacion(): Void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>963</x><y>693</y><w>234</w><h>45</h></coordinates><panel_attributes>GPS
+--
++ TratarInformacion(): Void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1233</x><y>693</y><w>234</w><h>45</h></coordinates><panel_attributes>Velocimetro
+--
++ TratarInformacion(): Void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>351</x><y>702</y><w>234</w><h>45</h></coordinates><panel_attributes>Suscriptor
+--
++ Actualizar(): Void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>342</x><y>495</y><w>396</w><h>117</h></coordinates><panel_attributes>Publicador
+--
+- ListaSuscriptores: List&lt;Suscriptor&gt;
+--
++ GetListaSuscriptores(): List&lt;Suscriptor&gt;
++ SetListaSuscriptores(listaSuscriptor: List&lt;Suscriptor&gt;): Void
++ Notificar(suscriptor: Suscriptor): Void
++ PermitirSuscriptor(suscriptor: Suscriptor): Void
++ DarBajaSuscriptor(suscriptor: Suscriptor): Void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>855</x><y>207</y><w>378</w><h>81</h></coordinates><panel_attributes>PanelInstrumento
+--
+- PanelInstrumentos: List&lt;Instrumento&gt;
+--
++ GetPanelInstumentos(): Intrumento
++ SetPanelInstumento(panelInstrumentos: List&lt;Instrumento&gt;): Void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>261</x><y>225</y><w>216</w><h>45</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=(1, 1)
+m2= (1, 1)
+Tiene</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>Relation</id><coordinates><x>639</x><y>216</y><w>234</w><h>45</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=(1, 1)
+m2= (1, 1)
+Tiene</panel_attributes><additional_attributes>10;20;240;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1035</x><y>279</y><w>54</w><h>243</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=(1: 1)
+m2=(1: N)
+Tiene</panel_attributes><additional_attributes>10;10;10;250</additional_attributes></element><element><id>Relation</id><coordinates><x>1035</x><y>567</y><w>27</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>567</y><w>252</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>260;10;260;50;10;50;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>1035</x><y>567</y><w>324</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;340;50;340;140</additional_attributes></element><element><id>Relation</id><coordinates><x>126</x><y>117</y><w>54</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=(1, 1)
+m2= (1, N)
+Tiene</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>297</y><w>54</w><h>216</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=(1: 1)
+m2=(1: N)
+Es</panel_attributes><additional_attributes>10;10;10;220</additional_attributes></element><element><id>Relation</id><coordinates><x>504</x><y>603</y><w>54</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=(1: 1)
+m2=(0: N)
+Tiene</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element></diagram>

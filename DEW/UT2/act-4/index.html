@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JS 3</title>
+</head>
+
+<body>
+  <!-- Actividad 3 -->
+  <section>
+    <div class="div-1">
+      <h1>Pantalla:</h1>
+      <p id="pantalla"></p>
+    </div>
+    <div class="div-2">
+      <h1>Ventana:</h1>
+      <p id="ventana"></p>
+    </div>
+    <div class="div-3">
+      <h1>Despedida</h1>
+      <p>Esse excepteur enim consectetur ut nostrud sint aliquip.</p>
+    </div>
+  </section>
+
+  <!-- Actividad 4 -->
+  <div class="ventana-principal">
+    <h1>Ventana principal</h1>
+    <form>
+      <div>
+        <button onclick="nuevaVentana()">Nueva ventana</button>
+        <button onclick="cerrarVentana()">Cerrar ventana</button>
+      </div>
+      <div>
+        <button onclick="ampliarVentana()">Ampliar</button>
+        <button onclick="reducirVentana()">Reducir</button>
+      </div>
+
+      <div>
+        Indique posicion X <input type="number" min="1" id="pos-x">
+        Indique posicion Y <input type="number" min="1" id="pos-y">
+        <button onclick="mover()">Mover</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Actividad 5 -->
+  <div class="carrito-de-compra">
+    <h1>Carrito de compra</h1>
+
+    <!-- productos del carrito -->
+    <ul id="carrito_de_compra_actual"></ul>
+
+    <h1>Añade un producto</h1>
+    <form>
+      <div>
+        Nombre: <input type="text" id="nombre_producto"/>
+        Cantidad: <input type="number" id="cantidad_producto" min="1"/>
+        Precio: <input type="number" id="precio_producto" min="1"/>
+        <button type="button" onclick="AgregarProducto()">Agregar producto</button>
+        <button type="button" onclick="foo.initialize()">Mostrar productos</button>
+        <button type="button" onclick="foo.close()">Borrar carrito</button>
+        <button type="button" onclick="eliminarProducto()">Eliminar producto</button>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

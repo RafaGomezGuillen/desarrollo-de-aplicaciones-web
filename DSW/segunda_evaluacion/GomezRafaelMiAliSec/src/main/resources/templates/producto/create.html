@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+
+<div id="main-content">
+    <h1>Crear producto</h1>
+    <h2><a th:href="@{/producto}">Lista de productos</a></h2>
+    <div class="form-container">
+        <form th:action="@{/producto/saveProduct}" th:object="${product}" enctype="multipart/form-data" method="post">
+            <label>Nombre</label>
+            <input type="text" required th:field="*{productName}">
+            <span th:if="${#fields.hasErrors('productName')}" th:errors="*{productName}" class="error"></span>
+
+            <label>Precio</label>
+            <input type="number" required th:field="*{productPrice}">
+            <span th:if="${#fields.hasErrors('productPrice')}" th:errors="*{productPrice}" class="error"></span>
+
+            <label>Imagen</label>
+            <input type="file" id="img" name="img" required>
+
+            <br />
+            <br />
+
+            <label>Municipio</label>
+
+            <select th:field="*{idMunicipio}" required>
+                <option th:each="municipio : ${listMunicipios}"
+                        th:value="${municipio.id}"
+                        th:text="${municipio.nombre}">
+                </option>
+            </select>
+            <span th:if="${#fields.hasErrors('idMunicipio')}" th:errors="*{idMunicipio}" class="error"></span>
+
+            <label>Stock</label>
+            <input type="number" required th:field="*{productStock}">
+            <span th:if="${#fields.hasErrors('productStock')}" th:errors="*{productStock}" class="error"></span>
+
+            <button>Guardar producto</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+=========================================================================================
+| Descripcion...: Fichero en XML para hacer los Ejercicios de XPath.
+|                 Describe los datos de una compañia de alquiler de coches hay:  Alquileres, Vehiculos y Clientes.
+=========================================================================================
+-->
+<rentacar>
+  <nombre>Alquiler de coches CIFP</nombre>
+  <cif>B32323234</cif>
+  <!-- clientes -->
+  <clientes>
+    <cliente>
+      <id>78456788F</id>
+      <tipo>Particular</tipo>
+      <nombre>Juan Luis Gómez Alonso</nombre>
+      <direccion>C/ La Rosa, 23</direccion>
+      <provincia>Santa Cruz de Tenerife</provincia>
+      <telefono>655223458</telefono>
+    </cliente>
+    <cliente>
+      <id>78564322D</id>
+      <tipo>Particular</tipo>
+      <nombre>Pedro López Ramos</nombre>
+      <direccion>C/ San Francisco Javier, 55</direccion>
+      <provincia>Santa Cruz de Tenerife</provincia>
+      <telefono>643568790</telefono>
+    </cliente>
+    <cliente>
+      <id>78463299X</id>
+      <tipo>Particular</tipo>
+      <nombre>Javier González Hernández</nombre>
+      <direccion>C/ Ramón y Cajal, 65</direccion>
+      <provincia>Santa Cruz de Tenerife</provincia>
+      <telefono>630456345</telefono>
+    </cliente>
+    <cliente>
+      <id>78543211H</id>
+      <tipo>Particular</tipo>
+      <nombre>David Rodríguez Pérez</nombre>
+      <direccion>C/ Ramón y Cajal, 65</direccion>
+      <provincia>Santa Cruz de Tenerife</provincia>
+      <telefono>630456345</telefono>
+    </cliente>
+    <cliente>
+      <id>78475601F</id>
+      <tipo>Particular</tipo>
+      <nombre>Ana María Santana Alonso</nombre>
+      <direccion>C/ Pablo XII, 24</direccion>
+      <provincia>Las Palmas de Gran Canaria</provincia>
+      <telefono>600234421</telefono>
+    </cliente>
+    <cliente>
+      <id>A58718501</id>
+      <tipo>Empresa</tipo>
+      <nombre>Mercan S.A.</nombre>
+      <direccion>C/ Portugal, 30</direccion>
+      <provincia>Las Palmas de Gran Canaria</provincia>
+      <telefono>634543311</telefono>
+    </cliente>
+    <cliente>
+      <id>B67218092</id>
+      <tipo>Empresa</tipo>
+      <nombre>Comunilanz S.L.</nombre>
+      <direccion>C/ Benito Pérez Galdós, 42</direccion>
+      <provincia>Las Palmas de Gran Canaria</provincia>
+      <telefono>667231245</telefono>
+    </cliente>
+    <cliente>
+      <id>78432210Z</id>
+      <tipo>Particular</tipo>
+      <nombre>Adriana Pérez Lima</nombre>
+      <direccion>C/ La Marina, 12</direccion>
+      <provincia>Las Palmas de Gran Canaria</provincia>
+      <telefono>982341355</telefono>
+    </cliente>
+    <cliente>
+      <id>B12878922</id>
+      <tipo>Empresa</tipo>
+      <nombre>Gestser S.L.</nombre>
+      <direccion>C/ Norte, 21</direccion>
+      <provincia>Las Palmas de Gran Canaria</provincia>
+      <telefono>928223566</telefono>
+    </cliente>
+    <cliente>
+      <id>A21359900</id>
+      <tipo>Empresa</tipo>
+      <nombre>Ascanfer S.A.</nombre>
+      <direccion>C/ Triana, 5</direccion>
+      <provincia>Las Palmas de Gran Canaria</provincia>
+      <telefono>688213677</telefono>
+    </cliente>
+  </clientes>
+  <!-- vehiculos -->
+  <vehiculos>
+    <vehiculo id="corsa">
+      <matricula>3255FGZ</matricula>
+      <tipo>Turismo</tipo>
+      <marca>Opel</marca>
+      <modelo>Corsa Enjoy 1.4</modelo>
+      <cilindrada>1364</cilindrada>
+      <potencia>90</potencia>
+      <plazas>5</plazas>
+      <combustible>Gasolina</combustible>
+    </vehiculo>
+    <vehiculo id="combo">
+      <matricula>2488CDF</matricula>
+      <tipo>Furgoneta</tipo>
+      <marca>Opel</marca>
+      <modelo>Combo Tour Cosmo 1.7</modelo>
+      <cilindrada>1686</cilindrada>
+      <potencia>101</potencia>
+      <plazas>5</plazas>
+      <combustible>Gasóleo</combustible>
+    </vehiculo>
+    <vehiculo id="polo">
+      <matricula>6754GGZ</matricula>
+      <tipo>Turismo</tipo>
+      <marca>Volkswagen</marca>
+      <modelo>Polo 1.4 Advance</modelo>
+      <cilindrada>1390</cilindrada>
+      <potencia>85</potencia>
+      <plazas>5</plazas>
+      <combustible>Gasolina</combustible>
+    </vehiculo>
+    <vehiculo id="meriva">
+      <matricula>8976FZR</matricula>
+      <tipo>Monovolumen</tipo>
+      <marca>Opel</marca>
+      <modelo>Meriva Essentia 1.4</modelo>
+      <cilindrada>1398</cilindrada>
+      <potencia>100</potencia>
+      <plazas>5</plazas>
+      <combustible>Gasolina</combustible>
+    </vehiculo>
+    <vehiculo id="500">
+      <matricula>1264GCH</matricula>
+      <tipo>Deportivo</tipo>
+      <marca>Fiat</marca>
+      <modelo>500 1.4 Sport</modelo>
+      <cilindrada>1368</cilindrada>
+      <potencia>101</potencia>
+      <plazas>4</plazas>
+      <combustible>Gasolina</combustible>
+    </vehiculo>
+    <vehiculo id="one">
+      <matricula>5609GGG</matricula>
+      <tipo>Turismo</tipo>
+      <marca>Mini</marca>
+      <modelo>One</modelo>
+      <cilindrada>1397</cilindrada>
+      <potencia>75</potencia>
+      <plazas>4</plazas>
+      <combustible>Gasóleo</combustible>
+    </vehiculo>
+    <vehiculo id="c30">
+      <matricula>4300HCF</matricula>
+      <tipo>Deportivo</tipo>
+      <marca>Volvo</marca>
+      <modelo>C30 1.6 Momentum</modelo>
+      <cilindrada>1596</cilindrada>
+      <potencia>100</potencia>
+      <plazas>4</plazas>
+      <combustible>Gasolina</combustible>
+    </vehiculo>
+    <vehiculo id="captiva">
+      <matricula>0411FZX</matricula>
+      <tipo>Todoterreno</tipo>
+      <marca>Chevrolet</marca>
+      <modelo>Captiva 2.4 LS</modelo>
+      <cilindrada>2405</cilindrada>
+      <potencia>136</potencia>
+      <plazas>5</plazas>
+      <combustible>Gasolina</combustible>
+    </vehiculo>
+    <vehiculo id="9-3">
+      <matricula>8766CDX</matricula>
+      <tipo>Turismo</tipo>
+      <marca>Saab</marca>
+      <modelo>9-3 Cabrio 1.9</modelo>
+      <cilindrada>1910</cilindrada>
+      <potencia>160</potencia>
+      <plazas>4</plazas>
+      <combustible>Gasóleo</combustible>
+    </vehiculo>
+    <vehiculo id="vivaro">
+      <matricula>7777FZS</matricula>
+      <tipo>Furgoneta</tipo>
+      <marca>Opel</marca>
+      <modelo>Vivaro Combi 9 2.0</modelo>
+      <cilindrada>1995</cilindrada>
+      <potencia>114</potencia>
+      <plazas>9</plazas>
+      <combustible>Gasóleo</combustible>
+    </vehiculo>
+    <vehiculo id="discovery">
+      <matricula>1146GVZ</matricula>
+      <tipo>Todoterreno</tipo>
+      <marca>Land Rover</marca>
+      <modelo>Discovery 4 2.7</modelo>
+      <cilindrada>2721</cilindrada>
+      <potencia>190</potencia>
+      <plazas>5</plazas>
+      <combustible>Gasóleo</combustible>
+    </vehiculo>
+    <vehiculo id="vectra">
+      <matricula>9754ERF</matricula>
+      <tipo>Turismo</tipo>
+      <marca>Opel</marca>
+      <modelo>Vectra 1.8 Essentia</modelo>
+      <cilindrada>1796</cilindrada>
+      <potencia>140</potencia>
+      <plazas>5</plazas>
+      <combustible>Gasolina</combustible>
+    </vehiculo>
+    <vehiculo id="freelander">
+      <matricula>3244HGX</matricula>
+      <tipo>Todoterreno</tipo>
+      <marca>Land Rover</marca>
+      <modelo>Freelander 2 2.2</modelo>
+      <cilindrada>2179</cilindrada>
+      <potencia>160</potencia>
+      <plazas>5</plazas>
+      <combustible>Gasóleo</combustible>
+    </vehiculo>
+    <vehiculo id="c70">
+      <matricula>9055BCX</matricula>
+      <tipo>Deportivo</tipo>
+      <marca>Volvo</marca>
+      <modelo>C70 D5 Momentum</modelo>
+      <cilindrada>2400</cilindrada>
+      <potencia>180</potencia>
+      <plazas>4</plazas>
+      <combustible>Gasóleo</combustible>
+    </vehiculo>
+    <vehiculo id="altea">
+      <matricula>8522FFF</matricula>
+      <tipo>Monovolumen</tipo>
+      <marca>Seat</marca>
+      <modelo>Altea XL 1.6 TDI</modelo>
+      <cilindrada>1598</cilindrada>
+      <potencia>105</potencia>
+      <plazas>5</plazas>
+      <combustible>Gasóleo</combustible>
+    </vehiculo>
+    <vehiculo id="aveo">
+      <matricula>2130BDD</matricula>
+      <tipo>Turismo</tipo>
+      <marca>Chevrolet</marca>
+      <modelo>Aveo 1.4 LS</modelo>
+      <cilindrada>1399</cilindrada>
+      <potencia>100</potencia>
+      <plazas>5</plazas>
+      <combustible>Gasolina</combustible>
+    </vehiculo>
+    <vehiculo id="ibiza">
+      <matricula>2599GJC</matricula>
+      <tipo>Turismo</tipo>
+      <marca>Seat</marca>
+      <modelo>Ibiza 1.4 TDI</modelo>
+      <cilindrada>1422</cilindrada>
+      <potencia>80</potencia>
+      <plazas>5</plazas>
+      <combustible>Gasóleo</combustible>
+    </vehiculo>
+    <vehiculo id="transit">
+      <matricula>3020DXC</matricula>
+      <tipo>Furgoneta</tipo>
+      <marca>Ford</marca>
+      <modelo>Transit 2.4 TDCI</modelo>
+      <cilindrada>2402</cilindrada>
+      <potencia>115</potencia>
+      <plazas>9</plazas>
+      <combustible>Gasóleo</combustible>
+    </vehiculo>
+    <vehiculo id="astra">
+      <matricula>2929GGG</matricula>
+      <tipo>Turismo</tipo>
+      <marca>Opel</marca>
+      <modelo>Astra 1.8 Cosmo</modelo>
+      <cilindrada>1796</cilindrada>
+      <potencia>125</potencia>
+      <plazas>5</plazas>
+      <combustible>Gasolina</combustible>
+    </vehiculo>
+    <vehiculo id="fiesta">
+      <matricula>5111BAS</matricula>
+      <tipo>Turismo</tipo>
+      <marca>Ford</marca>
+      <modelo>Fiesta Trend 1.4 TDCI</modelo>
+      <cilindrada>1399</cilindrada>
+      <potencia>68</potencia>
+      <plazas>5</plazas>
+      <combustible>Gasóleo</combustible>
+    </vehiculo>
+  </vehiculos>
+  <!-- alquileres -->
+  <alquileres>
+    <alquiler>
+      <cliente>78543211H</cliente>
+      <vehiculo>3255FGZ</vehiculo>
+      <fechas>
+        <inicio><dia>22</dia>-
+			      <mes>05</mes><anio>2011</anio></inicio>
+        <entrega>
+          <dia>27</dia>
+          <mes>05</mes>
+          <anio>2011</anio>
+        </entrega>
+      </fechas>
+      <importe>320.40</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>78564322D</cliente>
+      <vehiculo>6754GGZ</vehiculo>
+      <fechas>
+        <inicio>
+          <dia>05</dia>
+          <mes>12</mes>
+          <anio>2010</anio>
+        </inicio>
+        <entrega>
+          <dia>10</dia>
+          <mes>12</mes>
+          <anio>2010</anio>
+        </entrega>
+      </fechas>
+      <importe>237.54</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>A58718501</cliente>
+      <vehiculo>1264GCH</vehiculo>
+      <fechas>
+        <inicio>
+          <dia>23</dia>
+          <mes>10</mes>
+          <anio>2010</anio>
+        </inicio>
+        <entrega>
+          <dia>30</dia>
+          <mes>10</mes>
+          <anio>2010</anio>
+        </entrega>
+      </fechas>
+      <importe>423.65</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>78543211H</cliente>
+      <vehiculo>0411FZX</vehiculo>
+      <fechas>
+        <inicio>
+          <dia>15</dia>
+          <mes>09</mes>
+          <anio>2010</anio>
+        </inicio>
+        <entrega>
+          <dia>20</dia>
+          <mes>10</mes>
+          <anio>2010</anio>
+        </entrega>
+      </fechas>
+      <importe>123.40</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>B67218092</cliente>
+      <vehiculo>3255FGZ</vehiculo>
+      <fechas>
+        <inicio><dia>11</dia><mes>09</mes><anio>2010</anio>   
+        </inicio>
+      </fechas>
+      <importe>234.67</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>78543211H</cliente>
+      <vehiculo>1146GVZ</vehiculo>
+      <fechas>
+        <inicio>
+          <dia>07</dia>
+          <mes>09</mes>
+          <anio>2010</anio>
+        </inicio>
+        <entrega>
+          <dia>14</dia>
+          <mes>09</mes>
+          <anio>2010</anio>
+        </entrega>
+      </fechas>
+      <importe>432.11</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>B12878922</cliente>
+      <vehiculo>3244HGX</vehiculo>
+      <fechas>
+        <inicio>
+          <dia>30</dia>
+          <mes>08</mes>
+          <anio>2010</anio>
+        </inicio>
+        <entrega>
+          <dia>05</dia>
+          <mes>09</mes>
+          <anio>2010</anio>
+        </entrega>
+      </fechas>
+      <importe>211.54</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>A21359900</cliente>
+      <vehiculo>8522FFF</vehiculo>
+      <fechas>
+        <inicio>
+          <dia>15</dia>
+          <mes>08</mes>
+          <anio>2010</anio>
+        </inicio>
+      </fechas>
+      <importe>432.66</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>78475601F</cliente>
+      <vehiculo>2130BDD</vehiculo>
+      <fechas>
+        <inicio>
+          <dia>05</dia>
+          <mes>08</mes>
+          <anio>2010</anio>
+        </inicio>
+        <entrega>10-08-2010
+			    <dia>10</dia>
+          <mes>08</mes>
+          <anio>2010</anio>
+			</entrega>
+      </fechas>
+      <importe>210.34</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>78463299X</cliente>
+      <vehiculo>2599GJC</vehiculo>
+      <fechas>
+        <inicio>
+          <dia>05</dia>
+          <mes>08</mes>
+          <anio>2010</anio>
+        </inicio>
+      </fechas>
+      <importe>540.33</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>78475601F</cliente>
+      <vehiculo>3255FGZ</vehiculo>
+      <fechas>
+        <inicio>
+          <dia>25</dia>
+          <mes>07</mes>
+          <anio>2010</anio>
+        </inicio>
+        <entrega>30-07-2010
+			    <dia>30</dia>
+          <mes>07</mes>
+          <anio>2010</anio>
+			</entrega>
+      </fechas>
+      <importe>332.12</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>B67218092</cliente>
+      <vehiculo>5111BAS</vehiculo>
+      <fechas>
+        <inicio>
+          <dia>10</dia>
+          <mes>07</mes>
+          <anio>2010</anio>
+        </inicio>
+        <entrega>
+          <dia>14</dia>
+          <mes>07</mes>
+          <anio>2010</anio>
+        </entrega>
+      </fechas>
+      <importe>431.33</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>78432210Z</cliente>
+      <vehiculo>6754GGZ</vehiculo>
+      <fechas>
+        <inicio>
+          <dia>03</dia>
+          <mes>07</mes>
+          <anio>2010</anio>
+        </inicio>
+      </fechas>
+      <importe>320.44</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>78543211H</cliente>
+      <vehiculo>8976FZR</vehiculo>
+      <fechas>
+        <inicio>
+          <dia>22</dia>
+          <mes>06</mes>
+          <anio>2010</anio>
+        </inicio>
+        <entrega>
+          <dia>24</dia>
+          <mes>06</mes>
+          <anio>2010</anio>
+        </entrega>
+      </fechas>
+      <importe>417.12</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>78564322D</cliente>
+      <vehiculo>2488CDF</vehiculo>
+      <fechas>
+        <inicio>
+          <dia>08</dia>
+          <mes>06</mes>
+          <anio>2010</anio>
+        </inicio>
+        <entrega>
+          <dia>13</dia>
+          <mes>06</mes>
+          <anio>2010</anio>
+        </entrega>
+      </fechas>
+      <importe>223.43</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>78475601F</cliente>
+      <vehiculo>1264GCH</vehiculo>
+      <fechas>
+        <inicio>
+          <dia>05</dia>
+          <mes>06</mes>
+          <anio>2010</anio>
+        </inicio>
+        <entrega>
+          <dia>07</dia>
+          <mes>06</mes>
+          <anio>2010</anio>
+        </entrega>
+      </fechas>
+      <importe>342.11</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>B67218092</cliente>
+      <vehiculo>5609GGG</vehiculo>
+      <fechas>
+        <inicio>
+          <dia>22</dia>
+          <mes>05</mes>
+          <anio>2010</anio>
+        </inicio>
+        <entrega>
+          <dia>27</dia>
+          <mes>05</mes>
+          <anio>2010</anio>
+        </entrega>
+      </fechas>
+      <importe>287.43</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>78463299X</cliente>
+      <vehiculo>4300HCF</vehiculo>
+      <fechas>
+        <inicio>
+          <dia>18</dia>
+          <mes>05</mes>
+          <anio>2010</anio>
+        </inicio>
+        <entrega>
+          <dia>22</dia>
+          <mes>05</mes>
+          <anio>2010</anio>
+        </entrega>
+      </fechas>
+      <importe>332.34</importe>
+    </alquiler>
+    <alquiler>
+      <cliente>A58718501</cliente>
+      <vehiculo>0411FZX</vehiculo>
+      <fechas>
+        <inicio>
+          <dia>09</dia>
+          <mes>05</mes>
+          <anio>2010</anio>
+        </inicio>
+      </fechas>
+      <importe>217.32</importe>
+    </alquiler>
+  </alquileres>
+</rentacar>

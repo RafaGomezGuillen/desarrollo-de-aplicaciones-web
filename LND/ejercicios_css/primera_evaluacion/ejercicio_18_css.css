@@ -1,0 +1,212 @@
+body {
+  background-color: #91a3ff;
+}
+
+.cabezera {
+  background-color: #253575;
+  color: white;
+  height: 100px;
+}
+
+.cabezera a {
+  font-size: 40px;
+  text-decoration: underline;
+  color: white;
+  position: relative;
+  bottom: -25px;
+  left: 30px;
+}
+
+.cabezera form {
+  float: right;
+  position: relative;
+  bottom: -39px;
+  left: -30px;
+}
+
+.buscador-text {
+  width: 300px;
+}
+
+.cabezera-menu {
+  background-color: #192666;
+  height: 70px;
+  width: 100%;
+}
+
+.cabezera-menu p {
+  background-color: #253575;
+  color: #a7c1de;
+  float: left;
+  min-width: 100px;
+  min-height: 30px;
+  width: 10%;
+  text-align: center;
+  position: relative;
+  left: 45px;
+  bottom: -7.5px;
+  font-size: 22px;
+  padding-top: 10px;
+}
+
+.cabezera-menu p:hover {
+  background-color: white;
+  color: orange;
+}
+
+.contenido-principal {
+  float: left;
+  width: 70%;
+  background-color: white;
+}
+
+.menu-contenido {
+  float: left;
+  width: 30%;
+  background-color: #a0b9f3;
+}
+
+.contenido-1 {
+  height: 250px;
+}
+
+.contenido-2 {
+  height: 250px;
+}
+
+.contenido-3 {
+  height: 250px;
+}
+
+.contenido-1 a,
+.contenido-2 a,
+.contenido-3 a {
+  font-size: 30px;
+  position: relative;
+  left: 20px;
+  bottom: -10px;
+}
+
+.enlaces {
+  height: 50px;
+  width: 80%;
+  position: relative;
+  left: 20px;
+  bottom: -15px;
+}
+
+.enlaces span {
+  font-size: 20px;
+  color: #91a3ff;
+  text-decoration: underline;
+}
+
+.enlaces span:hover {
+  color: orange;
+}
+
+.enlaces img {
+  width: 20px;
+}
+
+.contenido-1 p,
+.contenido-2 p,
+.contenido-3 p {
+  font-size: 20px;
+  position: relative;
+  left: 20px;
+  width: 90%;
+}
+
+a.seguir-leyendo {
+  font-size: 25px;
+  position: relative;
+  bottom: 10px;
+}
+
+.sobre-mi-enlace {
+  font-size: 40px;
+  position: relative;
+  left: 20px;
+}
+
+.sobre-mi {
+  background-color: #cedbf9;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 200px;
+  overflow: auto;
+}
+
+.sobre-mi p,
+.sobre-mi a {
+  font-size: 22.2px;
+}
+
+.sobre-mi a {
+  padding-left: 10px;
+}
+
+.sobre-mi img {
+  float: left;
+  min-width: 150px;
+  width: 200px;
+  margin: 10px;
+}
+
+.titulos {
+  font-size: 35px;
+  margin-left: 20px;
+  position: relative;
+  bottom: 30px;
+}
+
+.categorias,
+.archivo,
+.enlaces-2 {
+  background-color: #cedbf9;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  bottom: 30px;
+}
+
+.categorias li,
+.archivo li,
+.enlaces-2 li {
+  list-style-image: url(../imagenes/icono_categoria.gif);
+}
+
+.categorias li,
+.archivo li,
+.enlaces-2 li {
+  border-bottom: solid white;
+}
+
+.categorias a:hover,
+.archivo a:hover,
+.enlaces-2 a:hover {
+  color: black;
+}
+
+.categorias li:hover,
+.archivo li:hover,
+.enlaces-2 li:hover {
+  list-style-image: url(../imagenes/icono_elemento_seleccionado.gif);
+}
+
+.pie {
+  float: left;
+  background-color: #192666;
+  color: white;
+  font-size: 40px;
+  width: 100%;
+}
+
+.pie p {
+  margin: 20px;
+}
+

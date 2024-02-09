@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<alumnos
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="indicador2.xsd">
+  <alumno dni="111">
+    <nombre>Antonio Pérez</nombre>
+    <direccion>
+      <calle>Calle Fuente</calle>
+      <numero>4</numero>
+      <ciudad>Jabugo</ciudad>
+      <provincia>Huelva</provincia>
+    </direccion>
+    <telefono>
+      <fijo>959222322</fijo>
+    </telefono>
+  </alumno>
+  <alumno dni="112">
+    <nombre>Carlos Garcia</nombre>
+    <direccion>
+      <calle>Calle perro</calle>
+      <numero>2</numero>
+      <ciudad>Miranda</ciudad>
+      <provincia>Guarenas</provincia>
+    </direccion>
+    <telefono>
+      <móvil>959222111</móvil>
+    </telefono>
+  </alumno>
+</alumnos>

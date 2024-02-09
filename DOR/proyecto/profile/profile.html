@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- shared -->
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+
+    <!-- styles page -->
+    <link rel="stylesheet" href="profile.css" />
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Profile</title>
+  </head>
+
+  <body>
+    <nav id="myTopnav">
+      <a href="../index.html">Home</a>
+      <a href="../catalog/catalog.html">Catalog</a>
+      <a href="#" class="active">Profile</a>
+      <a href="../about-us/about-us.html" >About us</a>
+      <label for="selTheme">Select color pallete</label>
+      <select id="selTheme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+      <a href="#" class="log">Log in</a>
+      <a href="#" class="log">Log out</a>
+      <a
+        href="javascript:void(0);"
+        class="icon"
+        onclick="navbar()"
+        aria-label="Navbar icon for mobile screens"
+      >
+        <em class="fa fa-bars"></em>
+      </a>
+    </nav>
+
+    <main>
+      <section class="profile-main-information">
+        <h2>Personal information</h2>
+        <figure class="profile-main-information-photo">
+          <div>
+            <img src="../assets/img/aston-martin.jpg" alt="profile-picture" />
+          </div>
+          <div>
+            <p>Personalize your account with a photo.</p>
+            <button>Change photo</button>
+          </div>
+        </figure>
+
+        <article>
+          <p>Name <a>Edit</a></p>
+          <p>Rafael Gómez Guillén</p>
+        </article>
+        <article>
+          <p>Birthday <a>Edit</a></p>
+          <p>24 / 06 / 2003</p>
+        </article>
+        <article>
+          <p>Country <a>Edit</a></p>
+          <p>Spain</p>
+        </article>
+        <article>
+          <p>Email address <a>Edit</a></p>
+          <p>rafa@gmail.com</p>
+        </article>
+        <article>
+          <p>Phone Number <a>Edit</a></p>
+          <p>+34 669 905 890</p>
+        </article>
+        <article style="border: none">
+          <p>Landline <a>Edit</a></p>
+          <p>+34 922 088 890</p>
+        </article>
+      </section>
+
+      <section class="profile-main-information" style="margin-top: 25px">
+        <h2>Edit personal information</h2>
+        <article>
+          <label>Email address</label>
+          <!-- Que no empieze por arroba más cualquier carácter que no tenga espacio en blanco -->
+          <input
+            type="text"
+            pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+            placeholder="name@email.com"
+            title="Invalid email address"
+          />
+        </article>
+        <!-- 60 a 74 -->
+        <article>
+          <label>Mobile phone</label>
+          <!-- empieza por 6 más 8 números del 0 al 9 o 71, 72, 73, 74 más 7 números -->
+          +34
+          <input
+            type="text"
+            placeholder="type your number"
+            pattern="6[0-9]{8}|7[0-4][0-9]{7}"
+          />
+        </article>
+        <!-- 91 98 y 81 88 -->
+        <article style="border: none">
+          <label>Landline</label>
+          +34
+          <input
+            type="text"
+            placeholder="type your number"
+            pattern="8[1-8][0-9]{7}|9[1-8][0-9]{7}"
+          />
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <section class="footer-row">
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="" aria-label="Find us on GitHub">
+                <em class="fa fa-github"></em>
+              </a>
+              <a href="" aria-label="Find us on X">
+                <em class="fa fa-twitter"></em>
+                </a>
+              <a href="" aria-label="Find us on Instagram">
+                <em class="fa fa-instagram"></em>
+              </a>
+              <a href="" aria-label="Find us on LinkedIn">
+                <em class="fa fa-linkedin"></em>
+              </a>
+            </div>
+          </article>
+        </section>
+        <section class="footer-row">
+          <article class="footer-col" style="margin-top: 20px">
+            <a href="/">
+              <img
+                src="../assets/img/logos/f1.png"
+                style="width: 110px; margin-right: 10px; margin-bottom: 10px"
+                alt="f1 logo"
+              />
+            </a>
+          </article>
+          <article class="footer-col-bottom">
+            <p>
+              © 2023 Formula One World Championship Limited. Rafael Gómez
+              Guillén.
+            </p>
+          </article>
+        </section>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/darkMode.js"></script>
+  </body>
+</html>

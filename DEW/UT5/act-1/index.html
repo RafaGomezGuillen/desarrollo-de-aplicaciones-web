@@ -1,0 +1,59 @@
+<h2>Using the XMLHttpRequest Object</h2>
+
+<div id="demo">
+  <button type="button" onclick="loadXMLDoc()">Change Content</button>
+</div>
+
+<script>
+  // function loadXMLDoc() {
+  //   return new Promise((resolve, reject) => {
+  //     var xhttp = new XMLHttpRequest();
+
+  //     xhttp.onreadystatechange = function () {
+  //       if (this.readyState == 4 && this.status == 200) {
+  //         document.getElementById("demo").innerHTML = this.responseText;
+  //         resolve(this.responseText);
+  //       } else if (this.readyState == 4) {
+  //         reject(new Error("Error al realizar la solicitud"));
+  //       }
+  //     };
+
+  //     var myJson = {
+  //       fname: "Rafa",
+  //       lname: "Gomez",
+  //     };
+
+  //     xhttp.open("POST", "test.php");
+  //     xhttp.setRequestHeader(
+  //       "Content-type",
+  //       "application/x-www-form-urlencoded"
+  //     );
+  //     xhttp.send(`json_data=${JSON.stringify(myJson)}`);
+  //   });
+  // }
+
+  function loadXMLDoc() {
+    var myJson = {
+      fname: "Rafa",
+      lname: "Gomez",
+    };
+
+    return fetch("test.php", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/x-www-form-urlencoded",
+      },
+      body: `json_data=${JSON.stringify(myJson)}`,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Error al realizar la solicitud");
+        }
+        return response.text();
+      })
+      .then((data) => {
+        document.getElementById("demo").innerHTML = data;
+        return data;
+      });
+  }
+</script>

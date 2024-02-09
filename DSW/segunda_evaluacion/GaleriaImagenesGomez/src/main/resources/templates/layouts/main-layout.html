@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:fragment="main-fragment (mainContent)"
+>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+    <title>Galeria de imágenes</title>
+</head>
+<body>
+<header>
+    <div class="logotipo">
+        <img th:src="@{/uploadsGomez/logotipo.png}" />
+    </div>
+    <div class="titulo">
+        <h2>Bienvenido, esto es una galeria de imágenes</h2>
+    </div>
+</header>
+
+<section>
+    <main th:insert="${mainContent} ?: ~{}">
+        <!-- Esta es la sección que se rellenará con el contenido específico de cada página -->
+    </main>
+    <nav>
+        <h2><a th:href="@{/}">Principal</a></h2>
+        <h2><a th:href="@{/imagen}">Lista de imágenes</a></h2>
+        <h2><a th:href="@{/imagen/subir-imagen}">Subir imagen</a></h2>
+    </nav>
+</section>
+
+<footer>
+    <h2>Java Spring Galeria de imágenes - CIFP César Manrique - Rafael Gómez Guillén - Curso (2023 / 24)</h2>
+</footer>
+</body>
+</html>

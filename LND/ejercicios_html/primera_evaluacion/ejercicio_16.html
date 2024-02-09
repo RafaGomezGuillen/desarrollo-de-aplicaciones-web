@@ -1,0 +1,50 @@
+<html lang="es">
+
+<head>
+  <title> Información sobre el producto </title>
+</head>
+
+<body>
+  <h1> Información sobre el producto </h1>
+  <form id="formulario" method="post" action="">
+    <fieldset>
+      <legend> Datos Básicos </legend>
+      <label for="nombre"> Nombre </label> <br />
+      <input type="text" id="nombre" name="nombre" value="" size="42" />
+      <br /> <br />
+      <label for="descripcion"> Descripción </label> <br />
+      <textarea id="descripcion" name="descripcion" cols="40" rows="5"> </textarea>
+      <br /> <br />
+      Foto
+      <input type="file" name="adjunto" />
+      <br /> <br />
+      <input name="contador" type="checkbox" value="contador" /> Añadir contador de visitas
+    </fieldset>
+    <fieldset>
+      <legend> Datos económicos </legend>
+      <table>
+        <tr>
+          <td> Precio <input type="text" name="precio" value="" /> € &nbsp;
+          </td>
+          <td>
+            <label for="impuestos"> Impuestos </label>
+            <select id="impuestos" name="impuestos">
+              <option value="4"> 4% </option>
+              <option value="7"> 7% </option>
+              <option value="16"> 16% </option>
+              <option value="25"> 25% </option>
+          </td>
+        </tr>
+        <tr>
+          <td> Promoción <br />
+            <input type="radio" name="promocion" value="ninguno" checked="checked" /> Ninguno
+            <input type="radio" name="promocion" value="transporte" /> Transporte
+            <input type="radio" name="promocion" value="descuento" /> Descuento 5%
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+</body>
+
+</html>

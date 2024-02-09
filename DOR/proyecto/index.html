@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- shared -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+
+    <!-- sections -->
+    <link rel="stylesheet" href="styles/shop-by-team.css" />
+    <link rel="stylesheet" href="styles/carousell.css" />
+    <link rel="stylesheet" href="styles/card-container.css" />
+    <link rel="stylesheet" href="styles/about-us.css" />
+    <link rel="stylesheet" href="styles/promotion.css" />
+    <link rel="stylesheet" href="styles/posts.css" />
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>F1 Store</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>F1 store</h1>
+      <p>
+        Lorem excepteur eu incididunt esse est laboris occaecat est irure
+        cupidatat esse duis id enim.
+      </p>
+    </header>
+
+    <nav id="myTopnav">
+      <a href="index.html" class="active">Home</a>
+      <a href="catalog/catalog.html">Catalog</a>
+      <a href="profile/profile.html">Profile</a>
+      <a href="about-us/about-us.html">About us</a>
+      <label for="selTheme">Select color pallete</label>
+      <select id="selTheme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+      <a href="#" class="log">Log in</a>
+      <a href="#" class="log">Log out</a>
+      <a
+        href="javascript:void(0);"
+        class="icon"
+        onclick="navbar()"
+        aria-label="Navbar icon for mobile screens"
+      >
+        <em class="fa fa-bars"></em>
+      </a>
+    </nav>
+
+    <section class="shop-by-team">
+      <h2>Shop by Team</h2>
+      <div class="shop-by-team-grid-container">
+        <figure>
+          <a
+            ><img src="assets/img/logos/red-bull-logo.svg" alt="red bull logo"
+          /></a>
+        </figure>
+        <figure>
+          <a
+            ><img src="assets/img/logos/ferrari-logo.svg" alt="ferrari logo"
+          /></a>
+        </figure>
+        <figure>
+          <a
+            ><img src="assets/img/logos/mercedes-logo.svg" alt="merceded logo"
+          /></a>
+        </figure>
+        <figure>
+          <a><img src="assets/img/logos/haas.png" alt="haas logo" /></a>
+        </figure>
+        <figure>
+          <a><img src="assets/img/logos/haas.png" alt="haas logo" /></a>
+        </figure>
+        <figure>
+          <a
+            ><img
+              src="assets/img/logos/alfa-romeo-logo.svg"
+              alt=" alfa romeo logo"
+          /></a>
+        </figure>
+        <figure>
+          <a><img src="assets/img/logos/haas.png" alt="haas logo" /></a>
+        </figure>
+        <figure>
+          <a
+            ><img src="assets/img/logos/williams-logo.svg" alt="williams logo"
+          /></a>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <div class="carousell-container">
+        <article class="mySlides">
+          <img src="assets/img/aston-martin.jpg" alt="aston martin f1 car" />
+          <h2 class="caption">
+            <a href="details/details.html">Caption One</a>
+          </h2>
+        </article>
+
+        <article class="mySlides">
+          <img src="assets/img/aston-martin.jpg" alt="aston martin f1 car" />
+          <h2 class="caption">
+            <a href="details/details.html">Caption Two</a>
+          </h2>
+        </article>
+
+        <article class="mySlides">
+          <img src="assets/img/aston-martin.jpg" alt="aston martin f1 car" />
+          <h2 class="caption">
+            <a href="details/details.html">Caption Three</a>
+          </h2>
+        </article>
+
+        <a class="prev" onclick="plusSlides(-1)">&lt;</a>
+        <a class="next" onclick="plusSlides(1)">&gt;</a>
+      </div>
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </section>
+
+    <section class="card-container">
+      <div class="card-section">
+        <article>
+          <a href="details/details.html">
+            <img src="assets/img/aston-martin.jpg" alt="aston martin f1 car" />
+            <h2>Car One · 1000$</h2>
+            <p>
+              Anim ad aliquip consequat est sit laboris nisi adipisicing
+              consectetur est non consequat velit.
+            </p>
+            <div class="reputacion">
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+            </div>
+          </a>
+        </article>
+        <article>
+          <a href="details/details.html">
+            <img src="assets/img/aston-martin.jpg" alt="aston martin f1 car" />
+            <h2>Car Two · 1000$</h2>
+            <p>
+              Anim ad aliquip consequat est sit laboris nisi adipisicing
+              consectetur est non consequat velit.
+            </p>
+            <div class="reputacion">
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+            </div>
+          </a>
+        </article>
+        <article>
+          <a href="details/details.html">
+            <img src="assets/img/aston-martin.jpg" alt="aston martin f1 car" />
+            <h2>Car Three · 1000$</h2>
+            <p>
+              Anim ad aliquip consequat est sit laboris nisi adipisicing
+              consectetur est non consequat velit.
+            </p>
+            <div class="reputacion">
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="promotion">
+      <a href="details/details.html">
+        <article class="promotion-container">
+          <div class="promotion-image">
+            <img src="assets/img/aston-martin.jpg" alt="aston martin f1 car" />
+          </div>
+          <div class="promotion-content">
+            <h2>Car promotion · 2000$</h2>
+            <p>
+              Sit aute anim dolore deserunt elit dolor Lorem ea exercitation
+              pariatur.
+            </p>
+            <div class="reputacion">
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+            </div>
+          </div>
+        </article>
+      </a>
+    </section>
+
+    <section class="card-container">
+      <div class="card-section">
+        <article>
+          <a href="details/details.html">
+            <img src="assets/img/aston-martin.jpg" alt="aston martin f1 car" />
+            <h2>Car One · 1000$</h2>
+            <p>
+              Anim ad aliquip consequat est sit laboris nisi adipisicing
+              consectetur est non consequat velit.
+            </p>
+            <div class="reputacion">
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+            </div>
+          </a>
+        </article>
+        <article>
+          <a href="details/details.html">
+            <img src="assets/img/aston-martin.jpg" alt="aston martin f1 car" />
+            <h2>Car Two · 1000$</h2>
+            <p>
+              Anim ad aliquip consequat est sit laboris nisi adipisicing
+              consectetur est non consequat velit.
+            </p>
+            <div class="reputacion">
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+            </div>
+          </a>
+        </article>
+        <article>
+          <a href="details/details.html">
+            <img src="assets/img/aston-martin.jpg" alt="aston martin f1 car" />
+            <h2>Car Three · 1000$</h2>
+            <p>
+              Anim ad aliquip consequat est sit laboris nisi adipisicing
+              consectetur est non consequat velit.
+            </p>
+            <div class="reputacion">
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="promotion">
+      <a href="details/details.html">
+        <article class="promotion-container">
+          <div class="promotion-image">
+            <img src="assets/img/aston-martin.jpg" alt="aston martin f1 car" />
+          </div>
+          <div class="promotion-content">
+            <h2>Car promotion · 2000$</h2>
+            <p>
+              Sit aute anim dolore deserunt elit dolor Lorem ea exercitation
+              pariatur.
+            </p>
+            <div class="reputacion">
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+            </div>
+          </div>
+        </article>
+      </a>
+    </section>
+
+    <section class="post">
+      <h1>Latest posts</h1>
+      <div class="post-row">
+        <article>
+          <em class="fa fa-instagram"></em>
+          <img src="assets/img/aston-martin.jpg" alt="aston martin f1 car" />
+          <h2>Instagram post</h2>
+          <p>
+            Non in sit dolor dolor cillum sint deserunt pariatur exercitation
+            voluptate exercitation in pariatur.
+          </p>
+        </article>
+        <article>
+          <em class="fa fa-twitter"></em>
+          <img src="assets/img/aston-martin.jpg" alt="aston martin f1 car" />
+          <h2>X post</h2>
+          <p>
+            Non in sit dolor dolor cillum sint deserunt pariatur exercitation
+            voluptate exercitation in pariatur.
+          </p>
+        </article>
+        <article>
+          <em class="fa fa-facebook"></em>
+          <img src="assets/img/aston-martin.jpg" alt="aston martin f1 car" />
+          <h2>Facebook post</h2>
+          <p>
+            Non in sit dolor dolor cillum sint deserunt pariatur exercitation
+            voluptate exercitation in pariatur.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-us">
+      <h3>F1 Official Car Store</h3>
+      <p>
+        Ex non pariatur ex minim. Duis ut quis excepteur aute veniam cupidatat
+        dolor velit laborum officia laboris non ut esse. Nostrud ullamco
+        exercitation sit veniam pariatur irure.
+      </p>
+      <p>
+        Ex non pariatur ex minim. Duis ut quis excepteur aute veniam cupidatat
+        dolor velit laborum officia laboris non ut esse. Nostrud ullamco
+        exercitation sit veniam pariatur irure.
+      </p>
+      <div>
+        <img src="assets/img/logos/f1.png" alt="f1 logo" />
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <section class="footer-row">
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="" aria-label="Find us on GitHub">
+                <em class="fa fa-github"></em>
+              </a>
+              <a href="" aria-label="Find us on X">
+                <em class="fa fa-twitter"></em>
+                </a>
+              <a href="" aria-label="Find us on Instagram">
+                <em class="fa fa-instagram"></em>
+              </a>
+              <a href="" aria-label="Find us on LinkedIn">
+                <em class="fa fa-linkedin"></em>
+              </a>
+            </div>
+          </article>
+        </section>
+        <section class="footer-row">
+          <article class="footer-col" style="margin-top: 20px">
+            <a href="/">
+              <img
+                src="assets/img/logos/f1.png"
+                alt="f1 logo"
+                style="width: 110px; margin-right: 10px"
+              />
+            </a>
+          </article>
+          <article class="footer-col-bottom">
+            <p>
+              © 2023 Formula One World Championship Limited. Rafael Gómez
+              Guillén.
+            </p>
+          </article>
+        </section>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="js/carousell.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/darkMode.js"></script>
+  </body>
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <style></style>
+  </head>
+
+  <body>
+    <div id="header">
+      <ul>
+        <li>Asociaci&oacute;n Deportiva Las Mercedes</li>
+        <li><img src="soccer-3-64.png" /></li>
+      </ul>
+      <ul>
+        <li><img id="user_icon" src="user.png" /></li>
+        <li><img id="padlock_icon" src="padlock_blocked.png" /></li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <div id="view_bets">Ver mis apuestas</div>
+
+    <div class="dialog_window">
+      <span>Bienvenido a la p&aacute;gina web de la A.D. Las Mercedes</span>
+      <!--<ul><li>Bienvenido a la p&aacute;gina web de la A.D. Las Mercedes</li></ul>-->
+      <img src="soccer-3-64.png" />
+      <button>login</button>
+    </div>
+
+    <form>
+      <label for="user" id="user">Usuario</label><br />
+      <input type="text" name="user" value="" /><br />
+      <label for="psswrd">Contrase&ntilde;a</label><br />
+      <input type="text" name="psswrd" id="psswrd" value="" /><br /><br />
+      <input id="submit" type="submit" value="Enviar" />
+    </form>
+
+    <table>
+      <tr>
+        <th>Encuentro</th>
+        <th>Fecha</th>
+        <th>1.50&euro;</th>
+        <th>2.50&euro;</th>
+        <th>5.00&euro;</th>
+        <th colspan="3">TU APUESTA</th>
+      </tr>
+      <tr id="bet1">
+        <td>Vigo C.D. - Barcelona F.C.</td>
+        <td>02-02-2024</td>
+        <td><input class="1" type="radio" name="bet1" checked /></td>
+        <td><input class="2" type="radio" name="bet1" /></td>
+        <td><input class="3" type="radio" name="bet1" /></td>
+        <td class="rslt">1</td>
+        <td class="rslt">X</td>
+        <td class="rslt">2</td>
+      </tr>
+      <tr id="bet2">
+        <td>Burgos - Getafe</td>
+        <td>02-02-2024</td>
+        <td><input class="1" type="radio" name="bet2" checked /></td>
+        <td><input class="2" type="radio" name="bet2" /></td>
+        <td><input class="3" type="radio" name="bet2" /></td>
+        <td class="rslt">1</td>
+        <td class="rslt" v>X</td>
+        <td class="rslt">2</td>
+      </tr>
+      <tr id="bet3">
+        <td>Valencia - Almer&iacute;a</td>
+        <td>02-02-2024</td>
+        <td><input class="1" type="radio" name="bet3" checked /></td>
+        <td><input class="2" type="radio" name="bet3" /></td>
+        <td><input class="3" type="radio" name="bet3" /></td>
+        <td class="rslt">1</td>
+        <td class="rslt">X</td>
+        <td class="rslt">2</td>
+      </tr>
+      <tr id="bet4">
+        <td>Osasuna - Celta</td>
+        <td>02-02-2024</td>
+        <td><input class="1" type="radio" name="bet4" checked /></td>
+        <td><input class="2" type="radio" name="bet4" /></td>
+        <td><input class="3" type="radio" name="bet4" /></td>
+        <td class="rslt">1</td>
+        <td class="rslt">X</td>
+        <td class="rslt">2</td>
+      </tr>
+      <tr id="bet5">
+        <td>Granada - Las Palmas</td>
+        <td>02-02-2024</td>
+        <td><input class="1" type="radio" name="bet5" checked /></td>
+        <td><input class="2" type="radio" name="bet5" /></td>
+        <td><input class="3" type="radio" name="bet5" /></td>
+        <td class="rslt">1</td>
+        <td class="rslt">X</td>
+        <td class="rslt">2</td>
+      </tr>
+      <tr id="bet6">
+        <td>Albacete - Cartagena</td>
+        <td>02-02-2024</td>
+        <td><input class="1" type="radio" name="bet6" checked /></td>
+        <td><input class="2" type="radio" name="bet6" /></td>
+        <td><input class="3" type="radio" name="bet6" /></td>
+        <td class="rslt">1</td>
+        <td class="rslt">X</td>
+        <td class="rslt">2</td>
+      </tr>
+      <tr id="bet7">
+        <td>Girona- R. Sociedad</td>
+        <td>02-02-2024</td>
+        <td><input class="1" type="radio" name="bet7" checked /></td>
+        <td><input class="2" type="radio" name="bet7" /></td>
+        <td><input class="3" type="radio" name="bet7" /></td>
+        <td class="rslt">1</td>
+        <td class="rslt">X</td>
+        <td class="rslt">2</td>
+      </tr>
+      <tr id="bet8">
+        <td>R. Zaragoza - Sporting</td>
+        <td>02-02-2024</td>
+        <td><input class="1" type="radio" name="bet8" checked /></td>
+        <td><input class="2" type="radio" name="bet8" /></td>
+        <td><input class="3" type="radio" name="bet8" /></td>
+        <td class="rslt">1</td>
+        <td class="rslt">X</td>
+        <td class="rslt">2</td>
+      </tr>
+      <tr id="bet9">
+        <td>Rayo Vallecano - Sevilla</td>
+        <td>02-02-2024</td>
+        <td><input class="1" type="radio" name="bet9" checked /></td>
+        <td><input class="2" type="radio" name="bet9" /></td>
+        <td><input class="3" type="radio" name="bet9" /></td>
+        <td class="rslt">1</td>
+        <td class="rslt">X</td>
+        <td class="rslt">2</td>
+      </tr>
+      <tr id="bet10">
+        <td>Espanyol - Levante</td>
+        <td>02-02-2024</td>
+        <td><input class="1" type="radio" name="bet10" checked /></td>
+        <td><input class="2" type="radio" name="bet10" /></td>
+        <td><input class="3" type="radio" name="bet10" /></td>
+        <td class="rslt">1</td>
+        <td class="rslt">X</td>
+        <td class="rslt">2</td>
+      </tr>
+      <tr id="bet11">
+        <td>Villarreal - C&aacute;diz</td>
+        <td>02-02-2024</td>
+        <td><input class="1" type="radio" name="bet11" checked /></td>
+        <td><input class="2" type="radio" name="bet11" /></td>
+        <td><input class="3" type="radio" name="bet11" /></td>
+        <td class="rslt">1</td>
+        <td class="rslt">X</td>
+        <td class="rslt">2</td>
+      </tr>
+      <tr id="bet12">
+        <td>Tenerife - Andorra F.C.</td>
+        <td>02-02-2024</td>
+        <td><input class="1" type="radio" name="bet12" checked /></td>
+        <td><input class="2" type="radio" name="bet12" /></td>
+        <td><input class="3" type="radio" name="bet12" /></td>
+        <td class="rslt">1</td>
+        <td class="rslt">X</td>
+        <td class="rslt">2</td>
+      </tr>
+      <tr>
+        <td colspan="5" id="bet">TOTAL APUESTA: 0.00&euro;</td>
+        <td colspan="3" id="set_bet">APOSTAR</td>
+      </tr>
+    </table>
+
+    <!-- ##################################################################################################################################################### -->
+
+    <script>
+      // INICIALIZACIÓN DE LA INFO SOBRE APUESTAS
+
+      bet_status = {
+        bet1: [1.5, false, "1"],
+        bet2: [1.5, false, "1"],
+        bet3: [1.5, false, "1"],
+        bet4: [1.5, false, "1"],
+        bet5: [1.5, false, "1"],
+        bet6: [1.5, false, "1"],
+        bet7: [1.5, false, "1"],
+        bet8: [1.5, false, "1"],
+        bet9: [1.5, false, "1"],
+        bet10: [1.5, false, "1"],
+        bet11: [1.5, false, "1"],
+        bet12: [1.5, false, "1"],
+      };
+
+      bet_keys = Object.keys(bet_status);
+
+      radios = document.querySelectorAll("input[type=radio]");
+
+      function res_ok(user) {
+        // Gestión de la validación del usuario
+
+        setTimeout(() => {
+          document
+            .getElementsByClassName("dialog_window")[0]
+            .getElementsByTagName("span")[0].innerHTML =
+            "Bienvenido de nuevo " + user + ":)";
+          document.getElementById("padlock_icon").src = "padlock_open.png";
+          document.getElementById("user_icon").src = "checked_user.png";
+        }, 2000);
+
+        setTimeout(() => {
+          document.getElementsByClassName("dialog_window")[0].style.display =
+            "none";
+          document.getElementsByTagName("table")[0].style.display = "table";
+          document.getElementById("view_bets").style.display = "block";
+        }, 4000);
+      } // end of res_ok function
+
+      function res_not_ok() {
+        // Gestión de la no validación del usuario
+
+        setTimeout(() => {
+          document
+            .getElementsByClassName("dialog_window")[0]
+            .getElementsByTagName("span")[0].innerHTML =
+            "Usuario y/o contraseña no v&aacute;lidos:(";
+        }, 2000);
+
+        setTimeout(() => {
+          document.getElementsByClassName("dialog_window")[0].style.display =
+            "none";
+          document.getElementsByTagName("form")[0].style.display = "block";
+        }, 4000);
+      } // end of res_not_ok function
+
+      function show_bet() {
+        // Función para actualización del importe de la apuesta en la tabla
+        sum = 0;
+        for (j = 0; j < bet_keys.length; j++)
+          if (bet_status[bet_keys[j]][1])
+            sum = sum + Number(bet_status[bet_keys[j]][0]);
+        document.getElementById("bet").innerHTML =
+          "TOTAL APUESTA: " + sum.toFixed(2) + "€";
+      }
+
+      for (i = 0; i < radios.length; i++) {
+        // Eventos de input radio
+
+        radios[i].oninput = function (event) {
+          if (event.target.className == "1")
+            bet_status[event.target.getAttribute("name")][0] = 1.5;
+          if (event.target.className == "2")
+            bet_status[event.target.getAttribute("name")][0] = 2.5;
+          if (event.target.className == "3")
+            bet_status[event.target.getAttribute("name")][0] = 5.0;
+
+          show_bet();
+        };
+      }
+
+      rslts = document.getElementsByClassName("rslt");
+
+      for (i = 0; i < rslts.length; i++) {
+        // Eventos de selección de apuestas
+
+        rslts[i].onclick = function (event) {
+          clr = event.target.style.backgroundColor;
+          if (clr == "var(--enphasisclr)") {
+            event.target.style.backgroundColor =
+              event.target.parentNode.parentNode.style.backgroundColor;
+            bet_status[event.target.parentNode.id][1] = false;
+          } else {
+            objs = event.target.parentNode.getElementsByClassName("rslt");
+            for (j = 0; j < objs.length; j++)
+              objs[j].style.backgroundColor =
+                event.target.parentNode.parentNode.style.backgroundColor;
+            event.target.style.backgroundColor = "var(--enphasisclr)";
+            bet_status[event.target.parentNode.id][1] = true;
+            bet_status[event.target.parentNode.id][2] = event.target.innerHTML;
+          }
+
+          show_bet();
+        }; // end of function
+      } //end of i-loop
+
+      document.getElementsByTagName("body")[0].onload = () => {
+        // Inicialización de la página
+
+        setTimeout(function () {
+          document.getElementById("psswrd").value = "";
+          document.getElementsByTagName("input")[0].value = "";
+          document.getElementsByClassName("dialog_window")[0].style.display =
+            "block";
+        }, 2000);
+
+        for (i = 0; i < radios.length / 3; i++) {
+          if (radios[3 * i].checked) bet_status[bet_keys[i]][0] = 1.5;
+          if (radios[3 * i + 1].checked) bet_status[bet_keys[i]][0] = 2.5;
+          if (radios[3 * i + 2].checked) bet_status[bet_keys[i]][0] = 5.0;
+        }
+      }; // end of body onload
+
+      document
+        .getElementsByClassName("dialog_window")[0]
+        .getElementsByTagName("button")[0].onclick = (event) => {
+        // Gestión del botón inicial login
+        event.target.parentNode.style.display = "none";
+        setTimeout(function () {
+          document.getElementsByTagName("form")[0].style.display = "block";
+        }, 1000);
+      };
+
+      document.getElementById("psswrd").onfocus = () => {
+        if (event.target.style.color == "red")
+          event.target.style.color = "black";
+        event.target.value = "";
+      };
+
+      document.getElementsByTagName("input")[0].onfocus = () => {
+        if (event.target.style.color == "red")
+          event.target.style.color = "black";
+        event.target.value = "";
+      };
+
+      document.getElementsByTagName("form")[0].onsubmit = () => {
+        // GESTIÓN DEL FORMULARIO
+
+        event.preventDefault();
+
+        psswrd = document.getElementById("psswrd").value;
+        user = document.getElementsByTagName("input")[0].value;
+
+        valid_psswrd = true;
+        valid_user = true;
+
+        if (psswrd.match(/^[\w@#&$%]{8,16}$/i) != psswrd) valid_psswrd = false;
+        if (!/\d+/.test(psswrd)) valid_psswrd = false;
+        if (!/[a-z]+/.test(psswrd)) valid_psswrd = false;
+        if (!/[A-Z]+/.test(psswrd)) valid_psswrd = false;
+
+        if (
+          !/[a-zA-Z/d]{2,}/.test(user) ||
+          document.getElementsByTagName("input")[0].style.color == "red"
+        )
+          valid_user = false;
+
+        if (valid_psswrd && valid_user) {
+        } // end of valid's = true
+
+        if (!valid_psswrd) {
+          document.getElementById("psswrd").value = "Contraseña no válida";
+          document.getElementById("psswrd").style.color = "red";
+        }
+
+        if (!valid_user) {
+          document.getElementsByTagName("input")[0].value = "Usuario no válido";
+          document.getElementsByTagName("input")[0].style.color = "red";
+        }
+      }; //end of onsubmit
+
+      const DOM = {
+        usuarioInput: document.querySelector(
+          "body > form > input[type=text]:nth-child(3)"
+        ),
+        contraseñaInput: document.querySelector("#psswrd"),
+        enviarBtn: document.querySelector("#submit"),
+        dialog: document.querySelector("body > div.dialog_window"),
+        dialogMessage: document.querySelector(
+          "body > div.dialog_window > span"
+        ),
+        dialogBtn: document.querySelector("body > div.dialog_window > button"),
+        formDiv: document.querySelector("body > form"),
+        apuestas: document.querySelector("#view_bets"),
+        tabla: document.querySelector("body > table"),
+        apostarBtn: document.querySelector("#set_bet"),
+        verMisApuestasBtn: document.querySelector("#view_bets"),
+      };
+
+      // Actividad 1
+      DOM.enviarBtn.addEventListener("click", () => {
+        enivarDataLogin();
+      });
+
+      function enivarDataLogin() {
+        const user = {
+          user: DOM.usuarioInput.value,
+          psswrd: DOM.contraseñaInput.value,
+        };
+
+        let xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            // Si no hay error
+
+            DOM.formDiv.style.display = "none";
+            DOM.dialog.style.display = "block";
+            DOM.dialogMessage.textContent = "Validando información de acceso";
+            DOM.dialogBtn.style.display = "none";
+
+            setTimeout(() => {
+              DOM.dialogMessage.textContent = `Bienvenido de nuevo ${user.user}`;
+
+              setTimeout(() => {
+                DOM.dialog.style.display = "none";
+                DOM.tabla.style.display = "block";
+                DOM.apuestas.style.display = "block";
+              }, 2000);
+            }, 2000);
+          }
+        };
+
+        xhttp.open("POST", "check_user.php", false);
+        xhttp.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        );
+        xhttp.send(`user=${user.user}&psswrd=${user.psswrd}`);
+      }
+
+      // Actividad 2
+      DOM.apostarBtn.addEventListener("click", () => {
+        apostar();
+      });
+
+      function apostar() {
+        const data = {
+          bets: bet_status,
+          user: DOM.usuarioInput.value,
+          psswrd: DOM.contraseñaInput.value,
+        };
+
+        let contApuestas = 0;
+
+        for (let i = 1; i <= 12; i++) {
+          if (bet_status[`bet${i}`][1] === false) contApuestas++;
+        }
+
+        if (contApuestas !== 12) {
+          fetch("bet_reg.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: `data=${JSON.stringify(data)}`,
+          })
+            .then((response) => response.text())
+            .then((response) => {
+              if (response.trim() !== "N") {
+                alert(
+                  `${data.user} tu apuesta ha sido procesada correctamente.`
+                );
+              } else {
+                alert(
+                  `${data.user} la apuesta no ha sido procesada correctamente.`
+                );
+              }
+            })
+            .catch((error) => {
+              console.error(error);
+            });
+        } else {
+          alert(`${data.user} no haz realizado ninguna apuesta.`)
+        }
+      }
+
+      // Actividad 3
+      DOM.verMisApuestasBtn.addEventListener("click", () => {
+        verApuestas();
+      });
+
+      function verApuestas() {
+        const user = {
+          user: DOM.usuarioInput.value,
+          psswrd: DOM.contraseñaInput.value,
+        };
+
+        fetch("bet_info.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: `user=${user.user}&psswrd=${user.psswrd}`,
+        })
+          .then((response) => response.text())
+          .then((data) => {
+            if (data.trim() !== "N") {
+              alert(data);
+            } else {
+              alert(`${user.user} no ha realizado ninguna apuesta.`);
+            }
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      }
+    </script>
+  </body>
+</html>

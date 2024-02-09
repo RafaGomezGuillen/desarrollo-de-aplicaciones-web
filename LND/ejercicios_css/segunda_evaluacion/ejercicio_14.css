@@ -1,0 +1,35 @@
+.main {
+  border: solid black;
+  width: 450px;
+  height: 600px;
+}
+
+.nino {
+  width: 440px;
+  height: 590px;
+  -webkit-transition: all 0.5s ease 0.5s;
+}
+
+.nino-img {
+  width: 440px;
+  height: 590px;
+}
+
+.yoyo-img {
+  width: 80px;
+  height: 300px;
+  z-index: 1;
+  position: relative;
+  bottom: 370px;
+  left: 139px;
+}
+
+.nino:hover + .yoyo-img {
+  transform: scaleY(1);
+  transition: all 2s;
+}
+
+.nino + .yoyo-img {
+  transform: translate(0, -90px) scaleY(0.5);
+  transition: all 2s;
+}

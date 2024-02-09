@@ -1,0 +1,242 @@
+[
+  {
+    "web": "www.farmacia1.com",
+    "horario": "Lunes a Viernes de 9:00 a 20:00",
+    "telefono": "+34 928 111 111",
+    "nombre": "Farmacia 1",
+    "UTM_X": 1000,
+    "UTM_Y": 5000
+  },
+  {
+    "web": "www.farmacia2.com",
+    "horario": "Lunes a Sábado de 8:00 a 22:00",
+    "telefono": "+34 928 222 222",
+    "nombre": "Farmacia 2",
+    "UTM_X": 2000,
+    "UTM_Y": 10000
+  },
+  {
+    "web": "www.farmacia3.com",
+    "horario": "Abierto 24 horas",
+    "telefono": "+34 928 333 333",
+    "nombre": "Farmacia 3",
+    "UTM_X": 3000,
+    "UTM_Y": 15000
+  },
+  {
+    "web": "www.farmacia4.com",
+    "horario": "Lunes a Viernes de 8:00 a 19:00",
+    "telefono": "+34 928 444 444",
+    "nombre": "Farmacia 4",
+    "UTM_X": 4000,
+    "UTM_Y": 20000
+  },
+  {
+    "web": "www.farmacia5.com",
+    "horario": "Lunes a Domingo de 10:00 a 18:00",
+    "telefono": "+34 928 555 555",
+    "nombre": "Farmacia 5",
+    "UTM_X": 5000,
+    "UTM_Y": 25000
+  },
+  {
+    "web": "www.farmacia6.com",
+    "horario": "Lunes a Sábado de 9:00 a 21:00",
+    "telefono": "+34 928 666 666",
+    "nombre": "Farmacia 6",
+    "UTM_X": 6000,
+    "UTM_Y": 30000
+  },
+  {
+    "web": "www.farmacia7.com",
+    "horario": "Lunes a Viernes de 8:00 a 18:00",
+    "telefono": "+34 928 777 777",
+    "nombre": "Farmacia 7",
+    "UTM_X": 7000,
+    "UTM_Y": 35000
+  },
+  {
+    "web": "www.farmacia8.com",
+    "horario": "Lunes a Sábado de 10:00 a 20:00",
+    "telefono": "+34 928 888 888",
+    "nombre": "Farmacia 8",
+    "UTM_X": 8000,
+    "UTM_Y": 40000
+  },
+  {
+    "web": "www.farmacia9.com",
+    "horario": "Lunes a Domingo de 9:00 a 22:00",
+    "telefono": "+34 928 999 999",
+    "nombre": "Farmacia 9",
+    "UTM_X": 9000,
+    "UTM_Y": 45000
+  },
+  {
+    "web": "www.farmacia10.com",
+    "horario": "Lunes a Viernes de 9:00 a 20:00",
+    "telefono": "+34 928 111 111",
+    "nombre": "Farmacia 10",
+    "UTM_X": 10000,
+    "UTM_Y": 50000
+  },
+  {
+    "web": "www.farmacia11.com",
+    "horario": "Lunes a Sábado de 8:00 a 22:00",
+    "telefono": "+34 928 222 222",
+    "nombre": "Farmacia 11",
+    "UTM_X": 11000,
+    "UTM_Y": 55000
+  },
+  {
+    "web": "www.farmacia12.com",
+    "horario": "Abierto 24 horas",
+    "telefono": "+34 928 333 333",
+    "nombre": "Farmacia 12",
+    "UTM_X": 12000,
+    "UTM_Y": 60000
+  },
+  {
+    "web": "www.farmacia13.com",
+    "horario": "Lunes a Viernes de 8:00 a 19:00",
+    "telefono": "+34 928 444 444",
+    "nombre": "Farmacia 13",
+    "UTM_X": 13000,
+    "UTM_Y": 65000
+  },
+  {
+    "web": "www.farmacia14.com",
+    "horario": "Lunes a Domingo de 10:00 a 18:00",
+    "telefono": "+34 928 555 555",
+    "nombre": "Farmacia 14",
+    "UTM_X": 14000,
+    "UTM_Y": 70000
+  },
+  {
+    "web": "www.farmacia15.com",
+    "horario": "Lunes a Sábado de 9:00 a 21:00",
+    "telefono": "+34 928 666 666",
+    "nombre": "Farmacia 15",
+    "UTM_X": 15000,
+    "UTM_Y": 75000
+  },
+  {
+    "web": "www.farmacia16.com",
+    "horario": "Lunes a Viernes de 8:00 a 18:00",
+    "telefono": "+34 928 777 777",
+    "nombre": "Farmacia 16",
+    "UTM_X": 16000,
+    "UTM_Y": 80000
+  },
+  {
+    "web": "www.farmacia17.com",
+    "horario": "Lunes a Sábado de 10:00 a 20:00",
+    "telefono": "+34 928 888 888",
+    "nombre": "Farmacia 17",
+    "UTM_X": 17000,
+    "UTM_Y": 85000
+  },
+  {
+    "web": "www.farmacia18.com",
+    "horario": "Lunes a Domingo de 9:00 a 22:00",
+    "telefono": "+34 928 999 999",
+    "nombre": "Farmacia 18",
+    "UTM_X": 18000,
+    "UTM_Y": 90000
+  },
+  {
+    "web": "www.farmacia19.com",
+    "horario": "Lunes a Viernes de 9:00 a 20:00",
+    "telefono": "+34 928 111 111",
+    "nombre": "Farmacia 19",
+    "UTM_X": 19000,
+    "UTM_Y": 95000
+  },
+  {
+    "web": "www.farmacia20.com",
+    "horario": "Lunes a Sábado de 8:00 a 22:00",
+    "telefono": "+34 928 222 222",
+    "nombre": "Farmacia 20",
+    "UTM_X": 20000,
+    "UTM_Y": 100000
+  },
+  {
+    "web": "www.farmacia21.com",
+    "horario": "Abierto 24 horas",
+    "telefono": "+34 928 333 333",
+    "nombre": "Farmacia 21",
+    "UTM_X": 21000,
+    "UTM_Y": 105000
+  },
+  {
+    "web": "www.farmacia22.com",
+    "horario": "Lunes a Viernes de 8:00 a 19:00",
+    "telefono": "+34 928 444 444",
+    "nombre": "Farmacia 22",
+    "UTM_X": 22000,
+    "UTM_Y": 110000
+  },
+  {
+    "web": "www.farmacia23.com",
+    "horario": "Lunes a Domingo de 10:00 a 18:00",
+    "telefono": "+34 928 555 555",
+    "nombre": "Farmacia 23",
+    "UTM_X": 23000,
+    "UTM_Y": 115000
+  },
+  {
+    "web": "www.farmacia24.com",
+    "horario": "Lunes a Sábado de 9:00 a 21:00",
+    "telefono": "+34 928 666 666",
+    "nombre": "Farmacia 24",
+    "UTM_X": 24000,
+    "UTM_Y": 120000
+  },
+  {
+    "web": "www.farmacia25.com",
+    "horario": "Lunes a Viernes de 8:00 a 18:00",
+    "telefono": "+34 928 777 777",
+    "nombre": "Farmacia 25",
+    "UTM_X": 25000,
+    "UTM_Y": 125000
+  },
+  {
+    "web": "www.farmacia26.com",
+    "horario": "Lunes a Sábado de 10:00 a 20:00",
+    "telefono": "+34 928 888 888",
+    "nombre": "Farmacia 26",
+    "UTM_X": 26000,
+    "UTM_Y": 130000
+  },
+  {
+    "web": "www.farmacia27.com",
+    "horario": "Lunes a Domingo de 9:00 a 22:00",
+    "telefono": "+34 928 999 999",
+    "nombre": "Farmacia 27",
+    "UTM_X": 27000,
+    "UTM_Y": 135000
+  },
+  {
+    "web": "www.farmacia28.com",
+    "horario": "Lunes a Viernes de 9:00 a 20:00",
+    "telefono": "+34 928 111 111",
+    "nombre": "Farmacia 28",
+    "UTM_X": 28000,
+    "UTM_Y": 140000
+  },
+  {
+    "web": "www.farmacia29.com",
+    "horario": "Lunes a Sábado de 8:00 a 22:00",
+    "telefono": "+34 928 222 222",
+    "nombre": "Farmacia 29",
+    "UTM_X": 29000,
+    "UTM_Y": 145000
+  },
+  {
+    "web": "www.farmacia30.com",
+    "horario": "Abierto 24 horas",
+    "telefono": "+34 928 333 333",
+    "nombre": "Farmacia 30",
+    "UTM_X": 30000,
+    "UTM_Y": 150000
+  }
+]

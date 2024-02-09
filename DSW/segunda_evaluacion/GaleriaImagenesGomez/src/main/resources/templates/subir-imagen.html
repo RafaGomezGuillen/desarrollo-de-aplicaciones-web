@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+
+<div id="main-content">
+    <h2>Subir imagen</h2>
+    <form class="subir-imagen" action="imageManager" enctype="multipart/form-data" method="post">
+        <div>
+            <label for="img">Seleccionar Imagen:</label>
+            <input type="file" id="img" name="img" required>
+        </div>
+        <button type="submit">Upload</button>
+    </form>
+</div>

@@ -1,0 +1,19 @@
+<!ELEMENT catalogo (producto+)>
+<!ATTLIST producto
+  nombre CDATA #IMPLIED
+  categoria (herramienta | mesa | tienda-profesional) "herramienta"
+  inventario (enstock | bajoorden | tienda-nodisponible) #IMPLIED>
+<!ELEMENT producto (especificaciones+, opciones*, fabrica?, precios+, notas*, stock?)>
+<!ELEMENT especificaciones (#PCDATA)>
+<!ATTLIST especificaciones
+  peso CDATA #IMPLIED
+  potencia CDATA #REQUIRED>
+<!ELEMENT opciones (#PCDATA)>
+<!ATTLIST opciones adaptador (incluido | opcional | noincluido) "incluido">
+<!ELEMENT fabrica (#PCDATA)>
+<!ELEMENT precios (#PCDATA)>
+<!ATTLIST precios
+  moneda (euros | libra) #IMPLIED
+  gastodeenvio CDATA #IMPLIED>
+<!ELEMENT notas (#PCDATA)>
+<!ELEMENT stock EMPTY>

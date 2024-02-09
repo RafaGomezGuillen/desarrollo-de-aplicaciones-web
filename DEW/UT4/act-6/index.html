@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio práctivo UT4</title>
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.3.0-alpha1-dist/css/bootstrap.css"
+    />
+    <script src="../bootstrap-5.3.0-alpha1-dist/js/bootstrap.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form class="needs-validation" novalidate="">
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label for="firstName" class="form-label">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Indique el nombre"
+              value="Fabiola"
+            />
+            <div class="invalid-feedback">Indique su nombre.</div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="lastName" class="form-label">Apellidos</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Indique el apellido"
+              value="Glez"
+            />
+            <div class="invalid-feedback">Indique sus apellidos.</div>
+          </div>
+
+          <div class="col-12">
+            <label for="username" class="form-label">Nick</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text">@</span>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Indique su usario"
+                value="fgonleob"
+              />
+              <div class="invalid-feedback">Indique su usuario.</div>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <label for="isla" class="form-label">Isla</label>
+            <select class="form-select" id="isla">
+              <option value="">Indique una isla...</option>
+            </select>
+            <div class="invalid-feedback">Indique una isla.</div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="municipio" class="form-label">Municipio</label>
+            <select class="form-select" id="municipio">
+              <option value="">Indique un municipio...</option>
+            </select>
+            <div class="invalid-feedback">Indique un municipio.</div>
+          </div>
+
+          <div class="col-md-3">
+            <label for="zip" class="form-label">Código Postal</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Indique el código postal"
+              value="XXXXX"
+            />
+            <div class="invalid-feedback">Código postal.</div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" />
+          <label class="form-check-label"
+            >Envío del producto a la dirección indicada</label
+          >
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" />
+          <label class="form-check-label">Enviar factura por correo</label>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" />
+          <label class="form-check-label"> Empaquetar para regalo</label>
+        </div>
+
+        <hr class="my-4" />
+
+        <h4 class="mb-3">Pago</h4>
+
+        <div class="my-3">
+          <div class="form-check">
+            <input
+              id="credit"
+              name="paymentMethod"
+              type="radio"
+              class="form-check-input"
+            />
+            <label class="form-check-label" for="credit"
+              >Tarjeta de Crédito</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              id="debit"
+              name="paymentMethod"
+              type="radio"
+              class="form-check-input"
+            />
+            <label class="form-check-label" for="debit"
+              >Tarjera de Débito</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              id="paypal"
+              name="paymentMethod"
+              type="radio"
+              class="form-check-input"
+            />
+            <label class="form-check-label" for="paypal">PayPal</label>
+          </div>
+        </div>
+        <div class="row gy-3" id="tarjeta_credito">
+          <div class="col-md-6">
+            <label for="cc-name" class="form-label">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cc-name"
+              placeholder=""
+            />
+            <small class="text-muted"
+              >Debe indicar el nombre completo que aparece en la tarjeta</small
+            >
+            <div class="invalid-feedback">Name on bank is required</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="cc-number" class="form-label"
+              >Número de la tarjeta</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="cc-number"
+              placeholder=""
+            />
+            <div class="invalid-feedback">Credit card number is required</div>
+          </div>
+
+          <div class="col-md-3">
+            <label for="cc-expiration" class="form-label"
+              >Fecha Caducidad</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="cc-expiration"
+              placeholder=""
+            />
+            <div class="invalid-feedback">Expiration date required</div>
+          </div>
+
+          <div class="col-md-3">
+            <label for="cc-cvv" class="form-label">CVV</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cc-cvv"
+              placeholder=""
+            />
+            <div class="invalid-feedback">Security code required</div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <button class="w-100 btn btn-primary btn-lg">Continuar</button>
+        <button class="w-100 btn btn-secondary btn-lg">Resetear</button>
+      </form>
+    </div>
+  </body>
+
+  <script src="scripts.js"></script>
+</html>

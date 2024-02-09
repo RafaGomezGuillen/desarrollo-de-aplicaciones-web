@@ -1,0 +1,129 @@
+﻿@page
+@model Ejercicios.Pages.Ejercicio04Model
+@{
+    ViewData["Title"] = "Ejercicio 04";
+}
+<script>
+    function resetForm() => document.getElementById("form-1").reset();
+</script>
+<h2>Ejercicio 4</h2>
+<form method="post" id="form-1">
+    @if (Request.Method == "POST")
+    {
+        <div>
+            <label>Número 1: </label>
+            <input type="number" step="any" name="number1" value="@Request.Form["number1"]" />
+            <input type="checkbox" name="number1-box" @(Request.Form["number1-box"] == "on" ? "checked" : "") />
+        </div>
+        <div>
+            <label>Número 2: </label>
+            <input type="number" step="any" name="number2" value="@Request.Form["number2"]" />
+            <input type="checkbox" name="number2-box" @(Request.Form["number2-box"] == "on" ? "checked" : "") />
+        </div>
+        <div>
+            <label>Número 3: </label>
+            <input type="number" step="any" name="number3" value="@Request.Form["number3"]" />
+            <input type="checkbox" name="number3-box" @(Request.Form["number3-box"] == "on" ? "checked" : "") />
+        </div>
+        <div>
+            <label>Número 4: </label>
+            <input type="number" step="any" name="number4" value="@Request.Form["number4"]" />
+            <input type="checkbox" name="number4-box" @(Request.Form["number4-box"] == "on" ? "checked" : "") />
+        </div>
+        <div>
+            <label>Suma: </label>
+            <input type="radio" name="operacion" value="suma" @(Request.Form["operacion"] == "suma" ? "checked" : "") />
+        </div>
+        <div>
+            <label>Multiplicar: </label>
+            <input type="radio" name="operacion" value="multiplicacion" @(Request.Form["operacion"] == "multiplicacion" ? "checked" : "") />
+        </div>
+    }
+    else
+    {
+        <div>
+            <label>Número 1: </label>
+            <input type="number" name="number1" value="" />
+            <input type="checkbox" name="number1-box" />
+        </div>
+        <div>
+            <label>Número 2: </label>
+            <input type="number" name="number2" value="" />
+            <input type="checkbox" name="number2-box" />
+        </div>
+        <div>
+            <label>Número 3: </label>
+            <input type="number" name="number3" value="" />
+            <input type="checkbox" name="number3-box" />
+        </div>
+        <div>
+            <label>Número 4: </label>
+            <input type="number" name="number4" value="" />
+            <input type="checkbox" name="number4-box" />
+        </div>
+        <div>
+            <label>Suma: </label>
+            <input type="radio" name="operacion" value="suma" checked />
+        </div>
+        <div>
+            <label>Multiplicar: </label>
+            <input type="radio" name="operacion" value="multiplicacion" />
+        </div>
+    }
+    <p>
+        <input type="submit" value="Ejecutar" />
+        <input type="reset" value="Limpiar" onclick="resetForm()" />
+    </p>
+</form>
+<div>
+    @if (Request.Method == "POST")
+    {
+        <h2>Resultado</h2>
+        decimal numero1, numero2, numero3, numero4, suma = 0, mult = 1;
+
+        bool checkNumero1 = Request.Form["number1-box"] == "on";
+        bool checkNumero2 = Request.Form["number2-box"] == "on";
+        bool checkNumero3 = Request.Form["number3-box"] == "on";
+        bool checkNumero4 = Request.Form["number4-box"] == "on";
+        bool esSuma = Request.Form["operacion"] == "suma";
+        bool esMult = Request.Form["operacion"] == "multiplicacion";
+
+        if (checkNumero1 && decimal.TryParse(Request.Form["number1"], out numero1))
+        {
+            suma += numero1;
+            mult *= numero1;
+            <p>Número 1: @numero1</p>
+        }
+
+        if (checkNumero2 && decimal.TryParse(Request.Form["number2"], out numero2))
+        {
+            suma += numero2;
+            mult *= numero2;
+            <p>Número 2: @numero2</p>
+        }
+
+        if (checkNumero3 && decimal.TryParse(Request.Form["number3"], out numero3))
+        {
+            suma += numero3;
+            mult *= numero3;
+            <p>Número 3: @numero3</p>
+        }
+
+        if (checkNumero4 && decimal.TryParse(Request.Form["number4"], out numero4))
+        {
+            suma += numero4;
+            mult *= numero4;
+            <p>Número 4: @numero4</p>
+        }
+
+        if (esSuma)
+        {
+            <p>Su suma da: @suma</p>
+        }
+
+        if (esMult)
+        {
+            <p>Su multiplicación da: @mult</p>
+        }
+    }
+</div>

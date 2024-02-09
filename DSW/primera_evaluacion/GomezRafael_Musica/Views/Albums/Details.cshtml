@@ -1,0 +1,42 @@
+﻿@model GomezRafael_Musica.Models.Album
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<h1>Detalles del álbum</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            Artista
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Artist.Name)
+        </dd>
+    </dl>
+</div>
+@if (Model.Tracks.Any())
+{
+    <h1>Lista de canciones del álbum</h1>
+    <ul>
+        @foreach (var item in Model.Tracks)
+        {
+            <li>
+                @Html.DisplayFor(modelItem => item.Name)
+            </li>
+        }
+    </ul>
+}
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.AlbumId">Editar álbum</a> |
+    <a asp-action="Index">Volver a la lista de álbumes</a>
+</div>

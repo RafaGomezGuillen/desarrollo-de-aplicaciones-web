@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+
+<div id="main-content">
+    <h1>Editar album</h1>
+    <h2><a th:href="@{/album}">Lista de albumes</a></h2>
+    <div class="form-container">
+        <form th:action="@{/album/updateAlbum}" method="post" th:object="${album}">
+            <label for="id">Id</label>
+            <input type="text" id="id" name="id" th:field="*{id}" readonly>
+
+            <!-- Campo para el nombre -->
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" th:field="*{title}" required>
+
+            <!-- Lista desplegable para seleccionar el artista -->
+            <label for="artista">Artista</label>
+            <select id="artista" name="artista" th:field="*{artistaId}" required>
+                <option th:each="artista : ${listArtist}" th:value="${artista.id}" th:text="${artista.name}"></option>
+            </select>
+
+            <!-- Botón de envío -->
+            <button type="submit">Editar album</button>
+        </form>
+    </div>
+</div>

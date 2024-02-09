@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      type="text/javascript"
+      src="/medusa/eforma/campus/ruxitagentjs_ICA2NVfqru_10281231207105659.js"
+      data-dtconfig="rid=RID_-402039568|rpid=-125836034|domain=gobiernodecanarias.org|reportUrl=/medusa/eforma/campus/rb_bf29001mpg|app=6f32243ee21d715c|cuc=o9ygw9x5|mel=100000|featureHash=ICA2NVfqru|dpvc=1|ssv=4|lastModification=1705710059355|vcv=2|tp=500,50,0,1|rdnt=1|uxrgce=1|bp=3|agentUri=/medusa/eforma/campus/ruxitagentjs_ICA2NVfqru_10281231207105659.js"
+    ></script>
+    <style>
+      :root {
+        --mainclr: rgba(0, 150, 0, 1);
+        --enphasisclr: rgba(0, 150, 0, 1);
+        --hdr_font_clr: rgba(255, 255, 255, 1);
+        --txt_font_clr: rgba(125, 125, 125, 1);
+        --input_bckgrnd_clr: rgba(0, 175, 0, 1);
+      }
+
+      @font-face {
+        font-family: "peignot";
+        src: url("Peignot.ttf");
+      }
+
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+
+      #header {
+        height: 10%;
+        background-color: var(--mainclr);
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        font-family: peignot;
+        width: 100%;
+        font-size: 2.5vw;
+        text-align: center;
+        color: var(--hdr_font_clr);
+        font-weight: bold;
+      }
+      #header > ul {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #header > ul > li {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      #header > ul:nth-child(1) > li:nth-child(2) {
+        padding: 1vw 0vw 0vw 0.5vw;
+      }
+      #header > ul:nth-child(1) > li:nth-child(2) > img {
+        scale: 0.9;
+      }
+      #header > ul:nth-child(2) {
+        position: absolute;
+        left: 90%;
+        top: 50%;
+        transform: translate(0%, -50%);
+      }
+      #header > ul:nth-child(2) > li > img {
+        scale: 0.4;
+      }
+      hr {
+        width: 100%;
+        height: 1.5vh;
+        background-color: var(--enphasisclr);
+        position: absolute;
+        left: 0%;
+        top: 11%;
+        border: none;
+      }
+
+      .dialog_window {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 1vw;
+        min-width: 30%;
+        width: auto;
+        z-index: 2;
+        font-size: 1.5vw;
+        text-align: center;
+        height: 30vh;
+        box-shadow: 0.4vw 0.4vw 1vw var(--mainclr);
+        font-family: peignot;
+        color: var(--txt_font_clr);
+        border: 0.2vw solid white;
+        font-weight: bold;
+        display: none;
+      }
+      .dialog_window > ul {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -60%);
+        width: 80%;
+      }
+      .dialog_window > span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -60%);
+        width: 80%;
+      }
+      .dialog_window > ul > li {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .dialog_window > img {
+        position: absolute;
+        left: 100%;
+        top: 0%;
+        transform: translate(-125%, 0%);
+        scale: 0.8;
+      }
+      .dialog_window > button {
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, -130%);
+        background-color: var(--enphasisclr);
+        border: none;
+        border-radius: 0.5vw;
+        font-family: peignot;
+        color: var(--hdr_font_clr);
+        padding: 0.8vw;
+        font-size: 2vw;
+      }
+      .dialog_window > button:active {
+        color: var(--mainclr);
+        background-color: rgba(255, 255, 255, 1);
+      }
+
+      form {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 3vw 3vw 6vw 3vw;
+        border-radius: 1vw;
+        border: 0.2vw solid white;
+        box-shadow: 0.4vw 0.4vw 1vw var(--mainclr);
+        display: none;
+      }
+      label {
+        font-family: peignot;
+        font-size: 1.5vw;
+        font-weight: bold;
+        color: var(--txt_font_clr);
+      }
+      input {
+        outline: none;
+        border-radius: 0.5vw;
+        border-color: var(--enphasisclr);
+        padding: 0.5vw;
+        margin-bottom: 3vw;
+      }
+      input:focus {
+        background-color: var(--input_bckgrnd_clr);
+      }
+      input[type="submit"] {
+        color: rgba(255, 255, 255, 1);
+        background-color: var(--enphasisclr);
+        font-family: peignot;
+        color: rgba(255, 255, 255, 1);
+        padding: 0.8vw;
+        font-size: 1.5vw;
+        border-radius: 0.5vw;
+        left: 50%;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, -200%);
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cauce_cookie.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-base.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-eforma.js"
+    ></script>
+  </head>
+
+  <body>
+    <div id="header">
+      <ul>
+        <li>C&iacute;rculo Amigos de la Naturaleza</li>
+        <li><img src="tree.png" /></li>
+      </ul>
+      <ul>
+        <li><img id="user_icon" src="user.png" /></li>
+        <li><img id="padlock_icon" src="padlock_blocked.png" /></li>
+      </ul>
+    </div>
+    <hr />
+
+    <div class="dialog_window">
+      <span
+        >Bienvenido a la p&aacute;gina web del C&iacute;rculo Amigos de la
+        Naturaleza</span
+      >
+      <!--<ul><li>Bienvenido a la p&aacute;gina web de la A.D. Las Mercedes</li></ul>-->
+      <img src="tree_green.png" />
+      <button>continuar</button>
+    </div>
+
+    <form action="">
+      <label for="user" id="user">Usuario</label><br />
+      <input type="text" name="user" value="" /><br />
+      <label for="psswrd">Contrase&ntilde;a</label><br />
+      <input type="text" name="psswrd" id="psswrd" value="" /><br /><br />
+      <input id="submit" type="submit" value="Enviar" />
+    </form>
+
+    <script>
+      const DOM = {
+        dialog: document.querySelector(".dialog_window"),
+        loginBtn: document.querySelector("body > div.dialog_window > button"),
+        form: document.querySelector("body > form"),
+        userInput: document.querySelector(
+          "body > form > input[type=text]:nth-child(3)"
+        ),
+        passwordInput: document.querySelector("#psswrd"),
+        enviarBtn: document.querySelector("#submit"),
+      };
+
+      // Transcurridos 2s a partir de la carga de <body>, se mostrará el elemento <div class="dialog_window">
+      setTimeout(() => {
+        DOM.dialog.style.display = "block";
+      }, 2000);
+
+      // Cuando el usuario pulsa el botón "login", el <div class="dialog_window"> desaparece y, 1s más tarde, se muestra en pantalla el formulario
+      DOM.loginBtn.addEventListener("click", () => {
+        setTimeout(() => {
+          DOM.dialog.style.display = "none";
+          DOM.form.style.display = "block";
+        }, 1000);
+      });
+
+      // Cuando el usuario hace click en el botón "Enviar" se bloquea el envío del formulario (preventDefault())
+      DOM.enviarBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+      });
+
+      // Funcion para validar el username
+      function validateUsername(name) {
+        const nameRegex = /^[a-zA-Z]{1,}$/;
+        return nameRegex.test(name);
+      }
+
+      // Funcion para validar la contraseña
+      function validatePassword(password) {
+        const passwordRegex =
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[_@#$%&*])[A-Za-z\d_@#$%&*]{8,16}$/;
+
+        return passwordRegex.test(password);
+      }
+
+      // Eventos tipo input a username y password
+      const inputEvents = ["userInput", "passwordInput"];
+
+      inputEvents.forEach((eventName) => {
+        DOM[eventName].addEventListener("input", validateForm);
+      });
+
+      // Funcion si el form es valido
+      function validForm() {
+        DOM.enviarBtn.addEventListener("click", () => {
+          // El form no es visible
+          DOM.form.style.display = "none";
+
+          // Se muestra el dialog sin el boton de login y con el nuevo mensaje de informacion
+          DOM.dialog.style.display = "block";
+          DOM.loginBtn.style.display = "none";
+          const span = document.querySelector(
+            "body > div.dialog_window > span"
+          );
+          span.textContent = "Validando información de acceso";
+        });
+      }
+
+      // Funcion si el form es invalido
+      function invalidForm() {
+        DOM.enviarBtn.addEventListener("click", () => {
+          if (!validateUsername(DOM.userInput.value)) {
+            // Value de color rojo y "Nombre usuario no válido"
+            DOM.userInput.setAttribute("style", "color: red");
+            DOM.userInput.value = "Nombre usuario no válido";
+
+            // Evento focus para "limpiar" el value del input
+            DOM.userInput.addEventListener("focus", () => {
+              DOM.userInput.setAttribute("style", "color: black");
+              DOM.userInput.value = "";
+            });
+          }
+
+          if (!validatePassword(DOM.passwordInput.value)) {
+            // Value de color rojo y "Contraseña no válida"
+            DOM.passwordInput.setAttribute("style", "color: red");
+            DOM.passwordInput.value = "Contraseña no válida";
+
+            // Evento focus para "limpiar" el value del input
+            DOM.passwordInput.addEventListener("focus", () => {
+              DOM.passwordInput.setAttribute("style", "color: black");
+              DOM.passwordInput.value = "";
+            });
+          }
+        });
+      }
+
+      // Validar todos los campos
+      function validateForm() {
+        // Constantes booleanas para comprobar si el value de los inputs es valido
+        const nameValid = validateUsername(DOM.userInput.value);
+        const passwordValid = validatePassword(DOM.passwordInput.value);
+
+        if (!(nameValid && passwordValid)) {
+          invalidForm();
+        } else {
+          validForm();
+        }
+      }
+    </script>
+  </body>
+</html>

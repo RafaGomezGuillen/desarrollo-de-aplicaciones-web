@@ -1,0 +1,161 @@
+﻿@page
+@model Ejercicios.Pages.Ejercicio06Model
+@{
+    ViewData["Title"] = "Ejercicio 06";
+    string contraseñaStr = "";
+    bool esContraseñaGenerada = TempData["esContraseñaGenerada"] != null ? (bool)TempData["esContraseñaGenerada"] : false;
+}
+<script>
+    function resetForm() => document.getElementById("form-1").reset();
+</script>
+<style>
+    .validar-contraseña img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .validar-contraseña {
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<h2>Generador de contraseñas</h2>
+<form method="post" id="form-1">
+    @if(Request.Method == "POST")
+    {
+        <div>
+            <label for="contenido">Contenido: </label>
+            <select name="contenido" style="width: 200px;">
+                <option value="letras">Letras</option>
+                <option value="letras-numeros">Letras y números</option>
+                <option value="letras-numeros-simbolos">Letras, números y símbolos</option>
+            </select>
+        </div>
+        <div>
+            <label for="tamaño">Tamaño: </label>
+            <input type="number" min="8" max="20" name="tamaño" value="@Request.Form["tamaño"]" style="width: 207px;" />
+        </div>
+        <p>
+            <input type="submit" name="action" value="Generar" />
+            <input type="reset" value="Limpiar" onclick="resetForm()" />
+        </p>
+        <div>
+            @if (Request.Form["action"] == "Generar")
+            {
+                <h2>Nueva contraseña</h2>
+                string opcion = Request.Form["contenido"];
+                int tamaño = Convert.ToInt32(Request.Form["tamaño"]);
+
+                char[] contraseña;
+                Random random = new Random();
+
+                if (opcion == "letras")
+                {
+                    if (tamaño >= 14)
+                    {
+                        contraseña = new char[tamaño];
+                        for (int i = 1; i <= tamaño; i++) contraseña[i - 1] = Convert.ToChar(random.Next('a', 'z'));
+                        for (int i = 0; i < tamaño; i++) contraseñaStr += contraseña[i];
+
+                        <p>@contraseñaStr</p>
+                        esContraseñaGenerada = true;
+                    }
+                    else
+                    {
+                        <p>Una contraseña de solo letras deberá tener un mínimo de 14 caracteres.</p>
+                    }
+                }
+
+                if (opcion == "letras-numeros")
+                {
+                    if (tamaño >= 12)
+                    {
+                        contraseña = new char[tamaño];
+                        string caracteresPermitidos = "abcdefghijklmnopqrstuvwxyz0123456789";
+
+                        for (int i = 0; i < tamaño; i++)
+                        {
+                            int randomNumber = random.Next(0, caracteresPermitidos.Length);
+                            contraseña[i] = caracteresPermitidos[randomNumber];
+                            contraseñaStr += contraseña[i];
+                        }
+
+                        <p>@contraseñaStr</p>
+                        esContraseñaGenerada = true;
+                    }
+                    else
+                    {
+                        <p>Una contraseña de letras y números deberá tener un mínimo de 12 caracteres.</p>
+                    }
+                }
+
+                if (opcion == "letras-numeros-simbolos")
+                {
+                    contraseña = new char[tamaño];
+                    string caracteresPermitidos = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=";
+
+                    for (int i = 0; i < tamaño; i++)
+                    {
+                        int randomNumber = random.Next(0, caracteresPermitidos.Length);
+                        contraseña[i] = caracteresPermitidos[randomNumber];
+                        contraseñaStr += contraseña[i];
+                    }
+
+                    <p>@contraseñaStr</p>
+                    esContraseñaGenerada = true;
+                }
+                <input type="hidden" name="passwd" value=@contraseñaStr />
+                TempData["esContraseñaGenerada"] = esContraseñaGenerada;
+            }
+        </div>
+        if(esContraseñaGenerada)
+        {
+            <form method="post">
+                <h2>Prueba la contraseña</h2>
+                <div>
+                    <input type="text" name="nuevo-password" value="@Request.Form["nuevo-password"]" style="width: 210px;" />
+                </div>
+                <p>
+                    <input type="submit" name="action" value="Comprobar" />
+                </p>
+            </form>
+            <div>
+                @if (Request.Form["action"] == "Comprobar")
+                {
+                    <h3>Contraseña comprobada</h3>
+                    @if (Request.Form["passwd"] == Request.Form["nuevo-password"])
+                    {
+                        <div class="validar-contraseña"><img src="/img/Ejercicio06/contraseñaCorrecta.jpg" /></div>
+                    }
+                    else
+                    {
+                        <div class="validar-contraseña"><img src="/img/Ejercicio06/contraseñaIncorrecta.jpg" /></div>
+                    }
+                }
+            </div>
+        }
+    }
+    else
+    {
+        <div>
+            <label for="contenido">Contenido: </label>
+            <select name="contenido" style="width: 200px;">
+                <option value="letras">Letras</option>
+                <option value="letras-numeros">Letras y números</option>
+                <option value="letras-numeros-simbolos">Letras, números y símbolos</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="tamaño">Tamaño: </label>
+            <input type="number" min="8" max="20" name="tamaño" value="" style="width: 207px;" />
+        </div>
+        <p>
+            <input type="submit" name="action" value="Generar" />
+            <input type="reset" value="Limpiar" onclick="resetForm()" />
+        </p>
+    }
+</form>
+
+
+

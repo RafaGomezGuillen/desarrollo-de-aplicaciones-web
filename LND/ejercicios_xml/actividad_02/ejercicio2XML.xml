@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<correos>
+  <correo programa="Gmail">
+    <destinatarios>
+      <destinatario>gomez@gmail.com</destinatario>
+      <destinatario>guillen@gmail.com</destinatario>
+    </destinatarios>
+    <asunto>Un saludito a todos</asunto>  
+    <cuerpo>
+      <mensaje>Buenos días.</mensaje>
+    </cuerpo>
+    <ficheros>
+      <fichero tipo="pdf">archivo.pdf</fichero>
+      <fichero tipo="html">index.html</fichero>
+    </ficheros>
+  </correo>
+</correos>

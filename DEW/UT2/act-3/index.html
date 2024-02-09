@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- actividad 1 -->
+  <section>
+    <h1>Divisores</h1>
+    <form>
+      <!-- num1 -->
+      <input type="text" id="number">
+      <button onclick="calcular()">calcular</button>
+    </form>
+    <div id="divisores"></div>
+  </section>
+
+  <hr />
+
+  <!-- actividad 2 -->
+  <section>
+    <h1>Fibonacci no recursivo</h1>
+    <form>
+      <input type="number" id="number-fibonacci">
+      <button onclick="fibonacci()">Calcular</button>
+    </form>
+    <div id="fibonacci-resultado"></div>
+  </section>
+
+  <hr />
+
+  <!-- actividad 3 -->
+  <section>
+    <h1>Fibonacci recursivo</h1>
+    <form>
+      <input type="number" id="number-fibonacci-recursivo">
+      <button onclick="fibonacciRecursivo()">Calcular</button>
+    </form>
+    <div id="fibonacci-resultado-recursivo"></div>
+  </section>
+
+  <hr />
+
+  <!-- actividad 4 y 5 -->
+  <section>
+    <h1>Calculadora</h1>
+
+    <table class="calculadora">
+      <tr>
+        <td colspan="5" id="display">
+        </td>
+      </tr>
+
+      <tr>
+        <td><button onclick="inputTecla('7')">7</button></td>
+        <td><button onclick="inputTecla('8')">8</button></td>
+        <td><button onclick="inputTecla('9')">9</button></td>
+        <td><button onclick="inputTecla('+')">+</button></td>
+        <td><button onclick="inputTecla('-')">-</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="inputTecla('4')">4</button></td>
+        <td><button onclick="inputTecla('5')">5</button></td>
+        <td><button onclick="inputTecla('6')">6</button></td>
+        <td><button onclick="inputTecla('*')">*</button></td>
+        <td><button onclick="inputTecla('/')">/</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="inputTecla('1')">1</button></td>
+        <td><button onclick="inputTecla('2')">2</button></td>
+        <td><button onclick="inputTecla('3')">3</button></td>
+        <td><button onclick="randomNumber()">RAND</button></td>
+        <td><button onclick="clearDisplay()">C</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="inputTecla('0')">0</button></td>
+        <td><button onclick="raizCuadrada()">√</button></td>
+        <td><button onclick="exponencial()">EXP</button></td>
+        <td><button onclick="arcocoseno()">ARC</button></td>
+        <td><button onclick="calculadora()">=</button></td>
+      </tr>
+    </table>
+  </section>
+
+  <hr />
+
+  <!-- actividad 6 -->
+  <section>
+    <h1>Divitron</h1>
+    <p>Indique una cadena de divisiones</p>
+
+    <textarea id="numeros-dividir" style="width: 300px; height: 100px;">
+
+    </textarea>
+    <br />
+    <br />
+    <button onclick="divisoresMod()">Calcular</button>
+    <span id="resultado_division"></span>
+  </section>
+  
+  <hr />
+
+  <!-- actividad 8 y 9 -->
+  <section>
+    <h1>Hoy es:</h1>
+    <p id="fecha-actual"></p>
+  </section>
+
+  <!-- actividad 10 -->
+  <hr />
+  <section>
+    <h1>Introduce un fecha: </h1>
+    <form>
+      <input type="date" id="fecha-introducida">
+      <button onclick="calcularFecha()">Calcular Fecha</button>
+    </form>
+    <div id="fecha_restante">
+
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- actividad 11 -->
+  <section>
+    <h1>Decimal a binario</h1>
+    <form>
+      <input type="number" id="num-decimal">
+      <button onclick="decToBin()">Convertir a binario</button>
+    </form>
+    <div id="num_binario"></div>
+  </section>
+
+  <hr />
+
+  <!-- actividad 12 -->
+  <section>
+    <h1>Decimal a Hexadecimal</h1>
+    <form>
+      <input type="number" id="num-decimal-hexa">
+      <button onclick="decToHex()">Convertir a hexadecimal</button>
+    </form>
+    <div id="num_hexadecimal"></div>
+  </section>
+
+  <!-- scripts -->
+  <script src="script.js"></script>
+</body>
+
+</html>

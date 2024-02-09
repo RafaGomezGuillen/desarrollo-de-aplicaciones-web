@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+
+<div id="main-content">
+    <h1>Detalles producto</h1>
+    <h2><a th:href="@{/producto}">Lista de productos</a></h2>
+    <div class="form-container">
+        <form th:object="${product}" method="post">
+            <label>Id</label>
+            <input type="text" th:field="*{id}" readonly />
+
+            <label>Nombre</label>
+            <input type="text" th:field="*{productName}" readonly />
+
+            <label>Precio</label>
+            <input type="number" th:field="*{productPrice}" readonly />
+
+            <label>Imagen</label>
+
+            <br />
+            <br />
+
+            <img th:src="@{'/img/'+${product.productPicture}}" width="100px" height="100px" />
+
+            <br />
+            <br />
+
+            <label>Municipio</label>
+            <input type="text" th:field="*{municipio.nombre}" readonly />
+
+            <label>Stock</label>
+            <input type="number" th:field="*{productStock}" readonly />
+        </form>
+    </div>
+</div>

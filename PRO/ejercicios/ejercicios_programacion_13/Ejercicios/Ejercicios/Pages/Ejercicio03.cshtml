@@ -1,0 +1,46 @@
+﻿@page
+@model Ejercicios.Pages.Ejercicio03Model
+@{
+    ViewData["Title"] = "Ejercicio 03";
+}
+<h2>Datediff versión barata</h2>
+<form method="post">
+    <p>
+        <label>Introduce una fecha: </label>
+        @if (Request.Method == "POST")
+        {
+            <input type="date" name="fecha" value="@Request.Form["fecha"]" />
+        }
+        else
+        {
+            <input type="date" name="fecha" value="" />
+        }
+    </p>
+    <p>
+        <input type="submit" value="Calcular" />
+    </p>
+</form>
+<div>
+    @{
+        if (Request.Method == "POST")
+        {
+            <h2>Resultado</h2>
+
+            string fechaString = Request.Form["fecha"];
+            DateTime fecha = DateTime.Parse(fechaString, null);
+            int comprobacion = fecha.CompareTo(DateTime.Now);
+
+            if (comprobacion == -1)
+            {
+                TimeSpan diferencia = DateTime.Now.Subtract(fecha);
+                int diferenciaDias = diferencia.Days;
+
+                <p>@($"La diferencia es: {diferenciaDias} días.")</p>
+            }
+            else
+            {
+                <p>La fecha no puede ser mayor que la actual.</p>
+            }
+        }
+    }
+</div>

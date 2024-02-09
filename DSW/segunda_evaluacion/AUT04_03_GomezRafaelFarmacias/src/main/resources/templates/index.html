@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+
+<div id="main-content">
+    <h1>Página principal</h1>
+
+    <h3>Estructura del proyecto</h3>
+    <ul>
+        <li>controller</li>
+            <ul>
+                <li>FarmaciaController</li>
+                <li>IndexController</li>
+            </ul>
+        <li>data</li>
+            <ul>
+                <li>Persistencia</li>
+                <li>PersistenciaImplementada</li>
+            </ul>
+        <li>model</li>
+            <ul>
+                <li>Farmacia</li>
+            </ul>
+    </ul>
+
+    <h3>Estructura de archivos estáticos</h3>
+    <ul>
+        <li>css</li>
+        <ul>
+            <li>main.css</li>
+        </ul>
+        <li>img</li>
+        <ul>
+            <li>logotipo.png</li>
+        </ul>
+        <li>json</li>
+        <ul>
+            <li>GomezRafael_farmacias.json</li>
+        </ul>
+    </ul>
+
+    <h3>Estructura de archivos HTML</h3>
+    <ul>
+        <li>layouts</li>
+        <ul>
+            <li>main-layout.html</li>
+        </ul>
+        <li>buscar-farmacia.html</li>
+        <li>index.html</li>
+        <li>lista-farmacias.html</li>
+    </ul>
+</div>

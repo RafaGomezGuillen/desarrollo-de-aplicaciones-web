@@ -1,0 +1,57 @@
+table {
+  border-style: solid;
+  border-width: 0.6em;
+  border-color: darkblue;
+  border-collapse: separate;
+  width: 50em;
+  height: 50em;
+}
+
+td {
+  border-style: solid;
+  border-width: 0.1em;
+}
+
+td.amarillo {
+  background-color: yellow;
+  border-style: none;
+}
+
+td.amarillo- {
+  background-color: yellow;
+  border-style: solid;
+}
+
+td.verde {
+  background-color: green;
+  border-style: none;
+}
+
+td.verde- {
+  background-color: green;
+  border-style: solid;
+}
+
+td.azul {
+  border-style: none;
+  background-color: blue;
+}
+
+td.azul- {
+  background-color: blue;
+  border-style: solid;
+}
+
+td.rojo {
+  border-style: none;
+  background-color: red;
+}
+
+td.rojo- {
+  background-color: red;
+  border-style: solid;
+}
+
+td.blanco {
+  border-style: none;
+}

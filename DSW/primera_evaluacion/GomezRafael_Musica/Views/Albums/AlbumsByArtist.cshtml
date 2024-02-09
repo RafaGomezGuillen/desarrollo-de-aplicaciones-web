@@ -1,0 +1,43 @@
+﻿@model IEnumerable<GomezRafael_Musica.Models.Album>
+
+<h1>lista de álbumes</h1>
+@if(Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    Artista
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @*Manera descendente según el ID del álbum. Take solo muestra 15 álbumes*@
+
+            @foreach (var album in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => album.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => album.Artist.Name)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h2>Este artista no tiene álbumes creados</h2>
+}
+
+<div>
+    <a asp-controller="Albums" asp-action="Index">Ver lista de álbumes</a> |
+    <a asp-controller="Artists" asp-action="Index">Ver lista de artistas</a> 
+</div>

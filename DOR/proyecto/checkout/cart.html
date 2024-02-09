@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- shared -->
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+
+    <!-- sections -->
+    <link rel="stylesheet" href="../styles/card-container.css" />
+
+    <!-- style page -->
+    <link rel="stylesheet" href="cart.css" />
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>F1 Store</title>
+  </head>
+
+  <body>
+    <nav id="myTopnav">
+      <a href="../index.html">Home</a>
+      <a href="../catalog/catalog.html">Catalog</a>
+      <a href="../profile/profile.html">Profile</a>
+      <a href="../about-us/about-us.html">About us</a>
+      <label for="selTheme">Select color pallete</label>
+      <select id="selTheme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+      <a href="#" class="log">Log in</a>
+      <a href="#" class="log">Log out</a>
+      <a
+        href="javascript:void(0);"
+        class="icon"
+        onclick="navbar()"
+        aria-label="Navbar icon for mobile screens"
+      >
+        <em class="fa fa-bars"></em>
+      </a>
+    </nav>
+
+    <section class="items">
+      <div class="checkout">
+        <p>Purchasing >> cart</p>
+        <label>Have a Coupon?</label>
+        <input type="text" placeholder="Coupon (Limit 1)" />
+
+        <h2>Cart Total = 3000$</h2>
+
+        <div>
+          <a href="shipping/shipping.html">
+            Checkout <em class="fa fa-credit-card"></em>
+          </a>
+        </div>
+      </div>
+      <div class="items-container">
+        <p>Purchasing >> cart</p>
+        <article>
+          <div class="item-img">
+            <img
+              src="../assets/img/aston-martin.jpg"
+              alt="aston martin f1 car"
+            />
+          </div>
+
+          <div class="item-titles">
+            <label>Aston Martin F1 Car / Season 2021</label>
+            <label>Description</label>
+            <label style="color: #cc0000">Price: $1000</label>
+            <label><del>Normal price: $1000</del></label>
+
+            <div class="item-btn">
+              <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+              <button>
+                Remove from cart <em class="fa fa-shopping-cart"></em>
+              </button>
+              <button>Remove <em class="fa fa-trash"></em></button>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <div class="item-img">
+            <img
+              src="../assets/img/aston-martin.jpg"
+              alt="aston martin f1 car"
+            />
+          </div>
+
+          <div class="item-titles">
+            <label>Aston Martin F1 Car / Season 2021</label>
+            <label>Description</label>
+            <label style="color: #cc0000">Price: $1000</label>
+
+            <div class="item-btn">
+              <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+              <button>
+                Remove from cart <em class="fa fa-shopping-cart"></em>
+              </button>
+              <button>Remove <em class="fa fa-trash"></em></button>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <div class="item-img">
+            <img
+              src="../assets/img/aston-martin.jpg"
+              alt="aston martin f1 car"
+            />
+          </div>
+
+          <div class="item-titles">
+            <label>Aston Martin F1 Car / Season 2021</label>
+            <label>Description</label>
+            <label style="color: #cc0000">Price: $1000</label>
+
+            <div class="item-btn">
+              <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+              <button>
+                Remove from cart <em class="fa fa-shopping-cart"></em>
+              </button>
+              <button>Remove <em class="fa fa-trash"></em></button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <h2 style="text-align: center; color: var(--color-font)">
+      Related products
+    </h2>
+
+    <section class="card-container" style="margin-top: 0px">
+      <div class="card-section" style="border: none">
+        <article>
+          <a href="../details/details.html">
+            <img
+              src="../assets/img/aston-martin.jpg"
+              alt="aston martin f1 car"
+            />
+            <h3>Car One · 1000$</h3>
+            <p>
+              Anim ad aliquip consequat est sit laboris nisi adipisicing
+              consectetur est non consequat velit.
+            </p>
+            <div class="reputacion">
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+            </div>
+          </a>
+        </article>
+        <article>
+          <a href="../details/details.html">
+            <img
+              src="../assets/img/aston-martin.jpg"
+              alt="aston martin f1 car"
+            />
+            <h3>Car Two · 1000$</h3>
+            <p>
+              Anim ad aliquip consequat est sit laboris nisi adipisicing
+              consectetur est non consequat velit.
+            </p>
+            <div class="reputacion">
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+            </div>
+          </a>
+        </article>
+        <article>
+          <a href="../details/details.html">
+            <img
+              src="../assets/img/aston-martin.jpg"
+              alt="aston martin f1 car"
+            />
+            <h3>Car Three · 1000$</h3>
+            <p>
+              Anim ad aliquip consequat est sit laboris nisi adipisicing
+              consectetur est non consequat velit.
+            </p>
+            <div class="reputacion">
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+              <em class="fa fa-star"></em>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <section class="footer-row">
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="" aria-label="Find us on GitHub">
+                <em class="fa fa-github"></em>
+              </a>
+              <a href="" aria-label="Find us on X">
+                <em class="fa fa-twitter"></em>
+                </a>
+              <a href="" aria-label="Find us on Instagram">
+                <em class="fa fa-instagram"></em>
+              </a>
+              <a href="" aria-label="Find us on LinkedIn">
+                <em class="fa fa-linkedin"></em>
+              </a>
+            </div>
+          </article>
+        </section>
+        <section class="footer-row">
+          <article class="footer-col" style="margin-top: 20px">
+            <a href="/">
+              <img
+                src="../assets/img/logos/f1.png"
+                style="width: 110px; margin-right: 10px; margin-bottom: 10px"
+                alt="f1 logo"
+              />
+            </a>
+          </article>
+          <article class="footer-col-bottom">
+            <p>
+              © 2023 Formula One World Championship Limited. Rafael Gómez
+              Guillén.
+            </p>
+          </article>
+        </section>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/darkMode.js"></script>
+  </body>
+</html>

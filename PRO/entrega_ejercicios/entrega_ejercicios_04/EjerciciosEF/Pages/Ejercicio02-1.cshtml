@@ -1,0 +1,150 @@
+﻿@page
+@model EjerciciosEF.Pages.Ejercicio02_1Model
+@{
+    ViewData["Title"] = "Ejercicio 2.1";
+    int contador = TempData["contador"] != null ? (int)TempData["contador"] : 3;
+    DateTime fecha;
+}
+<h2>Página de fecha</h2>
+<p>
+    En está página se muestra los discos lanzados después del año introducido.
+    <br />
+    <br />
+    Año mínimo: 1968. Año máximo: 1985.
+</p>
+<form method="post">
+    @if (Request.Method == "POST")
+    {
+        <div>
+            <label for="fecha">Fecha:</label>
+            <input type="date" min="1968-01-01" max="1985-12-31" required name="fecha" value="@Request.Form["fecha"]" />
+            <input type="submit" name="action" value="Mostrar" />
+        </div>
+
+        string fechaString = Request.Form["fecha"];
+        fecha = DateTime.Parse(fechaString);
+        List<string> discoInterprete = (from disco in Model.Datos.Disco
+                                        join interprete in Model.Datos.Interprete
+                                        on disco.IdInterprete equals interprete.IdInterprete
+                                        where disco.Agno >= fecha.Year
+                                        orderby disco.IdDisco
+                                        select $"{interprete.Interprete1};{disco.Titulo};{disco.Agno.ToString()}").ToList();
+
+        @if (Request.Form["action"] == "Mostrar")
+        {
+            @if (fecha.Year >= 1984)
+            {
+                <table>
+                    <tr>
+                        <td>Intérprete</td>
+                        <td>Título</td>
+                        <td>Año</td>
+                    </tr>
+                    <tr>
+                        @{
+                            foreach (string str in discoInterprete)
+                            {
+                                string[] separarCampos = str.Split(';');
+                                for (int i = 0; i < separarCampos.Length; i++)
+                                {
+                                    <td>@separarCampos[i]</td>
+                                }
+                            }
+                        }
+                    </tr>
+                </table>
+            }
+            else
+            {
+                <table>
+                    <tr>
+                        <td>Intérprete</td>
+                        <td>Título</td>
+                        <td>Año</td>
+                    </tr>
+                    @for (int i = 0; i < 3; i++)
+                    {
+                        <tr>
+                            @{
+                                string[] separarCampos = discoInterprete.ElementAt(i).Split(';');
+                                for (int j = 0; j < separarCampos.Length; j++)
+                                {
+                                    <td>@separarCampos[j]</td>
+                                }
+                            }
+                        </tr>
+                    }
+                </table>
+            }
+        }
+        <form method="post">
+            @if (Request.Form["action"] == "anterior")
+            {
+                contador -= 3;
+                TempData["contador"] = contador;
+
+                <table>
+                    <tr>
+                        <td>Intérprete</td>
+                        <td>Título</td>
+                        <td>Año</td>
+                    </tr>
+                    @for (int i = contador - 3; i < contador; i++)
+                    {
+                        <tr>
+                            @{
+                                string[] separarCampos = discoInterprete.ElementAt(i).Split(';');
+                                for (int j = 0; j < separarCampos.Length; j++)
+                                {
+                                    <td>@separarCampos[j]</td>
+                                }
+                            }
+                        </tr>
+                    }
+                </table>
+            }
+            @if (Request.Form["action"] == "siguiente")
+            {
+                contador += 3;
+                TempData["contador"] = contador;
+                <table>
+                    <tr>
+                        <td>Intérprete</td>
+                        <td>Título</td>
+                        <td>Año</td>
+                    </tr>
+                    @for (int i = contador - 3; i < contador; i++)
+                    {
+                        <tr>
+                            @{
+                                string[] separarCampos = discoInterprete.ElementAt(i).Split(';');
+                                for (int j = 0; j < separarCampos.Length; j++)
+                                {
+                                    <td>@separarCampos[j]</td>
+                                }
+                            }
+                        </tr>
+                    }
+                </table>
+            }
+            <div>
+                @if (contador > 3)
+                {
+                    <input type="submit" name="action" value="anterior" />
+                }
+                @if (contador <= discoInterprete.Count - 2)
+                {
+                    <input type="submit" name="action" value="siguiente" />
+                }
+            </div>
+        </form>
+    }
+    else
+    {
+        <div>
+            <label for="fecha">Fecha:</label>
+            <input type="date" min="1968-01-01" max="1985-12-31" required name="fecha" />
+            <input type="submit" name="action" value="Mostrar" />
+        </div>
+    }
+</form>

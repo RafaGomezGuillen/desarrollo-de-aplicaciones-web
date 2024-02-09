@@ -1,0 +1,284 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="new_user_dialog.css" />
+</head>
+
+<style type="text/css"></style>
+
+<body>
+  <div id="header">
+    <ul>
+      <li>
+        <div></div>
+      </li>
+      <li>
+        <div></div>
+      </li>
+      <li>
+        <div></div>
+      </li>
+      <li>
+        <ul>
+          <li><a id="view_general_catalog">General Catalog</a></li>
+          <li><a href="">item#1</a></li>
+          <li><a href="">item#2</a></li>
+          <li><a href="">item#3</a>
+          </li>
+          <li><a style="cursor:pointer;">View gifts list</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul id="test">
+      <li>
+        <div>
+          <image src="whatsapp_icon_32x32_white.png" />
+        </div>
+        <ul>
+          <li><br><br>For any question relative to our products contact at:<br><br><img src="email_32x32_black.png">
+            <p>farandula@info.es</p>
+          </li>
+          <li>Need inmediate help?<br><br>
+            <img src="whatsapp_icon_32x32_black.png">
+            <p>(+34) 666666666</p>
+          </li>
+        </ul>
+      </li>
+
+      <li id="shopping_bag_list">
+        <div>
+          <image src="purse_icon_32x32_white.png">
+        </div>
+        <div id="number">0</div>
+      </li>
+
+      <li>
+        <div>
+          <image src="padlock_locked_32x32_white.png">
+        </div>
+        <ul id="unlogged_user_dialog">
+          <li>User:<br>
+            <form id="loggin_form" method="post" action="">
+              <input type="text" name="user" value="" required>
+          </li>
+          <li>Password:<br><input type="text" name="password" value="" required /></li>
+          <li><button id="loggin_button" type="button">Login</button></li>
+          </form>
+          <li>Forgot your password?<br>Click <a href="#">here</a> to restore it
+          </li>
+          <li>New user? Create your account:</li>
+          <li><button>New user</button></li>
+        </ul>
+
+        <ul id="logged_user_dialog">
+          <li><img src="icons/user_icon_black_32x32.png">
+            <p>user name (logged in)</p>
+          </li>
+          <li id="fauvorites_list">
+            <img src="icons/favorites_icon_black_32x32.png">
+            <p>My favorites</p>
+          </li>
+          <li id="gifts_list"><img src="icons/gifted_icon_black_32x32.png">
+            <p>Gifts list</p>
+          </li>
+          <li><button id="sign_out">Sign out</button></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="dialog"><span>Your message here</span>
+    <ul>
+      <li><input type="checkbox"></li>
+      <li>Send me an e-mail with my Gifts list Id</li>
+    </ul>
+    <button onclick="close_me(event)">X</button><button onclick="close_me(event)">OK</button>
+  </div>
+
+
+  <div class="dialog" id="frgttn_psswrd"><span>Enter your e-mail</span>
+    <ul>
+      <li><input type="text"></li>
+    </ul><button onclick="close_me(event)">X</button><button>Send</button>
+  </div>
+
+  <div id="new_user">
+    <button onclick="close_me(event)">X</button>
+    <ul>
+      <li><span>(*) Mandatory field:</span><br></li>
+      <li><span id="name">First name*</span><br><input type="text" onchange="onchange_input_alt(event)" /></li>
+      <li><span id="surname">Last name*</span><br><input type="text" onchange="onchange_input_alt(event)" /></li>
+      <li><span id="e_mail">e-mail address*</span><br><input type="text" onchange="onchange_input_alt(event)" /></li>
+      <li><span id="e_mail_conf">Repeat your e-email*</span><br><input type="text"
+          onchange="onchange_input_alt(event)" /></li>
+      <li><span id="user_name">User* (3 characters at least)</span><br><input type="text"
+          onchange="onchange_input_alt(event)" /></li>
+      <li><span id="birth_date">Birth date* (dd/mm/yy)</span><br><input type="date"
+          onchange="onchange_input_alt(event)" /></li>
+      <li><span id="tfn_number">Telephone number* (+prefix)xxxxxxxxx</span><br><input type="text"
+          onchange="onchange_input_alt(event)" /></li>
+      <li><br><span id="e_mail_sending_info">Enviando e-mail...</span></li>
+    </ul>
+    <button id="send_new_user">Send</button>
+  </div>
+
+  <form method="post" action=""><button id="form_submit" type="submit" name="" value="" style="display:none;"></button>
+  </form>
+
+  <script>
+    document.getElementsByTagName("body")[0].onload = function () {
+      for (i = 0; i < inputs.length; i++) inputs[i].value = "";
+    }; //clear fields when uploading the page
+
+    function close_me(e) {
+      e.target.parentNode.style.display = "none";
+      document.getElementById("new_user").style.filter = "opacity(100%)";
+    } // handle class = dialog window
+
+    function show_warning(mssg, indx) {
+      inputs[indx].style.color = "red";
+      document.getElementById("new_user").style.filter = "opacity(20%)";
+      document.getElementsByClassName("dialog")[0].style.display = "block";
+      document
+        .getElementsByClassName("dialog")[0]
+        .getElementsByTagName("span")[0].innerHTML = mssg;
+    }
+
+    inputs = document
+      .getElementById("new_user")
+      .getElementsByTagName("input"); //save input elements in array
+
+    for (i = 0; i < inputs.length; i++)
+      inputs[i].onfocus = function () {
+        //clear all input type text when focused again against incorrect formats
+        if (event.target.style.color == "red") {
+          event.target.value = "";
+          event.target.style.color = "black";
+        }
+      };
+
+    function onchange_input_alt(e) {
+      // link  each type text input elements to its validate function
+      if (
+        e.target.parentNode.getElementsByTagName("span")[0].innerHTML ==
+        "First name*"
+      )
+        validate_first_name(e.target.value);
+      if (
+        e.target.parentNode.getElementsByTagName("span")[0].innerHTML ==
+        "Last name*"
+      )
+        validate_last_name(e.target.value);
+      if (
+        e.target.parentNode.getElementsByTagName("span")[0].innerHTML ==
+        "e-mail address*"
+      )
+        validate_email(e.target.value);
+      if (
+        e.target.parentNode.getElementsByTagName("span")[0].innerHTML ==
+        "Repeat your e-email*"
+      )
+        validate_repeat_email(e.target.value);
+      if (
+        e.target.parentNode.getElementsByTagName("span")[0].innerHTML ==
+        "User* (3 characters at least)"
+      )
+        validate_user(e.target.value);
+      if (
+        e.target.parentNode.getElementsByTagName("span")[0].innerHTML ==
+        "Birth date* (dd/mm/yy)"
+      )
+        validate_birth_date(e.target.value);
+      if (
+        e.target.parentNode.getElementsByTagName("span")[0].innerHTML ==
+        "Telephone number* (+prefix)xxxxxxxxx"
+      )
+        validate_tfn_number(e.target.value);
+    }
+
+    function validate_first_name(val) {
+      if (val != "" && val.match(/^[a-zA-Z]{2,99}$/) != val) {
+        mssg = "First name should contain 2 characters at least";
+        show_warning(mssg, 0);
+      }
+    }
+
+    function validate_last_name(val) {
+      if (val != "" && val.match(/^[a-zA-Z]{2,99}$/) != val) {
+        mssg = "Last name should contain 2 characters at least";
+        show_warning(mssg, 1);
+      }
+    }
+
+    function validate_email(val) {
+      mtch = val.match(
+        /^[a-z\d]+([_.\-!$%&#]?[a-z\d]+)*[a-z]*\@[a-z\d]+\.[a-z]{2,3}$/
+      );
+      if (mtch == null || mtch[0] != val) {
+        mssg = "Please enter a valid e-mail address";
+        show_warning(mssg, 2);
+      }
+    }
+
+    function validate_repeat_email(val) {
+      if (val != inputs[2].value) {
+        mssg = "Contents should be same as previous field";
+        show_warning(mssg, 3);
+      }
+    }
+
+    function validate_user(val) {
+      if (val != "" && val.match(/^[-a-zA-Z\d_.!$%&#]{2,99}$/) != val) {
+        mssg = "User should contain 5 characters at least";
+        show_warning(mssg, 4);
+      }
+    }
+
+    function validate_birth_date(val) {
+      // ########## SET TO TYPE ''DATE'' #####################
+      return val;
+    }
+
+    function validate_tfn_number(val) {
+      if (val != "" && val.match(/^\(\+[\d]{1,3}\)[\d]{9}$/) != val) {
+        mssg = "Please enter a valid format";
+        show_warning(mssg, 6);
+      }
+    }
+
+    // manage "send" button behaviour
+    document.getElementById("send_new_user").onclick = function () {
+      ctrl = true; // define a control boolean set to true by default
+
+      for (i = 0; i < inputs.length; i++)
+        if (
+          inputs[i].value == "" ||
+          inputs[i].value == null ||
+          inputs[i].style.color == "red"
+        )
+          ctrl = false; // check all input fields are validated
+
+      if (ctrl) {
+        mssg =
+          "Connecting to the server...<br><br> This may take a few seconds...";
+
+          // {  } further code to connect to server and send info
+      } else {
+        mssg =
+          "Fields marked with (*) are mandatory <br><br> Pleaser check your info";
+      }
+      document.getElementById("new_user").style.filter = "opacity(20%)";
+      document.getElementsByClassName("dialog")[0].style.display = "block";
+      document
+        .getElementsByClassName("dialog")[0]
+        .getElementsByTagName("span")[0].innerHTML = mssg;
+    };
+  </script>
+
+  <script src="users_handling.js"></script>
+</body>
+
+</html>

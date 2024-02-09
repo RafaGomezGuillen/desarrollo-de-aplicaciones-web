@@ -1,0 +1,169 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+* {
+  --bg-color: #ecc;
+  --fg-color: #622;
+  --emph-color: #922;
+  --main-bg-color: #fff;
+  font-family: Montserrat;
+  font-size: 10pt;
+
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-color);
+  max-width: 100%;
+}
+
+header,
+nav,
+main,
+footer {
+  width: 60%;
+  margin: auto;
+}
+
+header > img {
+  width: 100%;
+}
+
+main {
+  background-color: var(--main-bg-color);
+}
+
+.message {
+  display: block;
+}
+
+footer {
+  background-color: #333;
+  color: #ddd;
+
+  padding: 1em 5em;
+  bottom: 0;
+}
+
+footer > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/* CSS */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+label {
+  margin-right: 10px; /* Ajuste el espaciado entre la etiqueta y el campo de entrada */
+  width: 100px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 200px;
+}
+
+
+span.ok,
+span.error,
+span.alert {
+  margin-left: 10px; /* Añade espacio entre el campo de entrada y el texto de estado */
+}
+
+button {
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Estilo para el botón "Seguir" */
+.crear-cuenta-btn {
+  background-color: var(--emph-color); /* Color de fondo resaltado */
+  color: var(--main-bg-color); /* Color de texto resaltado */
+}
+
+/* Estilo para el botón "No quiero registrarme" */
+.no-crear-cuenta-btn {
+  background-color: var(--bg-color); /* Color de fondo predeterminado */
+  color: var(--fg-color); /* Color de texto predeterminado */
+}
+
+@media (max-width: 1000px) {
+  header,
+  nav,
+  main,
+  footer {
+    width: 90%;
+  }
+}
+
+/* Estilos para la versión móvil */
+@media (max-width: 600px) {
+  header,
+  nav,
+  main,
+  footer {
+    width: 100%;
+  }
+
+  .form-field {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  label {
+    margin-bottom: 5px; /* Ajusta el espacio entre la etiqueta y el input */
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: auto; /* Ajusta el ancho del input para adaptarse al contenido */
+    margin-bottom: 5px; /* Ajusta el espacio entre el input y el mensaje de estado */
+  }
+
+  span.ok,
+  span.error,
+  span.alert {
+    margin-left: 0; /* Ajusta el margen izquierdo de los mensajes de estado */
+    margin-top: 5px; /* Ajusta el espacio entre el input y el mensaje de estado */
+  }
+
+  .form-field-box {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+  }
+  
+  input[type="checkbox"],
+  label {
+    margin-right: 10px; /* Ajusta el espaciado entre el checkbox y la etiqueta */
+  }
+  
+  label {
+    flex: 1; /* Hace que la etiqueta ocupe todo el espacio disponible */
+  }
+
+  .form-field-box span {
+    margin-left: 0; /* Ajusta el margen izquierdo de los mensajes de estado */
+    margin-top: 5px; /* Ajusta el espacio entre el input y el mensaje de estado */
+  }
+}

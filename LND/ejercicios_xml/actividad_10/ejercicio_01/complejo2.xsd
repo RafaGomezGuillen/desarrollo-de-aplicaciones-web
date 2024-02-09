@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="alumno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string" />
+        <xs:element name="direccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="calle" type="xs:string" />
+              <xs:element name="numero" type="xs:positiveInteger" />
+              <xs:element name="ciudad" type="xs:string" />
+              <xs:element name="provincia" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="telefono">
+          <xs:simpleType>
+            <xs:restriction base="xs:positiveInteger">
+              <xs:pattern value="[0-9]{9}" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="dni" type="xs:positiveInteger" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

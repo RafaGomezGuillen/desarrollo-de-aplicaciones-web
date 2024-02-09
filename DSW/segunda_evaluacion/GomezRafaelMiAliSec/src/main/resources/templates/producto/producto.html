@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+
+<div id="main-content">
+    <h1>Lista de productos</h1>
+    <h2><a th:href="@{/producto/create}">Crear producto</a></h2>
+
+    <form th:action="@{/producto/municipiosByProvincia}" method="get">
+        <!-- Seleccionar provincias -->
+        <select name="provinciaId" onchange="this.form.submit()" th:if="${listProvincias}">
+            <option th:text="${message}"></option>
+            <option th:each="provincia : ${listProvincias}"
+                    th:value="${provincia.id}"
+                    th:text="${provincia.nombre}">
+            </option>
+        </select>
+    </form>
+
+    <form th:action="@{/producto/productsByMunicipio}" method="get">
+        <!-- Seleccionar municipios -->
+        <select name="municipioId" onchange="this.form.submit()" th:if="${listMunicipios}">
+            <option th:text="${message}"></option>
+            <option th:each="municipio : ${listMunicipios}"
+                    th:value="${municipio.id}"
+                    th:text="${municipio.nombre}">
+            </option>
+        </select>
+    </form>
+
+    <table th:if="${listProducts}">
+        <tr>
+            <td>Nombre</td>
+            <td>Precio</td>
+            <td>Imagen</td>
+            <td>Municipio</td>
+            <td>Stock</td>
+            <td>Operaciones</td>
+            <td>Añadir al carrito</td>
+        </tr>
+        <tr th:each="product : ${listProducts}">
+            <td th:text="${product.productName}"></td>
+            <td th:text="${product.productPrice}"></td>
+            <td>
+                <img th:src="@{'/img/'+${product.productPicture}}" width="100px" height="100px" />
+            </td>
+            <td th:text="${product.municipio.nombre}"></td>
+            <td th:text="${product.productStock}"></td>
+            <td>
+                <a th:href="@{'/producto/details/' + ${product.id}}">Detalles</a> |
+                <a th:href="@{'/producto/update/' + ${product.id}}">Editar</a> |
+                <a th:href="@{'/producto/delete/' + ${product.id}}">Eliminar</a>
+            </td>
+            <td th:if="${product.productStock > 0}">
+                <form th:action="@{/producto/addToCart}" method="post">
+                    <input type="hidden" name="id" th:value="${product.id}" />
+                    <button type="submit">Añadir al carrito</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>

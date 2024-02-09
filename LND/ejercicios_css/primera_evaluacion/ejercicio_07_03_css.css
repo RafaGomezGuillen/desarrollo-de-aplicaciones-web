@@ -1,0 +1,33 @@
+body {
+  background-color: #95e1ff;
+  font-family: sans-serif;
+}
+
+div {
+  border-style: solid;
+  background-color: lightyellow;
+  width: 410px;
+  padding: 30px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+  letter-spacing: 1em;
+}
+
+th {
+  text-align: center;
+  border-style: solid;
+}
+
+td {
+  border-style: solid;
+  text-align: top, left;
+  font-size: smaller;
+  padding-right: 3em;
+  padding-bottom: 2em;
+}

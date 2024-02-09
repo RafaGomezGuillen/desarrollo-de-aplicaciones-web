@@ -1,0 +1,70 @@
+﻿@model IEnumerable<PO01_GomezRafael_v1.Models.Producto>
+
+@{
+    ViewData["Title"] = "Productos Por Gama";
+}
+
+<h1>Productos de @ViewData["gama"] </h1>
+<p>
+    <a asp-controller="Productoes" asp-action="CrearProductoPorGama" asp-route-id="@ViewData["gama"]">Crear producto de @ViewData["gama"]</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dimensiones)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Proveedor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadEnStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioVenta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioProveedor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GamaNavigation)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.OrderByDescending(item => item.CodigoProducto)) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dimensiones)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Proveedor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadEnStock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioVenta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioProveedor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GamaNavigation.Gama)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<heladeria
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="ejercicio3.xsd">
+  <helado>
+    <fresa></fresa>
+    <chocolate></chocolate>
+  </helado>
+  <helado>
+    <vainilla />
+    <chocolate />
+  </helado>
+</heladeria>

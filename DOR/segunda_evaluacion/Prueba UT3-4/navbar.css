@@ -1,0 +1,39 @@
+nav {
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: var(--fg-color);
+  border: 3px solid var(--fg-color);
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  font-size: 1.25em;
+  align-items: center;
+  height: 1.5em;
+  padding-top: 0.25em;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: var(--bg-color);
+  background-color: var(--fg-color);
+
+  float: left;
+  display: block;
+}
+
+nav:last-child {
+  color: var(--fg-color);
+  background-color: var(--bg-color);
+  font-weight: bold;
+}
+
+.menu li:hover {
+  border-color: var(--fg-color);
+  color: var(--fg-color);
+  background-color: var(--bg-color);
+}

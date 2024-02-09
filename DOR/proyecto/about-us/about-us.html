@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- shared -->
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+
+    <link rel="stylesheet" href="about-us.css" />
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>F1 Store</title>
+  </head>
+
+  <body>
+    <nav id="myTopnav">
+      <a href="../index.html">Home</a>
+      <a href="../catalog/catalog.html">Catalog</a>
+      <a href="../profile/profile.html">Profile</a>
+      <a href="" class="active">About us</a>
+      <label for="selTheme">Select color pallete</label>
+      <select id="selTheme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+      <a href="#" class="log">Log in</a>
+      <a href="#" class="log">Log out</a>
+      <a
+        href="javascript:void(0);"
+        class="icon"
+        onclick="navbar()"
+        aria-label="Navbar icon for mobile screens"
+      >
+        <em class="fa fa-bars"></em>
+      </a>
+    </nav>
+
+    <section class="about-us-section">
+      <div class="about-us-container">
+        <h1>About us</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          velit ducimus, enim inventore earum, eligendi nostrum pariatur
+          necessitatibus eius dicta a voluptates sit deleniti autem error eos
+          totam nisi neque voluptates sit deleniti autem error eos totam nisi
+          neque.
+        </p>
+        <div>
+          <span>Races</span>
+          <span>Tyres</span>
+          <span>Drivers</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="progression-section">
+      <h2>Our progression</h2>
+      <p>
+        Ut irure fugiat labore esse sint velit dolore anim minim elit. Ut irure
+        fugiat labore esse sint velit dolore anim minim elit. Ut irure fugiat
+        labore esse sint velit dolore anim minim elit.
+      </p>
+      <p>Ut irure fugiat labore esse sint velit dolore anim minim elit.</p>
+
+      <div class="charts">
+        <img src="../assets/img/graph_1.png" alt="Sales Gross ploth chart" />
+        <img
+          src="../assets/img/graph_2.png"
+          alt="Sales by continent Bar chart"
+        />
+      </div>
+    </section>
+
+    <section class="video-player">
+      <div>
+        <h2>This is Formula One</h2>
+
+        <p>
+          Cupidatat dolore mollit et exercitation minim Lorem ut et. Duis amet
+          excepteur non dolor. Reprehenderit pariatur nisi adipisicing fugiat.
+          Tempor adipisicing ipsum reprehenderit do magna velit. Magna est
+          adipisicing dolor sit tempor culpa.
+        </p>
+
+        <p>
+          Qui officia magna elit ipsum voluptate magna aute ea non non et quis
+          deserunt sit.
+        </p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/s8WHY3Gusx0?si=QnE9A6PzWHRcCzrI"
+          title="Formula One explained"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <div class="data-section">
+      <div class="data-section-content">
+        <h2>Our drivers</h2>
+        <p>
+          These are the drivers who came out on top last season. In the table
+          you can see their results such as teams, wins, total podiums and points.
+        </p>
+        <div class="data-section-table">
+          <table>
+            <caption>
+              Top Formula One Drivers
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">DRIVER</th>
+                <th scope="col">TEAM</th>
+                <th scope="col">WINS</th>
+                <th scope="col">PODIUMS</th>
+                <th scope="col">POINTS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Max Verstappen</td>
+                <td>Red Bull</td>
+                <td>15</td>
+                <td>17</td>
+                <td>454</td>
+              </tr>
+              <tr>
+                <td>Charles Leclerc</td>
+                <td>Ferrari</td>
+                <td>3</td>
+                <td>11</td>
+                <td>308</td>
+              </tr>
+              <tr>
+                <td>Sergio Pérez</td>
+                <td>Red Bull</td>
+                <td>2</td>
+                <td>11</td>
+                <td>305</td>
+              </tr>
+              <tr>
+                <td>George Russell</td>
+                <td>Mercedes</td>
+                <td>1</td>
+                <td>8</td>
+                <td>275</td>
+              </tr>
+              <tr>
+                <td>Carlos Sainz</td>
+                <td>Ferrari</td>
+                <td>1</td>
+                <td>9</td>
+                <td>246</td>
+              </tr>
+              <tr>
+                <td>Lewis Hamilton</td>
+                <td>Mercedes</td>
+                <td>0</td>
+                <td>9</td>
+                <td>240</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="data-section-img">
+        <img src="../assets/img/aston-martin.jpg" alt="Aston martin f1 car" />
+      </div>
+    </div>
+
+    <h2 style="text-align: center; color: var(--color-font)">Our Team</h2>
+
+    <section class="our-team">
+      <article class="card">
+        <img
+          src="https://randomuser.me/api/portraits/women/79.jpg"
+          alt="Jane Doe CEO & Founder position"
+        />
+        <div>
+          <h2>Jane Doe</h2>
+          <h3>CEO & Founder</h3>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>jane@example.com</p>
+          <button>Contact</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://randomuser.me/api/portraits/men/86.jpg"
+          alt="Mike Ross Art Director position"
+        />
+        <div>
+          <h2>Mike Ross</h2>
+          <h3>Art Director</h3>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>mike@example.com</p>
+          <button>Contact</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://randomuser.me/api/portraits/men/83.jpg"
+          alt="John Doe Designer position"
+        />
+        <div>
+          <h2>John Doe</h2>
+          <h3>Designer</h3>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>john@example.com</p>
+          <button>Contact</button>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <section class="footer-row">
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>Section</h4>
+            <ul>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+            </ul>
+          </article>
+          <article class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="" aria-label="Find us on GitHub">
+                <em class="fa fa-github"></em>
+              </a>
+              <a href="" aria-label="Find us on X">
+                <em class="fa fa-twitter"></em>
+                </a>
+              <a href="" aria-label="Find us on Instagram">
+                <em class="fa fa-instagram"></em>
+              </a>
+              <a href="" aria-label="Find us on LinkedIn">
+                <em class="fa fa-linkedin"></em>
+              </a>
+            </div>
+          </article>
+        </section>
+        <section class="footer-row">
+          <article class="footer-col" style="margin-top: 20px">
+            <a href="/">
+              <img
+                src="../assets/img/logos/f1.png"
+                style="width: 110px; margin-right: 10px; margin-bottom: 10px"
+                alt="f1 logo"
+              />
+            </a>
+          </article>
+          <article class="footer-col-bottom">
+            <p>
+              © 2023 Formula One World Championship Limited. Rafael Gómez
+              Guillén.
+            </p>
+          </article>
+        </section>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/darkMode.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="alumnos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="alumno" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element name="apellidos" type="xs:string" />
+              <xs:element name="nota" type="tipoNota"/>
+              <xs:element name="edad" type="xs:positiveInteger" minOccurs="0" />
+              <xs:element name="comentario" type="xs:string" minOccurs="0" />
+              <xs:element name="direccion" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="calle" type="xs:string" />
+                    <xs:element name="numero" type="xs:positiveInteger" />
+                    <xs:element name="piso" type="xs:string" />
+                    <xs:element name="poblacion" type="xs:string" />
+                    <xs:element name="codigo-postal" type="xs:positiveInteger" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="dni" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="tipoNota">
+    <xs:union>
+      <xs:simpleType>
+        <xs:restriction base="xs:decimal">
+          <xs:minInclusive value="0"></xs:minInclusive>
+          <xs:maxInclusive value="10"></xs:maxInclusive>
+          <xs:totalDigits value="3"></xs:totalDigits>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="No presentado"></xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+</xs:schema>

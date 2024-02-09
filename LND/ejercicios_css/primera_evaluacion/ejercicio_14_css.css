@@ -1,0 +1,47 @@
+img {
+  width: 150px;
+}
+
+img:hover {
+  border-color: red;
+  border-style: solid;
+  border-width: 10px;
+}
+
+div > img:active {
+  position: relative;
+  z-index: 55;
+  border: blue solid;
+}
+
+img.hola {
+  z-index: 5;
+}
+
+img.j {
+  z-index: 15;
+  position: relative;
+  bottom: -30px;
+  left: -120px;
+}
+
+img.reina {
+  z-index: 25;
+  position: relative;
+  bottom: -60px;
+  left: -245px;
+}
+
+img.rey {
+  z-index: 35;
+  position: relative;
+  bottom: -95px;
+  left: -370px;
+}
+
+img.as {
+  z-index: 45;
+  position: relative;
+  bottom: -120px;
+  left: -495px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(~{:: #main-content})}"
+>
+
+<div id="main-content">
+    <h1>Total de lista de productos sin filtar</h1>
+    <h2><a th:href="@{/producto/create}">Crear producto</a></h2>
+
+    <th:block th:if="${#lists.size(listProductsCarrito) > 0}">
+        <table>
+            <tr>
+                <td>Nombre</td>
+                <td>Precio</td>
+                <td>Imagen</td>
+                <td>Municipio</td>
+                <td>Stock</td>
+                <td>Operaciones</td>
+            </tr>
+            <tr th:each="product, index : ${listProductsCarrito}">
+                <td th:text="${product.productName}"></td>
+                <td th:text="${product.productPrice}"></td>
+                <td>
+                    <img th:src="@{'/img/'+${product.productPicture}}" width="100px" height="100px" />
+                </td>
+                <td th:text="${product.municipio.nombre}"></td>
+                <td th:text="${product.productStock}"></td>
+                <td>
+                    <form th:action="@{/pedido/deleteFromCart}" method="post">
+                        <input type="hidden" name="index" th:value="${index.index}" />
+                        <button>Eliminar del carrito</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </th:block>
+
+    <br />
+    <br />
+
+    <table th:if="${listProducts}">
+        <tr>
+            <td>Nombre</td>
+            <td>Precio</td>
+            <td>Imagen</td>
+            <td>Municipio</td>
+            <td>Stock</td>
+            <td>Operaciones</td>
+            <td>Añadir al carrito</td>
+        </tr>
+        <tr th:each="product : ${listProducts}">
+            <td th:text="${product.productName}"></td>
+            <td th:text="${product.productPrice}"></td>
+            <td>
+                <img th:src="@{'/img/'+${product.productPicture}}" width="100px" height="100px" />
+            </td>
+            <td th:text="${product.municipio.nombre}"></td>
+            <td th:text="${product.productStock}"></td>
+            <td>
+                <a th:href="@{'/producto/' + ${product.id}}">Detalles</a> |
+                <a th:href="@{'/producto/update/' + ${product.id}}">Editar</a> |
+                <a th:href="@{'/producto/delete/' + ${product.id}}">Eliminar</a>
+            </td>
+            <td th:if="${product.productStock > 0}">
+                <form th:action="@{/pedido/addToCart}" method="post">
+                    <input type="hidden" name="id" th:value="${product.id}" />
+                    <button type="submit">Añadir al carrito</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>

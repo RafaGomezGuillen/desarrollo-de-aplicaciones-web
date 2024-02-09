@@ -1,0 +1,19 @@
+Letra arial
+colores 
+NavajoWhite, black, white, silver
+
+Logo
+#FFD700;
+#C0C0C0;
+#4169E1;
+#006400;
+
+Letras
+FireBrick
+IndianRed
+
+Texto ejercicio html/css
+
+darkBlue  
+navy
+

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<GomezRafael_Musica.Models.Album>
+@{
+    ViewData["Title"] = "Lista de álbumes";
+}
+
+<h1>lista de álbumes</h1>
+
+<p>
+    <a asp-action="Create">Crear un nuevo álbum</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AlbumId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                Artista
+            </th>
+            <th>
+                Operaciones
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @*Manera descendente según el ID del álbum. Take solo muestra 15 álbumes*@
+
+        @foreach (var album in Model.OrderByDescending(item => item.AlbumId).Take(15))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => album.AlbumId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => album.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => album.Artist.Name)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@album.AlbumId">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@album.AlbumId">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@album.AlbumId">Borrar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-primary">Casa</a>

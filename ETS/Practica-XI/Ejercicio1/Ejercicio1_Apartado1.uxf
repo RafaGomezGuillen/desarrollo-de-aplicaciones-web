@@ -1,0 +1,64 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text>Space for diagram note</help_text><element><id>UMLClass</id><coordinates><x>99</x><y>414</y><w>333</w><h>117</h></coordinates><panel_attributes>Profesor
+--
+- ListaAsignaturas: List&lt;Asignatura&gt;
+- EsTutor: Bool
+--
++ GetListaAsignatura(): Asignatura
++ SetListaAsignatura(listaAsignaturas: List&lt;Asignatura&gt;): Void
++ GetEsTutor(): Bool
++ SetEsTutor(esTutor: bool): Void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>513</x><y>414</y><w>252</w><h>72</h></coordinates><panel_attributes>Alumno
+--
+- ListaNotas: List&lt;decimal&gt;
+--
++ GetListaNotas(): Int
++ SetListaNotas(listaNotas: List&lt;decimal&gt;) Void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1035</x><y>297</y><w>288</w><h>117</h></coordinates><panel_attributes>Ciclo
+--
+- Grado: Int (1 or 2)
+- Modalidad: String ("precencial" or "semiprecencial")
+--
++ GetGrado(): Int
++ SetGrado(grado: Int): Void
++ GetModalidad(): String
++ SetModalidad(modalidad: String): Void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>279</x><y>657</y><w>297</w><h>144</h></coordinates><panel_attributes>Curso
+--
+- ListaAlumno: List&lt;Alumno&gt;
+- ListaProfesor: List&lt;Profesor&gt;
+--
++ GetListaAlumno(): List&lt;Alumno&gt;
++ SetListaAlumnos(listaAlumno: List&lt;Alumno&gt;): void
++ GetListaProfesor(): List&lt;Profesor&gt;
++ SetListaProfesor(listaProfesor: List&lt;Profesor&gt;): void
++ ContadorAlumnos(): Int
++ ContadorProfesores(): Int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>162</x><y>522</y><w>135</w><h>216</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=(0:N)
+m2=(1:N)
+Es matriculado</panel_attributes><additional_attributes>130;210;10;210;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>567</x><y>477</y><w>171</w><h>261</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=(0:1)
+m2=(1:N)
+Es matriculado</panel_attributes><additional_attributes>10;260;90;260;90;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1026</x><y>522</y><w>297</w><h>117</h></coordinates><panel_attributes>FPBasica
+--
+- NombreMadre: String
+- NombreMadre: Padre
+--
++ GetNombreMadre(): String
++ SetNombreMadre(nombreMadre: String): void
++ GetNombrePadre(): String
++ SetNombrePadre(nombrePadre: String): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>288</x><y>144</y><w>306</w><h>153</h></coordinates><panel_attributes>Persona
+--
+- Nombre: String
+- Apellidos: String
+- FechaNacimiento: Datetime
+--
++ GetNombre(): String
++ Setnombre(nombre: String): Void
++ GetApellidos(): String
++ SetApellidos(apellidos: String): Void
++ GetFechaNacimiento(): Datetime
++ SetFechaNacimiento(fechaNacimiento: Datetime): Void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>279</x><y>288</y><w>180</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>180;10;180;70;10;70;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>432</x><y>288</y><w>180</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70;180;70;180;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>819</x><y>432</y><w>90</w><h>27</h></coordinates><panel_attributes>Puede Ser</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>900</x><y>342</y><w>153</w><h>117</h></coordinates><panel_attributes>lt=-
+m1=(0:1)
+</panel_attributes><additional_attributes>150;10;40;10;40;110;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>900</x><y>432</y><w>144</w><h>171</h></coordinates><panel_attributes>lt=-
+m1=(0:1)
+
+</panel_attributes><additional_attributes>140;160;40;160;40;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>756</x><y>441</y><w>81</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=(1:N)</panel_attributes><additional_attributes>10;10;70;10</additional_attributes></element></diagram>

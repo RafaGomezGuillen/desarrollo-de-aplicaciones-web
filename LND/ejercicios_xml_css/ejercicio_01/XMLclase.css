@@ -1,0 +1,138 @@
+clase {
+  background-color: Moccasin;
+  font-family: Helvetica;
+}
+
+id {
+  display: block;
+  background-color: rgba(80%,50%,0%, 0.9);
+}
+
+curso::before {
+  content: "Curso: ";
+}
+
+curso, anios {
+  font-size: 30px;
+}
+
+modulos, alumnos {
+  display: block;
+  margin-right: 40%;
+}
+
+modulos::before {
+  content: "Modulos del curso: ";
+  display: block;
+  font-size: 25px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+modulos modulo {
+  background-color: yellowgreen;
+  display: list-item;
+  list-style: square;
+  margin-left: 20px;
+}
+
+modulo > nombre {
+  font-size: 20px;
+  display: inline;
+  margin-left: 40px;
+  width: 200px;
+}
+
+profesor {
+  display: inline;
+}
+
+profesor::after {
+  content: " ) " attr(cargo);
+  display: inline;
+  text-transform: uppercase;
+}
+
+profesor::before {
+  content: "( ";
+}
+
+profesor nombre, profesor apellidos {
+  color: red;
+  text-decoration: underline;
+}
+
+alumnos {
+  display: block;
+}
+
+alumnos::before {
+  content: "Alumnos: ";
+  display: block;
+  background-color: Moccasin;
+  font-size: 25px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+alumno {
+  display: block;
+  background-color: mediumseagreen;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+alumno dni {
+  display: none;
+}
+
+alumno persona {
+  display: block;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+notas {
+  display: table;
+  background-color: #CCC;
+  width: 80%;
+  margin: auto;
+}
+
+notas modulo {
+  display: table-row;
+  margin: 20px;
+  padding: 10px;
+}
+
+notas modulo nombre {
+  display: table-cell;
+  color: blue;
+  margin: 0;
+  border-bottom: solid black 1px;
+  font-size: 18px;
+  width: 20%;
+}
+
+notas modulo parcial {
+  display: table-cell;
+  border-bottom: solid black 1px; 
+  text-align: center;
+  width: 10%;
+}
+
+notas modulo final {
+  display: table-cell;
+  border-bottom: solid black 1px;
+  text-align: center;
+  width: 10%;
+}
+
+notas modulo calificacion {
+  display: table-cell;
+  color: red;
+  border-bottom: solid black 1px;
+  text-transform: capitalize;
+  font-weight: bold;
+}

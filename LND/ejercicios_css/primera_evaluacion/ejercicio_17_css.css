@@ -1,0 +1,128 @@
+h1.titulo {
+  background-color: #eeeeee;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.datos {
+  background-color: #eeeeee;
+}
+
+.datos legend {
+  background-color: white;
+  border: solid #eeeeee;
+}
+
+td.apellido input {
+  width: 220px;
+}
+
+input.domicilio {
+  width: 360px;
+}
+
+.postal {
+  padding-left: 35px;
+}
+
+.potal input {
+  width: 80px;
+}
+
+td.postal input {
+  width: 50px;
+}
+
+td.localidad input {
+  width: 175px;
+}
+
+.provincia {
+  padding-left: 50px;
+}
+
+.telefono {
+  padding-left: 40px;
+  width: 60px;
+}
+
+.telefono input {
+  width: 80px;
+}
+
+.fecha input {
+  width: 75px;
+}
+
+.requisito {
+  background-color: #FFFFE0;
+}
+
+.requisito legend {
+  background-color: white;
+  border: solid #FFFFE0;
+}
+
+.tabulado {
+  padding-left: 30px;
+}
+
+.documentacion {
+  background-color: #FFB6C1;
+}
+
+.documentacion legend {
+  background-color: white;
+  border: solid #FFB6C1;
+}
+
+.comunicacion {
+  background-color: #FFE4C4;
+}
+
+.comunicacion legend {
+  background-color: white;
+  border: solid #FFE4C4;
+}
+
+.dos {
+  width: 40px;
+}
+
+.registro {
+  border: solid black;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  margin-left: 300px;
+  text-align: center;
+  float: right;
+}
+
+.casi-final {
+  border: black dotted;
+}
+
+.final {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.firma {
+  position: relative;
+  bottom: -190px;
+}
+
+.solicitud {
+  background-color: #ADD8E6;
+}
+
+.solicitud legend {
+  background-color: white;
+  border: solid #ADD8E6;
+}
+
+.left {
+  font-weight: bold;
+}
+

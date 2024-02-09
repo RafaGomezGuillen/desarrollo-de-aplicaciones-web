@@ -1,0 +1,1 @@
+{"bets":{"bet1":[1.5,true,"2"],"bet2":[1.5,false,"1"],"bet3":[1.5,true,"X"],"bet4":[1.5,false,"1"],"bet5":[1.5,false,"1"],"bet6":[1.5,true,"X"],"bet7":[1.5,false,"1"],"bet8":[1.5,false,"1"],"bet9":[1.5,false,"1"],"bet10":[1.5,false,"1"],"bet11":[1.5,false,"1"],"bet12":[1.5,false,"1"]},"user":"manuel","psswrd":"123bA6#8"}

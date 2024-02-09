@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- un DTD en la que toda la información se guarde en forma de atributos -->
+<!DOCTYPE partidos [
+  <!ELEMENT partidos (partido)*>
+  <!ELEMENT partido EMPTY>
+  <!ATTLIST partido equipo-local CDATA #REQUIRED>
+  <!ATTLIST partido equipo-visitante CDATA #REQUIRED>
+  <!ATTLIST partido goles-local NMTOKEN #REQUIRED>
+  <!ATTLIST partido goles-visitante NMTOKEN #REQUIRED>
+]>
+
+<partidos>
+  <partido equipo-local="Nottingham Presa" equipo-visitante="Inter de Mitente" goles-local="0" goles-visitante="1" />
+  <partido equipo-local="Vodka Juniors" equipo-visitante="Sparta da Risa" goles-local="3" goles-visitante="3" />
+  <partido equipo-local="Water de Munich" equipo-visitante="Esteaua es del grifo" goles-local="4" goles-visitante="2" />
+</partidos>

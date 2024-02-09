@@ -1,0 +1,63 @@
+h1 {
+  background-color: #bbbbbb;
+  font-weight: bold;
+}
+
+h2 {
+  background-color: #dddddd;
+  text-align: right;
+  border-bottom-style: dotted;
+  border-bottom-color: grey;
+  position: relative;
+  bottom: 25px;
+}
+
+h3 {
+  text-align: center;
+  background-color: #dddddd;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  padding: 15px;
+  position: relative;
+  bottom: 18px;
+}
+
+h4 {
+  background-color: grey;
+  color: white;
+  text-align: right;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-left: black solid;
+  border-top: black solid;
+  border-right: black solid;
+  position: relative;
+  bottom: 35px;
+}
+
+div > p {
+  border-left: black solid;
+  border-bottom: black solid;
+  border-right: black solid;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: -35px;
+  overflow: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  position: relative;
+  bottom: 57px;
+}
+
+div.bloque {
+  border-left: grey dotted;
+  border-right: grey dotted;
+  width: 200px;
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+  position: relative;
+  bottom: 35px;
+}

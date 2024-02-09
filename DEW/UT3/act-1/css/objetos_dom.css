@@ -1,0 +1,52 @@
+table,
+table th,
+table td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
+.cabecera {
+  background: red;
+  color: #e0e0f8;
+  font: bold "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+.filaPar {
+  background: #fe9a2e;
+  color: white;
+}
+
+.filaImpar {
+  background: #c7c7c7;
+  color: black;
+}
+
+.primeraColumna {
+  background: black;
+  color: white;
+}
+
+.presidente {
+  background: yellow;
+  color: blue;
+  border: 2px solid blue;
+}
+
+.policia {
+  background: #f5a9e1;
+}
+
+.borde_rojo {
+  border: 3px red solid;
+}
+
+.destaca {
+  text-decoration: underline overline blink;
+  color: blue;
+}
+.escudo,
+.logo {
+  margin-top: 10px;
+}

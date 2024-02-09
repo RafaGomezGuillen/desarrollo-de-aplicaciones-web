@@ -1,0 +1,243 @@
+.principal-1 {
+  width: 600px;
+  height: 660px;
+  border: solid black;
+  float: left;
+  margin: 30px;
+}
+
+h1 {
+  text-align: center;
+  position: relative;
+  top: 10px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.principal-1 .div-1 {
+  width: 250px;
+  height: 80px;
+  border: solid black;
+  float: left;
+  margin: 20px;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 5px 5px;
+}
+
+.principal-1 .div-2 {
+  width: 250px;
+  height: 80px;
+  margin: 20px;
+  float: left;
+  border: solid black;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: -13px -10px inset, 5px 5px inset;
+}
+
+.principal-1 .div-3 {
+  width: 250px;
+  height: 80px;
+  border: solid black;
+  float: left;
+  margin: 20px;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 9px 9px inset;
+}
+
+.principal-1 .div-4 {
+  width: 250px;
+  height: 80px;
+  margin: 20px;
+  float: left;
+  border: solid black;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 9px 9px 9px inset;
+}
+
+.principal-1 .div-5 {
+  width: 250px;
+  height: 80px;
+  border: solid black;
+  float: left;
+  margin: 20px;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 15px 15px inset;
+}
+
+.principal-1 .div-6 {
+  width: 250px;
+  height: 80px;
+  margin: 20px;
+  float: left;
+  border: solid black;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 15px 15px 15px inset;
+}
+
+.principal-1 .div-7 {
+  width: 250px;
+  height: 80px;
+  border: solid black;
+  float: left;
+  margin: 20px;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 15px 15px inset #800000;
+}
+
+.principal-1 .div-8 {
+  width: 250px;
+  height: 80px;
+  margin: 20px;
+  float: left;
+  border: solid black;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px inset #800000, -2px -2px 10px inset #800000;
+}
+
+.principal-1 .div-9 {
+  width: 250px;
+  height: 80px;
+  border: solid black;
+  float: left;
+  margin: 20px;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 15px 15px 15px inset #800000;
+}
+
+.principal-1 .div-10 {
+  width: 250px;
+  height: 80px;
+  margin: 20px;
+  float: left;
+  border: solid black;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 10px 10px 15px inset #800000, -10px -10px 15px inset #800000;
+}
+
+.principal-2 {
+  width: 600px;
+  height: 660px;
+  border: solid black;
+  float: left;
+  margin: 30px;
+}
+
+.principal-2 .div-1 {
+  width: 250px;
+  height: 80px;
+  border: solid black;
+  float: left;
+  margin: 20px;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: -5px -5px;
+}
+
+.principal-2 .div-2 {
+  width: 250px;
+  height: 80px;
+  margin: 20px;
+  float: left;
+  border: solid black;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: -5px -5px inset, 15px 15px inset;
+}
+
+.principal-2 .div-3 {
+  width: 250px;
+  height: 80px;
+  border: solid black;
+  float: left;
+  margin: 20px;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 7px 7px;
+}
+
+.principal-2 .div-4 {
+  width: 250px;
+  height: 80px;
+  margin: 20px;
+  float: left;
+  border: solid black;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 7px 7px 7px;
+}
+
+.principal-2 .div-5 {
+  width: 250px;
+  height: 80px;
+  border: solid black;
+  float: left;
+  margin: 20px;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 15px 15px;
+}
+
+.principal-2 .div-6 {
+  width: 250px;
+  height: 80px;
+  margin: 20px;
+  float: left;
+  border: solid black;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 15px 15px 15px;
+}
+
+.principal-2 .div-7 {
+  width: 250px;
+  height: 80px;
+  border: solid black;
+  float: left;
+  margin: 20px;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 15px 15px #800000;
+}
+
+.principal-2 .div-8 {
+  width: 250px;
+  height: 80px;
+  margin: 20px;
+  float: left;
+  border: solid black;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: -2px -2px 10px #800000, 2px 2px 10px #800000;
+}
+
+.principal-2 .div-9 {
+  width: 250px;
+  height: 80px;
+  border: solid black;
+  float: left;
+  margin: 20px;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 15px 15px 15px #800000;
+}
+
+.principal-2 .div-10 {
+  width: 250px;
+  height: 80px;
+  margin: 20px;
+  float: left;
+  border: solid black;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 10px 10px 15px #800000 inset, -10px -10px 15px #800000 inset;
+}

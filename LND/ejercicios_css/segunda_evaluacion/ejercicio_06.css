@@ -1,0 +1,56 @@
+div {
+  background-color: #FFA500;
+  border: solid black;
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  margin: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 5px 10px;
+  float: left;
+}
+
+#rotar1 {
+  transform: rotate(30deg);
+}
+
+#rotar2 {
+  transform: rotate(-30deg);
+}
+
+#escala1 {
+  transform: scaleX(0.5);
+}
+
+#escala2 {
+  transform: scaleY(1.5);
+}
+
+#skewX1 {
+  transform: skewX(10deg);
+}
+
+#skewX2 {
+  transform: skewX(-10deg);
+}
+
+#skewY1 {
+  transform: skewY(10deg);
+}
+
+#skewY2 {
+  transform: skewY(-10deg);
+}
+
+#translate1 {
+  transform: translate(20px, 40px);
+}
+
+#translate2 {
+  transform: translate(0, -40px);
+}
+
+#contentBox1:hover {
+  transform: skewX(-20deg);
+} 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- un DTD en la que no haya atributos, sino únicamente etiquetas -->
+<!DOCTYPE partidos [
+  <!ELEMENT partidos (partido)*>
+  <!ELEMENT partido (equipo-local, equipo-visitante, goles-local, goles-visitante)>
+  <!ELEMENT equipo-local (#PCDATA)>
+  <!ELEMENT equipo-visitante (#PCDATA)>
+  <!ELEMENT goles-local (#PCDATA)>
+  <!ELEMENT goles-visitante (#PCDATA)>
+]>
+
+<partidos>
+  <partido>
+    <equipo-local>Nottingham Presa</equipo-local>
+    <equipo-visitante>Inter de Mitente</equipo-visitante>
+    <goles-local>0</goles-local>
+    <goles-visitante>1</goles-visitante>
+  </partido>
+  <partido>
+    <equipo-local>Vodka Juniors</equipo-local>
+    <equipo-visitante>Sparta da Risa</equipo-visitante>
+    <goles-local>3</goles-local>
+    <goles-visitante>3</goles-visitante>
+  </partido>
+  <partido>
+    <equipo-local>Water de Munich</equipo-local>
+    <equipo-visitante>Esteaua es del grifo</equipo-visitante>
+    <goles-local>4</goles-local>
+    <goles-visitante>2</goles-visitante>
+  </partido>
+</partidos>
