@@ -1,0 +1,4 @@
+1.- Cambiar nombre carpeta padre.
+2.- Abrimos el proyecto.
+3.- Hacer F2 al nombre de la solución, y el proyecto.
+4.- Cambiamos con F2 el namespace del program.cs
